@@ -66,7 +66,7 @@ def get_most_popular(process, country_code, category):
     most_popular = [request.execute()]
 
     for i in count(0):
-        print(f"Page {i + 1}...")
+        print(f"........Page {i + 1}...")
         # When making requests, "nextPageToken" will eventually become "previousPageToken", i.e., it is the last page
         try:
             query = most_popular[i]["nextPageToken"]
@@ -100,15 +100,18 @@ def get_channels_info(process, most_popular):
     # dictionary most_popular will have exactly 200 videos inside items, 50 each.
     # so the idea here is to go to each channels video and gather their information
     channel_info = []
+    channel_number = 0
 
     for i in range(4):
         for j in range(50):
+            print(f"........Channel {channel_number + 1}")
             channel = most_popular[i]['items'][j]['snippet']['channelId']
             request = process.channels().list(part="id, snippet, contentDetails, statistics, topicDetails",
                                               id=f"{channel}",
                                               fields=filters
                                               )
             channel_info.append(request.execute())
+            channel_number += 1
 
     return channel_info
 

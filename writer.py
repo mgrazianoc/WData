@@ -10,13 +10,13 @@ def write_file(data, parser):
 
     # step 3
     print("Writing data in file...")
-    file_name = f"cat{parser.category}_{time.strftime('%y.%m.%d')}_{parser.country}_{parser.data}.json"
+    file_name = f"cat{parser.category}_{time.strftime('%y.%m.%d')}_{parser.country}_{parser.task}.json"
 
     with open(f"{parser.output_dir}/{file_name}",
               "w", encoding="utf-8") as file:
         file.write(str(data))
 
-    size_calculator(file_name, parser)
+    # size_calculator(file_name, parser)
 
 
 def json_format(data):
@@ -25,10 +25,10 @@ def json_format(data):
     return json_data
 
 
-def size_calculator(file_name, parser):
-    directory = os.getcwd()
-    size = os.path.getsize(f"{directory}/{parser.output_dir}/{file_name}")
-    print(f"Total of data downloaded: {size} bytes")
+# def size_calculator(file_name, parser):
+#     directory = os.getcwd()
+#     size = os.path.getsize(f"{directory}/{parser.output_dir}/{file_name}")
+#     print(f"Total of data downloaded: {size} bytes")
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -37,5 +37,5 @@ def size_calculator(file_name, parser):
 def temp_write(data, output):
     data = json_format(data)
     print("Writing data in file...")
-    with open(f"{output}Testing.json", "w") as teste:
-        teste.write(str(data))
+    with open(f"{output}Testing.json", "w") as testing:
+        testing.write(str(data))
