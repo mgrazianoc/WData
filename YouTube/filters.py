@@ -8,39 +8,25 @@ def filter_manager(data, parse):
     if parse.task == "trends":
         # This function will filter videos related data
         filtered_data = videos_filter(data)
-        LEN = len(filtered_data["Data"])
-        print(LEN)
-        
+
         # This function will filter channels related data
         filtered_data = channel_filter(data, filtered_data)
-        LEN = len(filtered_data["Data"])
-        print(LEN)
 
         # This function will include each videos durations in seconds (float)
         extra_data = YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
-        LEN = len(extra_data["Data"])
-        print(LEN)
 
         # This function will construct the data of Time Query and Trend Date
         # It is not the best way to call it, but it uses less code (instead of calling main, again)
-        extra_data = time_construct(extra_data)  # DICTIONARY BREAKS HERE <<<<<==========================
-        LEN = len(extra_data["Data"])
-        print(LEN)
+        extra_data = time_construct(extra_data)
 
         # This function will insert the ID Query and the ID Query Name
         extra_data = id_construct(extra_data, parse)
-        LEN = len(extra_data["Data"])
-        print(LEN)
 
         # This function will include index for the final dictionary to be written
         final_data = create_dict(extra_data)
-        LEN = len(final_data["Data"])
-        print(LEN)
 
         # And last, this function will just remove some bad characters from strings
         final_data = string_correction(final_data)
-        LEN = len(final_data["Data"])
-        print(LEN)
 
     return final_data
 
