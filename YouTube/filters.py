@@ -18,28 +18,28 @@ def filter_manager(data, parse):
 
         # This function will include each videos durations in seconds (float)
         extra_data = YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
-        LEN = len(filtered_data["Data"])
+        LEN = len(extra_data["Data"])
         print(LEN)
 
         # This function will construct the data of Time Query and Trend Date
         # It is not the best way to call it, but it uses less code (instead of calling main, again)
-        extra_data = time_construct(extra_data)
-        LEN = len(filtered_data["Data"])
+        extra_data = time_construct(extra_data)  # DICTIONARY BREAKS HERE <<<<<==========================
+        LEN = len(extra_data["Data"])
         print(LEN)
 
         # This function will insert the ID Query and the ID Query Name
         extra_data = id_construct(extra_data, parse)
-        LEN = len(filtered_data["Data"])
+        LEN = len(extra_data["Data"])
         print(LEN)
 
         # This function will include index for the final dictionary to be written
         final_data = create_dict(extra_data)
-        LEN = len(filtered_data["Data"])
+        LEN = len(final_data["Data"])
         print(LEN)
 
         # And last, this function will just remove some bad characters from strings
         final_data = string_correction(final_data)
-        LEN = len(filtered_data["Data"])
+        LEN = len(final_data["Data"])
         print(LEN)
 
     return final_data
@@ -92,10 +92,13 @@ def videos_filter(data):
                             elif m == "description":
                                 filtered_data["Data"][position - 1].update({"Video Description": n})
                             elif m == "tags":
+                                # turning list of tags into a single string
                                 tags = ""
                                 for p in range(len(n)):
-                                    tags += n[p]
-                                tags += ", "
+                                    for q in n[p]:
+                                        tags += q
+                                    if p < len(n) - 1:
+                                        tags += ", "
                                 filtered_data["Data"][position-1].update({"Tags": tags})
                                 size = len(data[t]["items"][i][j][m])
                                 filtered_data["Data"][position - 1].update({"Number of Tags": size})
@@ -184,19 +187,19 @@ def time_construct(data):
     new_data = {"Data": []}
     
     for i in range(len(data["Data"])):
+        new_data["Data"].append({})
         for j, k in data["Data"][i].items():
-            new_data["Data"].append({})
-            
+
             if j != "Time request":
                 new_data["Data"][i].update({j: k})
             else:
-            
+
                 # making the time request
                 time_request = k
                 time_pattern = re.compile(r"\d\d:\d\d:\d\d")
                 time = str(re.search(time_pattern, time_request))
                 time = time[-10:-2]
-            
+
                 # making the date request
                 date_request = k
                 date_pattern = r"\D\D\D \d\d"
@@ -205,7 +208,7 @@ def time_construct(data):
                     date = date[-9: -2] + " 2019"
                 else:
                     date = date[-8: -2] + " 2019"
-                
+
                 # updating dictionary
                 new_data["Data"][i].update({"Time Query": time})
                 new_data["Data"][i].update({"Trending Date": date})
@@ -227,9 +230,13 @@ def id_construct(data, parse):
         
         # Getting name of the Video Category ID
         try:
-            category_id = data["Data"][i]["Video Category ID"]
+            # converting string to integer
+            category_id = int(data["Data"][i]["Video Category ID"])
+            new_data["Data"][i].update({"Video Category ID": category_id})
+
+            # assign name of category
             category_name = YouTube.config.constants.DICTIONARY_BR[category_id]
-            new_data["Data"][i].update({"Video Category Name": int(category_name)})
+            new_data["Data"][i].update({"Video Category Name": category_name})
         except KeyError:
             new_data["Data"][i].update({"Video Category Name": "ERROR"})
         
