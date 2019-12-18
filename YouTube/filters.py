@@ -99,6 +99,8 @@ def videos_filter(data):
                                 filtered_data["Data"][position-1].update({"Tags": tags})
                                 size = len(data[t]["items"][i][j][m])
                                 filtered_data["Data"][position - 1].update({"Number of Tags": size})
+                            elif m == "categoryId":
+                                filtered_data["Data"][position - 1].update({"Video Category ID": n})
                         continue
                     
                     if j == "statistics":
@@ -157,7 +159,7 @@ def channel_filter(data, video_data):
                             video_data["Data"][i].update({"Channel Creation Date": n[:10]})
                             continue
                         
-                        if "country" in data["Data"][i][j] and m == "country":
+                        if "country" in data[i]["items"][0][j] and m == "country":
                             video_data["Data"][i].update({"Channel Country": n})
                         else:
                             video_data["Data"][i].update({"Channel Country": "Unknown"})
@@ -219,9 +221,18 @@ def id_construct(data, parse):
         for j, k in data["Data"][i].items():
             new_data["Data"][i].update({j: k})
         
+        # Getting information about Query
         new_data["Data"][i].update({"Query ID": parse.category})
         new_data["Data"][i].update({"Query ID Name": YouTube.config.constants.DICTIONARY_BR[parse.category]})
-    
+        
+        # Getting name of the Video Category ID
+        try:
+            category_id = data["Data"][i]["Video Category ID"]
+            category_name = YouTube.config.constants.DICTIONARY_BR[category_id]
+            new_data["Data"][i].update({"Video Category Name": int(category_name)})
+        except KeyError:
+            new_data["Data"][i].update({"Video Category Name": "ERROR"})
+        
     return new_data
 
 

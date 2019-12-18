@@ -51,7 +51,7 @@ def api_manager(parse):
 def get_most_popular(process, country_code, category):
     filters = "nextPageToken, " \
               "items(etag, id, " \
-              "snippet(publishedAt, channelId, title, description, thumbnails/maxres/url, tags)," \
+              "snippet(publishedAt, channelId, title, categoryId, description, thumbnails/maxres/url, tags)," \
               "statistics)"
 
     print("Getting videos information from youtube...")
@@ -66,7 +66,7 @@ def get_most_popular(process, country_code, category):
     most_popular = [request.execute()]
 
     for i in count(0):
-        print(f"........Page {i + 1}...")
+        print(f"........Page {i + 1}")
         # When making requests, "nextPageToken" will eventually become "previousPageToken", i.e., it is the last page
         try:
             query = most_popular[i]["nextPageToken"]

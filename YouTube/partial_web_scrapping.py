@@ -36,8 +36,11 @@ def get_video_duration(html):
     # cleaning up junk and returning video duration integer (seconds)
     pattern = re.compile(r"approxDurationMs..:..\d+")
     duration = re.search(pattern, str(html_video_info))
-    duration = convert_to_seconds(duration.group())
-    return duration
+    try:
+        duration = convert_to_seconds(duration.group())
+        return duration
+    except AttributeError:
+        return "ERROR"
 
 
 def convert_to_seconds(time):
