@@ -7,11 +7,12 @@ def json_format(data):
     return json_data
 
 
-def write_file(data, parser):
-    print("Writing data in file...")
+def write_file(data):
+
     data = json_format(data)
+    print("Writing data in file...")
+
     with open(
-            f"/output/{parser.task}_{parser.country}.json",
-            "w",
-            encoding="utf-8") as file:
+            f"C:/Users/maruc/OneDrive/Área de Trabalho/Data Science/b_post_processing/data_frame_organize/output/testing.json",
+            "w") as file:
         file.write(str(data))

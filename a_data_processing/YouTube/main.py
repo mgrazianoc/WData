@@ -41,7 +41,7 @@ if __name__ == "__main__":
         help='Path to save the outputted files in',
         type=str,
         nargs=1,
-        default='/output'
+        default='C:/Users/maruc/OneDrive/Área de Trabalho/Data Science/YouTube/output'
     )
     parser.add_argument(
         '--name', '-n',

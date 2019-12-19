@@ -20,28 +20,28 @@ def init_twitter_api():
 
 def init_key():
     print("Gathering user developer Key...")
-    with open('config/Key.txt', 'r') as key:
+    with open('a_data_processing/config/Twitter/Key.txt', 'r') as key:
         api_key = key.read()
     return api_key
 
 
 def init_secret_key():
     print("Gathering secret user developer Key...")
-    with open('config/Key_secret.txt', 'r') as key:
+    with open('a_data_processing/config/Twitter/Key_secret.txt', 'r') as key:
         api_secret_key = key.read()
     return api_secret_key
 
 
 def init_token():
     print("Gathering user developer Token...")
-    with open('config/Token.txt', 'r') as token:
+    with open('a_data_processing/config/Twitter/Token.txt', 'r') as token:
         api_token = token.read()
     return api_token
 
 
 def init_secret_token():
     print("Gathering secret user developer Token...")
-    with open('config/Token_secret.txt', 'r') as token:
+    with open('a_data_processing/config/Twitter/Token_secret.txt', 'r') as token:
         api_secret_token = token.read()
     return api_secret_token
 
@@ -65,7 +65,7 @@ def get_woeid_trends(process):
     data = {"Data": []}
 
     # opening the WOEID made by the Yahoo Weather API into a dictionary
-    with open("C:/Users/maruc/OneDrive/Área de Trabalho/Data Science/Twitter/config/woeid_BR.json", "r") as code:
+    with open("C:a_data_processing/config/woeid_BR.json", "r") as code:
         states = json.load(code)
 
     states = states["Brasil"]

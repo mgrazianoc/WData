@@ -1,7 +1,7 @@
 import re
 import itertools
 import YouTube.partial_web_scrapping
-import YouTube.config.constants as constants
+import a_data_processing.config.constants as constants
 
 
 def filter_manager(data, parse):
@@ -41,9 +41,8 @@ def videos_filter(data):
     filtered_data = {"Data": []}
     filtered_data["Data"].append({})
     
-    # labelling first position process
-    position = len(filtered_data["Data"])
-    filtered_data["Data"][position - 1].update({"Position": position})
+    # labelling first position process. Using this because it was easy to work with it
+    filtered_data["Data"][0].update({"Position": 1})
     
     # making the data more accessible
     data = data["most_popular"]
@@ -53,30 +52,31 @@ def videos_filter(data):
     time = data[4]
     
     for t in range(4):
+        # we are gonna using try because the data from the API is irregular. I.E: don't have fixed values
         try:
             for i in itertools.count(0):
                 for j, k in data[t]["items"][i].items():
                     # filtering process
                     if j == "etag":
-                        filtered_data["Data"][position - 1].update({"Video E-tag": k})  # insuring labeling "Video etag"
+                        filtered_data["Data"][i].update({"Video E-tag": k})  # insuring labeling "Video etag"
                         continue
                         
                     if j == "id":
-                        filtered_data["Data"][position - 1].update({"Video ID": k})  # insuring labeling "Video Id"
+                        filtered_data["Data"][i].update({"Video ID": k})  # insuring labeling "Video Id"
                         continue
                     
                     if j == "snippet":
                         for m, n in data[t]["items"][i][j].items():
-                            if m == "PublishedAt":
-                                filtered_data["Data"][position - 1].update({"Publication Date": n[:10]})
-                                filtered_data["Data"][position - 1].update({"Publication Time": n[11:19]})
+                            if m == "publishedAt":
+                                filtered_data["Data"][i].update({"Publication Date": n[:10]})
+                                filtered_data["Data"][i].update({"Publication Time": n[11:19]})
                             if m == "thumbnails":
                                 url = data[t]["items"][i][j][m]["maxres"]["url"]
-                                filtered_data["Data"][position - 1].update({"Thumbnail Url": url})
+                                filtered_data["Data"][i].update({"Thumbnail Url": url})
                             elif m == "title":
-                                filtered_data["Data"][position - 1].update({"Video Title": n})
+                                filtered_data["Data"][i].update({"Video Title": n})
                             elif m == "description":
-                                filtered_data["Data"][position - 1].update({"Video Description": n})
+                                filtered_data["Data"][i].update({"Video Description": n})
                             elif m == "tags":
                                 # turning list of tags into a single string
                                 tags = ""
@@ -85,36 +85,35 @@ def videos_filter(data):
                                         tags += q
                                     if p < len(n) - 1:
                                         tags += ", "
-                                filtered_data["Data"][position-1].update({"Tags": tags})
+                                filtered_data["Data"][i].update({"Tags": tags})
                                 size = len(data[t]["items"][i][j][m])
-                                filtered_data["Data"][position - 1].update({"Number of Tags": size})
+                                filtered_data["Data"][i].update({"Number of Tags": size})
                             elif m == "categoryId":
-                                filtered_data["Data"][position - 1].update({"Video Category ID": n})
+                                filtered_data["Data"][i].update({"Video Category ID": n})
                         continue
                     
                     if j == "statistics":
                         for m, n in data[t]["items"][i][j].items():
                             if m == "viewCount":
-                                filtered_data["Data"][position - 1].update({"Visualizations": int(n)})
+                                filtered_data["Data"][i].update({"Visualizations": int(n)})
                             elif m == "likeCount":
-                                filtered_data["Data"][position - 1].update({"Likes": int(n)})
+                                filtered_data["Data"][i].update({"Likes": int(n)})
                             elif m == "dislikeCount":
-                                filtered_data["Data"][position - 1].update({"Dislikes": int(n)})
+                                filtered_data["Data"][i].update({"Dislikes": int(n)})
                             elif m == "favoriteCount":
-                                filtered_data["Data"][position - 1].update({"Favorites": int(n)})
+                                filtered_data["Data"][i].update({"Favorites": int(n)})
                             elif m == "commentCount":
-                                filtered_data["Data"][position - 1].update({"Comments": int(n)})
+                                filtered_data["Data"][i].update({"Comments": int(n)})
                             
                         # append time request
-                        filtered_data["Data"][position - 1].update({"Time request": time})
+                        filtered_data["Data"][i].update({"Time request": time})
                         
                         # creating a new dictionary for the next video
-                        if position < 200:
+                        if i <= 200:
                             filtered_data["Data"].append({})
                             
                             # labelling next position process
-                            position = len(filtered_data["Data"])
-                            filtered_data["Data"][position - 1].update({"Position": position})
+                            filtered_data["Data"][i].update({"Position": i+1})
         
         except IndexError:
             continue
@@ -196,7 +195,7 @@ def time_construct(data):
                     date = date[-8: -2] + " 2019"
 
                 # updating dictionary
-                new_data["Data"][i].update({"Time Query": time})
+                new_data["Data"][i].update({"Query Time": time})
                 new_data["Data"][i].update({"Trending Date": date})
     
     return new_data
@@ -212,7 +211,7 @@ def id_construct(data, parse):
         
         # Getting information about Query
         new_data["Data"][i].update({"Query ID": parse.category})
-        new_data["Data"][i].update({"Query ID Name": YouTube.config.constants.DICTIONARY_BR[parse.category]})
+        new_data["Data"][i].update({"Query ID Name": constants.DICTIONARY_BR[parse.category]})
         
         # Getting name of the Video Category ID
         try:
@@ -221,7 +220,7 @@ def id_construct(data, parse):
             new_data["Data"][i].update({"Video Category ID": category_id})
 
             # assign name of category
-            category_name = YouTube.config.constants.DICTIONARY_BR[category_id]
+            category_name = constants.DICTIONARY_BR[category_id]
             new_data["Data"][i].update({"Video Category Name": category_name})
         except KeyError:
             new_data["Data"][i].update({"Video Category Name": "ERROR"})
