@@ -1,10 +1,33 @@
 import urllib.request
 import re
 import bs4
+import logging
+
+
+def configuring_logging():
+    
+    # setting up logger
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    formatting = logging.Formatter(
+        "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
+    
+    # creating specific file handler on g_logs
+    file_handler = logging.fileHandler("/g_logs/youtube_api.log")
+    file_handler.setFormatter(formatting)
+    logger.addHandler(file_handler)
+    
+    # creating stream handler, simple format
+    cmd_handler = logging.StreamHandler()
+    logger.addHandler(cmd_handler)
+
+
+# ---------------------------------------------------------------------------------------------------------------------
 
 
 def web_scrapping_manager(data):
-    print("Initializing manual web scrapping process...")
+    configuring_logging()
+    logger("Initializing manual web scrapping process...")
     new_data = {"Data": []}
     
     for i in range(len(data["Data"])):
@@ -15,7 +38,7 @@ def web_scrapping_manager(data):
             
             # getting video duration
             if j == "Video ID":
-                print(f"........Getting Video {i+1} time duration")
+                logger(f"........Getting Video {i+1} time duration")
                 duration = get_video_duration(k)
                 new_data["Data"][i].update({"Video Duration (s)": duration})
     
@@ -40,6 +63,8 @@ def get_video_duration(html):
         duration = convert_to_seconds(duration.group())
         return duration
     except AttributeError:
+        logger("get_video_duration returned an AttributeError")
+    finally:
         return "ERROR"
 
 

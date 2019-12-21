@@ -3,10 +3,32 @@ import a_data_processing.YouTube.writer
 import a_data_processing.YouTube.filters
 
 import argparse
+import logging
 
 
-# this function is intend to construct the YouTube API when it is called by WData
+def configuring_logging():
+    # setting up logger
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    formatting = logging.Formatter(
+        "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
+    
+    # creating specific file handler on g_logs
+    file_handler = logging.fileHandler("/g_logs/youtube_api.log")
+    file_handler.setFormatter(formatting)
+    logger.addHandler(file_handler)
+    
+    # creating stream handler, simple format
+    cmd_handler = logging.StreamHandler()
+    logger.addHandler(cmd_handler)
+    
+# ---------------------------------------------------------------------------------------------------------------------
+
+
+# this function is intend to construct the YouTube API when it is called by WData, ex: routine on system tasks
 def construct():
+    configuring_logging()
+    logger("Starting YouTube API construct")
     print("Follow these instructions to use YouTube API")
     print("Which task will the API use? Choose a character:")
     print("[t] - trends videos information")
@@ -27,28 +49,37 @@ def construct():
         entries = {"task": task,
                    "category": category,
                    "country": country,
-                   "output": "C:/Users/maruc/OneDrive/Área de Trabalho/Data Science/YouTube/output"}
+                   "output": "a_data_processing\output\YouTube"}
+        logger(f"Starting process on {entries['task']}, category {entries['category']} for country {entries['country']}")
     else:
         task = "categories"
         entries = {"task": task,
                    "country": country,
                    "output": "a_data_processing\output\YouTube"}
+        logger(f"Starting process on {entries['task']} for country {entries['country']}")
+        
     main(None, entries)
 
 
 def main(main_parser, wdata_parser=None):
     if wdata_parser is None:
         raw_data = a_data_processing.YouTube.api.api_manager(main_parser)
+        logger("Download of Raw Data completed")
         final_api_data = a_data_processing.YouTube.filters.filter_manager(raw_data, main_parser)
+        logger("Data munging completed")
         a_data_processing.YouTube.writer.write_file(final_api_data, main_parser)
+        logger("Data file written")
     else:
         raw_data = a_data_processing.YouTube.api.api_manager(wdata_parser)
+        logger("Download of Raw Data completed")
         final_api_data = a_data_processing.YouTube.filters.filter_manager(raw_data, wdata_parser)
+        logger("Data munging completed")
         a_data_processing.YouTube.writer.write_file(final_api_data, wdata_parser)
+        logger("Data file written")
 
         
 if __name__ == "__main__":
-
+    configuring_logging()
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--task', '-t',

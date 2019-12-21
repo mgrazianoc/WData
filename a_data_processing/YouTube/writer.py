@@ -2,9 +2,30 @@ import time
 import json
 
 
+def configuring_logging():
+    
+    # setting up logger
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    formatting = logging.Formatter(
+        "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
+    
+    # creating specific file handler on g_logs
+    file_handler = logging.fileHandler("/g_logs/youtube_api.log")
+    file_handler.setFormatter(formatting)
+    logger.addHandler(file_handler)
+    
+    # creating stream handler, simple format
+    cmd_handler = logging.StreamHandler()
+    logger.addHandler(cmd_handler)
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+
 def write_file(data, parser):
     data = json_format(data)
-    print("Writing data in file...")
+    logger("Writing data in file...")
 
     # for direct call
     try:
@@ -22,7 +43,7 @@ def write_file(data, parser):
 
 
 def json_format(data):
-    print("Converting data into .JSON format...")
+    logger("Converting data into .JSON format...")
     json_data = json.dumps(data, indent=2)
     return json_data
 

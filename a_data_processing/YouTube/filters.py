@@ -1,8 +1,29 @@
+import logging
 import re
 import itertools
 import a_data_processing.YouTube.partial_web_scrapping
 from a_data_processing.YouTube.config.constants import DICTIONARY_BR
 
+
+def configuring_logging():
+    
+    # setting up logger
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+    formatting = logging.Formatter(
+        "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
+    
+    # creating specific file handler on g_logs
+    file_handler = logging.fileHandler("/g_logs/youtube_api.log")
+    file_handler.setFormatter(formatting)
+    logger.addHandler(file_handler)
+    
+    # creating stream handler, simple format
+    cmd_handler = logging.StreamHandler()
+    logger.addHandler(cmd_handler)
+
+
+# ---------------------------------------------------------------------------------------------------------------------
 
 def filter_manager(data, parse):
     try:
@@ -42,7 +63,7 @@ def filter_manager(data, parse):
 
 # This function will filter videos related data
 def videos_filter(data):
-    print("Filtering videos data junk...")
+    logger("Filtering videos data junk...")
     
     # constructing dictionary structure
     filtered_data = {"Data": []}
@@ -130,7 +151,7 @@ def videos_filter(data):
 
 # This function will filter channels related data
 def channel_filter(data, video_data):
-    print("Filtering channel data junk...")
+    logger("Filtering channel data junk...")
     
     # making the data more accessible
     data = data["channels_info"]
@@ -249,18 +270,18 @@ def id_construct(data, parse):
 
 
 def categories_filter(data):
-    print("Filtering categories data junk...")
+    logger("Filtering categories data junk...")
 
 
 def channels_from_categories_filter(data):
-    print("Filtering channels from categories data junk...")
+    logger("Filtering channels from categories data junk...")
 
 
 # ---------------------------------------------------------------------------------------------------------------------
 
 # This function will include index for the final dictionary to be written
 def create_dict(data):
-    print("Creating dictionary from the data...")
+    logger("Creating dictionary from the data...")
     
     new_data = {"Data": []}
     
@@ -284,7 +305,7 @@ def string_correction(data):
                           "Video Tittle",
                           "Channel Title",
                           "Channel Description"]
-    print("Applying string corrections...")
+    logger("Applying string corrections...")
     bad_chars = re.compile(r"\n|\r")
 
     for i in range(len(data["Data"])):
