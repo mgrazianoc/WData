@@ -4,31 +4,31 @@ import a_data_processing.YouTube.filters
 
 import argparse
 import logging
+import os
 
+# setting up logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+formatting = logging.Formatter(
+    "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
 
-def configuring_logging():
-    # setting up logger
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.INFO)
-    formatting = logging.Formatter(
-        "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
-    
-    # creating specific file handler on g_logs
-    file_handler = logging.fileHandler("/g_logs/youtube_api.log")
-    file_handler.setFormatter(formatting)
-    logger.addHandler(file_handler)
-    
-    # creating stream handler, simple format
-    cmd_handler = logging.StreamHandler()
-    logger.addHandler(cmd_handler)
+# creating specific file handler on g_logs
+directory = os.getcwd()
+file_handler = logging.FileHandler(f"{directory}/g_logs/youtube_api.log")
+file_handler.setFormatter(formatting)
+logger.addHandler(file_handler)
+
+# creating stream handler, simple format
+cmd_handler = logging.StreamHandler()
+logger.addHandler(cmd_handler) 
     
 # ---------------------------------------------------------------------------------------------------------------------
 
 
 # this function is intend to construct the YouTube API when it is called by WData, ex: routine on system tasks
 def construct():
-    configuring_logging()
-    logger("Starting YouTube API construct")
+    directory = os.getcwd()
+    logger.info("Starting YouTube API construct")
     print("Follow these instructions to use YouTube API")
     print("Which task will the API use? Choose a character:")
     print("[t] - trends videos information")
@@ -45,18 +45,18 @@ def construct():
               "\t [10] - Music \n"
               "\t [20] - Gaming \n"
               "\t [25] - News & Politics")
-        category = input()
+        category = int(input())
         entries = {"task": task,
                    "category": category,
                    "country": country,
-                   "output": "a_data_processing\output\YouTube"}
-        logger(f"Starting process on {entries['task']}, category {entries['category']} for country {entries['country']}")
+                   "output": f'{directory}a_data_processing\output\YouTube'}
+        logger.info(f"Starting process on {entries['task']}, category {entries['category']} for country {entries['country']}")
     else:
         task = "categories"
         entries = {"task": task,
                    "country": country,
-                   "output": "a_data_processing\output\YouTube"}
-        logger(f"Starting process on {entries['task']} for country {entries['country']}")
+                   "output": f'{directory}a_data_processing\output\YouTube'}
+        logger.info(f"Starting process on {entries['task']} for country {entries['country']}")
         
     main(None, entries)
 
@@ -64,22 +64,22 @@ def construct():
 def main(main_parser, wdata_parser=None):
     if wdata_parser is None:
         raw_data = a_data_processing.YouTube.api.api_manager(main_parser)
-        logger("Download of Raw Data completed")
+        logger.info("Download of Raw Data completed")
         final_api_data = a_data_processing.YouTube.filters.filter_manager(raw_data, main_parser)
-        logger("Data munging completed")
+        logger.info("Data munging completed")
         a_data_processing.YouTube.writer.write_file(final_api_data, main_parser)
-        logger("Data file written")
+        logger.info("Data file written")
     else:
         raw_data = a_data_processing.YouTube.api.api_manager(wdata_parser)
-        logger("Download of Raw Data completed")
+        logger.info("Download of Raw Data completed")
         final_api_data = a_data_processing.YouTube.filters.filter_manager(raw_data, wdata_parser)
-        logger("Data munging completed")
+        logger.info("Data munging completed")
         a_data_processing.YouTube.writer.write_file(final_api_data, wdata_parser)
-        logger("Data file written")
+        logger.info("Data file written")
 
         
 if __name__ == "__main__":
-    configuring_logging()
+    directory = os.getcwd()
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--task', '-t',
@@ -107,7 +107,7 @@ if __name__ == "__main__":
         help='Path to save the outputted files in',
         type=str,
         nargs=1,
-        default='a_data_processing\output\YouTube'
+        default=f'{directory}a_data_processing\output\YouTube'
     )
     parser.add_argument(
         '--name', '-n',
@@ -117,4 +117,4 @@ if __name__ == "__main__":
         default='standard'
     )
     args = parser.parse_args()
-    main(args)
+    main(args)  

@@ -2,30 +2,31 @@ from googleapiclient.discovery import build
 from itertools import count
 import time
 import logging
+import os
 
 
-def configuring_logging():
-    
-    # setting up logger
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.INFO)
-    formatting = logging.Formatter(
-        "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
-    
-    # creating specific file handler on g_logs
-    file_handler = logging.fileHandler("/g_logs/youtube_api.log")
-    file_handler.setFormatter(formatting)
-    logger.addHandler(file_handler)
-    
-    # creating stream handler, simple format
-    cmd_handler = logging.StreamHandler()
-    logger.addHandler(cmd_handler)
+# setting up logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+formatting = logging.Formatter(
+    "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
+
+# creating specific file handler on g_logs
+directory = os.getcwd()
+file_handler = logging.FileHandler(f"{directory}/g_logs/youtube_api.log")
+file_handler.setFormatter(formatting)
+logger.addHandler(file_handler)
+
+# creating stream handler, simple format
+cmd_handler = logging.StreamHandler()
+logger.addHandler(cmd_handler) 
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 
 
 def init_youtube_api():
-    logger("Initializing YouTube Api V3...")
+    logger.info("Initializing YouTube Api V3...")
     
     api_key = init_key()
     api = build("youtube", "v3", developerKey=api_key)
@@ -33,7 +34,7 @@ def init_youtube_api():
 
 
 def init_key():
-    logger("Gathering user developer Key...")
+    logger.info("Gathering user developer Key...")
     
     with open("a_data_processing/YouTube/config/Key.txt", 'r') as code:
         api_key = code.readline()
@@ -43,11 +44,10 @@ def init_key():
 
 
 def api_manager(parse):
-    configuring_logging()
     process = init_youtube_api()
 
     try:
-        logger("Initializing api_manager")
+        logger.info("Initializing api_manager")
         
         if parse.task == "trends":
             most_popular = get_most_popular(process, parse.country, parse.category)
@@ -94,7 +94,7 @@ def get_most_popular(process, country_code, category):
               "snippet(publishedAt, channelId, title, categoryId, description, thumbnails/maxres/url, tags)," \
               "statistics)"
 
-    logger("Getting videos information from youtube...")
+    logger.info("Getting videos information from youtube...")
     request = process.videos().list(part="id, snippet, statistics",
                                     chart="mostPopular",
                                     regionCode=country_code,
@@ -106,7 +106,7 @@ def get_most_popular(process, country_code, category):
     most_popular = [request.execute()]
 
     for i in count(0):
-        logger(f"........Page {i + 1}")
+        logger.info(f"........Page {i + 1}")
         # When making requests, "nextPageToken" will eventually become "previousPageToken", i.e., it is the last page
         try:
             query = most_popular[i]["nextPageToken"]
@@ -135,7 +135,7 @@ def get_channels_info(process, most_popular):
               "contentDetails/relatedPlaylists/uploads,"\
               "statistics(viewCount, subscriberCount, videoCount))"
 
-    logger("Getting channels information...")
+    logger.info("Getting channels information...")
 
     # dictionary most_popular will have exactly 200 videos inside items, 50 each.
     # so the idea here is to go to each channels video and gather their information
@@ -144,7 +144,7 @@ def get_channels_info(process, most_popular):
 
     for i in range(4):
         for j in range(50):
-            logger(f"........Channel {channel_number + 1}")
+            logger.info(f"........Channel {channel_number + 1}")
             channel = most_popular[i]['items'][j]['snippet']['channelId']
             request = process.channels().list(part="id, snippet, contentDetails, statistics, topicDetails",
                                               id=f"{channel}",
@@ -163,7 +163,7 @@ def get_categories(process, country_code):
     request = process.videoCategories().list(part="id, snippet",
                                              regionCode=country_code
                                              )
-    logger("Getting categories information from youtube...")
+    logger.info("Getting categories information from youtube...")
     result = request.execute()
     send_raw_data(result)
     return 0
@@ -185,7 +185,7 @@ def get_channels_from_category(process, category):
 
 
 def send_raw_data(data1, data2=None):
-    logger(f"Download of Raw Data completed at {time.ctime(time.time())}")
+    logger.info(f"Download of Raw Data completed at {time.ctime(time.time())}")
     if data2 is None:
         return data1
     else:
