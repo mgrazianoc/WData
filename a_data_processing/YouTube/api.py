@@ -12,7 +12,7 @@ def init_youtube_api():
 
 def init_key():
     print("Gathering user developer Key...")
-    with open("config/Key.txt", 'r') as code:
+    with open("a_data_processing/YouTube/config/Key.txt", 'r') as code:
         api_key = code.readline()
     return api_key
 
@@ -21,32 +21,46 @@ def init_key():
 
 def api_manager(parse):
     process = init_youtube_api()
-    if parse.task == "trends":
-        most_popular = get_most_popular(process, parse.country, parse.category)
-        current_time = time.ctime(time.time())
-        most_popular.append(current_time)
 
-        channel_info = get_channels_info(process, most_popular)
+    try:
+        if parse.task == "trends":
+            most_popular = get_most_popular(process, parse.country, parse.category)
+            current_time = time.ctime(time.time())
+            most_popular.append(current_time)
 
-        raw_data = send_raw_data(most_popular, channel_info)
+            channel_info = get_channels_info(process, most_popular)
 
-        return raw_data
-    elif parse.task == "categories":
-        raw_data = get_categories(process, parse.country)
-        return raw_data
-    elif parse.task == "single_channel":
-        raw_data = get_single_channel_info(process, parse.id)  # id needs implementation
-        return raw_data
-    elif parse.task == "channels_from_category":
-        raw_data = get_channels_from_category(process, parse.category)
-        return raw_data
-    else:
-        print("Invalid input")
-        return
-    pass
+            raw_data = send_raw_data(most_popular, channel_info)
 
+            return raw_data
+        elif parse.task == "categories":
+            raw_data = get_categories(process, parse.country)
+            return raw_data
+        elif parse.task == "single_channel":
+            raw_data = get_single_channel_info(process, parse.id)  # id needs implementation
+            return raw_data
+        elif parse.task == "channels_from_category":
+            raw_data = get_channels_from_category(process, parse.category)
+            return raw_data
+        else:
+            print("Invalid input")
+            return
+    except AttributeError:
+        if parse["task"] == "trends":
+            most_popular = get_most_popular(process, parse["country"], parse["category"])
+            current_time = time.ctime(time.time())
+            most_popular.append(current_time)
+
+            channel_info = get_channels_info(process, most_popular)
+
+            raw_data = send_raw_data(most_popular, channel_info)
+            return raw_data
+        elif parse["task"] == "categories":
+            raw_data = get_categories(process, parse["country"])
+            return raw_data
 
 # ---------------------------------------------------------------------------------------------------------------------
+
 
 def get_most_popular(process, country_code, category):
     filters = "nextPageToken, " \

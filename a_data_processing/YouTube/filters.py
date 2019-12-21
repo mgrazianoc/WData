@@ -1,39 +1,45 @@
 import re
 import itertools
-import YouTube.partial_web_scrapping
-import a_data_processing.config.constants as constants
+import a_data_processing.YouTube.partial_web_scrapping
 
 
 def filter_manager(data, parse):
-    if parse.task == "trends":
-        # This function will filter videos related data
-        filtered_data = videos_filter(data)
-
-        # This function will filter channels related data
-        filtered_data = channel_filter(data, filtered_data)
-
-        # This function will include each videos durations in seconds (float)
-        extra_data = YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
-
-        # This function will construct the data of Time Query and Trend Date
-        # It is not the best way to call it, but it uses less code (instead of calling main, again)
-        extra_data = time_construct(extra_data)
-
-        # This function will insert the ID Query and the ID Query Name
-        extra_data = id_construct(extra_data, parse)
-
-        # This function will include index for the final dictionary to be written
-        final_data = create_dict(extra_data)
-
-        # And last, this function will just remove some bad characters from strings
-        final_data = string_correction(final_data)
-
-    return final_data
-
+    try:
+        if parse.task == "trends":
+            filtered_data = videos_filter(data)
+            filtered_data = channel_filter(data, filtered_data)
+            extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
+            extra_data = time_construct(extra_data)
+            extra_data = id_construct(extra_data, parse)
+            final_data = create_dict(extra_data)
+            final_data = string_correction(final_data)
+            return final_data
+    except AttributeError:
+        if parse["task"] == "trends":
+            filtered_data = videos_filter(data)
+            filtered_data = channel_filter(data, filtered_data)
+            print(len(filtered_data["Data"]))
+            print("\n\n")
+            extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
+            print((len(filtered_data["Data"])))
+            print("\n\n")
+            extra_data = time_construct(extra_data)
+            print((len(extra_data["Data"])))
+            print("\n\n")
+            extra_data = id_construct(extra_data, parse)
+            print(len(extra_data["Data"]))
+            print("\n\n")
+            final_data = create_dict(extra_data)
+            print(len(final_data["Data"]))
+            print("\n\n")
+            final_data = string_correction(final_data)
+            print(len(final_data["Data"]))
+            return final_data
 
 # ---------------------------------------------------------------------------------------------------------------------
 
 
+# This function will filter videos related data
 def videos_filter(data):
     print("Filtering videos data junk...")
     
@@ -109,7 +115,7 @@ def videos_filter(data):
                         filtered_data["Data"][i].update({"Time request": time})
                         
                         # creating a new dictionary for the next video
-                        if i <= 200:
+                        if i < 200:
                             filtered_data["Data"].append({})
                             
                             # labelling next position process
@@ -121,6 +127,7 @@ def videos_filter(data):
     return filtered_data
 
 
+# This function will filter channels related data
 def channel_filter(data, video_data):
     print("Filtering channel data junk...")
     
@@ -166,6 +173,8 @@ def channel_filter(data, video_data):
     return video_data
 
 
+# This function will construct the data of Time Query and Trend Date
+# It is not the best way to call it, but it uses less code (instead of calling main, again)
 def time_construct(data):
     
     # we cannot change sized of a dictionary inside a loop
@@ -201,6 +210,7 @@ def time_construct(data):
     return new_data
 
 
+# This function will insert the ID Query and the ID Query Name
 def id_construct(data, parse):
     new_data = {"Data": []}
     for i in range(len(data["Data"])):
@@ -210,17 +220,23 @@ def id_construct(data, parse):
             new_data["Data"][i].update({j: k})
         
         # Getting information about Query
-        new_data["Data"][i].update({"Query ID": parse.category})
-        new_data["Data"][i].update({"Query ID Name": constants.DICTIONARY_BR[parse.category]})
+        try:
+            new_data["Data"][i].update({"Query ID": parse.category})
+            id_name = a_data_processing.YouTube.config.constants.DICTIONARY_BR[parse.category]
+            new_data["Data"][i].update({"Query ID Name": id_name})
+        except AttributeError:
+            new_data["Data"][i].update({"Query ID": parse["category"]})
+            id_name = a_data_processing.YouTube.config.constants.DICTIONARY_BR[parse["category"]]
+            new_data["Data"][i].update({"Query ID Name": id_name})
         
-        # Getting name of the Video Category ID
+        # Getting name of the Video Category ID.
         try:
             # converting string to integer
             category_id = int(data["Data"][i]["Video Category ID"])
             new_data["Data"][i].update({"Video Category ID": category_id})
 
             # assign name of category
-            category_name = constants.DICTIONARY_BR[category_id]
+            category_name = a_data_processing.YouTube.config.constants.DICTIONARY_BR[category_id]
             new_data["Data"][i].update({"Video Category Name": category_name})
         except KeyError:
             new_data["Data"][i].update({"Video Category Name": "ERROR"})
@@ -241,7 +257,7 @@ def channels_from_categories_filter(data):
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-
+# This function will include index for the final dictionary to be written
 def create_dict(data):
     print("Creating dictionary from the data...")
     
@@ -261,6 +277,7 @@ def create_dict(data):
 # ---------------------------------------------------------------------------------------------------------------------
 
 
+# And last, this function will just remove some bad characters from strings
 def string_correction(data):
     strings_to_correct = ["Video Description",
                           "Video Tittle",
