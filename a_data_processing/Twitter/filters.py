@@ -22,8 +22,8 @@ def time_construct(data):
     trends = {"Data": []}
 
     for i in range(len(data["Data"])):
+        trends["Data"].append({})
         for j, k in data["Data"][i].items():
-            trends["Data"].append({})
             if j != "Time Query":
                 trends["Data"][i].update({j: k})
             else:

@@ -1,6 +1,7 @@
 import twitter  # python-twitter api
-import Twitter.config
+import a_data_processing.Twitter.config
 import json
+from a_data_processing.Twitter.config.woeid import woeid
 
 
 def init_twitter_api():
@@ -20,28 +21,28 @@ def init_twitter_api():
 
 def init_key():
     print("Gathering user developer Key...")
-    with open('a_data_processing/config/Twitter/Key.txt', 'r') as key:
+    with open('a_data_processing/Twitter/config/Key.txt', 'r') as key:
         api_key = key.read()
     return api_key
 
 
 def init_secret_key():
     print("Gathering secret user developer Key...")
-    with open('a_data_processing/config/Twitter/Key_secret.txt', 'r') as key:
+    with open('a_data_processing/Twitter/config/Key_secret.txt', 'r') as key:
         api_secret_key = key.read()
     return api_secret_key
 
 
 def init_token():
     print("Gathering user developer Token...")
-    with open('a_data_processing/config/Twitter/Token.txt', 'r') as token:
+    with open('a_data_processing/Twitter/config/Token.txt', 'r') as token:
         api_token = token.read()
     return api_token
 
 
 def init_secret_token():
     print("Gathering secret user developer Token...")
-    with open('a_data_processing/config/Twitter/Token_secret.txt', 'r') as token:
+    with open('a_data_processing/Twitter/config/Token_secret.txt', 'r') as token:
         api_secret_token = token.read()
     return api_secret_token
 
@@ -64,11 +65,8 @@ def get_woeid_trends(process):
     # variable which will be hold the data
     data = {"Data": []}
 
-    # opening the WOEID made by the Yahoo Weather API into a dictionary
-    with open("C:a_data_processing/config/woeid_BR.json", "r") as code:
-        states = json.load(code)
-
-    states = states["Brasil"]
+    # getting states from Brazil
+    states = woeid["Brasil"]
 
     # creating an index
     index = 1

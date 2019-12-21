@@ -1,6 +1,7 @@
 import re
 import itertools
 import a_data_processing.YouTube.partial_web_scrapping
+from a_data_processing.YouTube.config.constants import DICTIONARY_BR
 
 
 def filter_manager(data, parse):
@@ -222,11 +223,11 @@ def id_construct(data, parse):
         # Getting information about Query
         try:
             new_data["Data"][i].update({"Query ID": parse.category})
-            id_name = a_data_processing.YouTube.config.constants.DICTIONARY_BR[parse.category]
+            id_name = DICTIONARY_BR[parse.category]
             new_data["Data"][i].update({"Query ID Name": id_name})
         except AttributeError:
             new_data["Data"][i].update({"Query ID": parse["category"]})
-            id_name = a_data_processing.YouTube.config.constants.DICTIONARY_BR[parse["category"]]
+            id_name = DICTIONARY_BR[parse["category"]]
             new_data["Data"][i].update({"Query ID Name": id_name})
         
         # Getting name of the Video Category ID.
@@ -236,7 +237,7 @@ def id_construct(data, parse):
             new_data["Data"][i].update({"Video Category ID": category_id})
 
             # assign name of category
-            category_name = a_data_processing.YouTube.config.constants.DICTIONARY_BR[category_id]
+            category_name = DICTIONARY_BR[category_id]
             new_data["Data"][i].update({"Video Category Name": category_name})
         except KeyError:
             new_data["Data"][i].update({"Video Category Name": "ERROR"})

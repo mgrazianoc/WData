@@ -5,10 +5,16 @@ import argparse
 # for now, this API only works with Brazil. The reason for that is some issues with translation on the Yahoo API
 
 
-def main(parser):
+def construct():
+    print("Follow these instructions to use YouTube API")
+    print("Which country the data will be Fetch? Use ISO 3166-1 Alpha 2 code")
+
+
+def main(parser, wdata_parser=None):
     data = Yahoo.Yahoo_Weather.api.api_manager(parser)
     Yahoo.Yahoo_Weather.writer.write_file(data, parser)
 
+    
 
 if __name__ == "__main__":
 

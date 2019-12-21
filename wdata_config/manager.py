@@ -1,13 +1,15 @@
-import wdata_config.fork as fork
-
+import subprocess
+from a_data_processing.YouTube.main import construct as youtube_construct
+from a_data_processing.Twitter.main import construct as twitter_construct
+from a_data_processing.Yahoo.Yahoo_Weather.main import construct as yahoo_weather_construct
 
 def wdata_manager(args):
     if args.youtube is True:
-        pass
+        youtube_construct()
     elif args.twitter is True:
-        pass
+        twitter_construct()
     elif args.yahoo is True:
-        pass
+        yahoo_weather_construct()
     elif args.xlsx is True:
         pass
     elif args.vector_dict is True:
