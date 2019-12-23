@@ -1,25 +1,12 @@
 from googleapiclient.discovery import build
 from itertools import count
+from wdata_config.decorators import func_time_logger as func_time_logger
+from wdata_config.loggers import create_info_log as create_info_log
+
 import time
-import logging
-import os
 
+logger = create_info_log(__name__)
 
-# setting up logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-formatting = logging.Formatter(
-    "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
-
-# creating specific file handler on g_logs
-directory = os.getcwd()
-file_handler = logging.FileHandler(f"{directory}/g_logs/youtube_api.log")
-file_handler.setFormatter(formatting)
-logger.addHandler(file_handler)
-
-# creating stream handler, simple format
-cmd_handler = logging.StreamHandler()
-logger.addHandler(cmd_handler) 
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -43,51 +30,44 @@ def init_key():
 # ---------------------------------------------------------------------------------------------------------------------
 
 
-def api_manager(parse):
+def api_manager(**kwargs):
+    logger.info("Initializing api_manager")
     process = init_youtube_api()
-
-    try:
-        logger.info("Initializing api_manager")
+    
+    task = kwargs.get("task")
+    
+    if task == "trends":
         
-        if parse.task == "trends":
-            most_popular = get_most_popular(process, parse.country, parse.category)
-            current_time = time.ctime(time.time())
-            most_popular.append(current_time)
+        most_popular = get_most_popular(
+            process, 
+            kwargs.get("country"),
+            kwargs.get("category")
+        )
+        
+        # appending currenctly time from which the query was made
+        current_time = time.ctime(time.time())
+        most_popular.append(current_time)
 
-            channel_info = get_channels_info(process, most_popular)
-
-            raw_data = send_raw_data(most_popular, channel_info)
-
-            return raw_data
-        elif parse.task == "categories":
-            raw_data = get_categories(process, parse.country)
-            return raw_data
-        elif parse.task == "single_channel":
-            raw_data = get_single_channel_info(process, parse.id)  # id needs implementation
-            return raw_data
-        elif parse.task == "channels_from_category":
-            raw_data = get_channels_from_category(process, parse.category)
-            return raw_data
-        else:
-            print("Invalid input")
-            return
-    except AttributeError:
-        if parse["task"] == "trends":
-            most_popular = get_most_popular(process, parse["country"], parse["category"])
-            current_time = time.ctime(time.time())
-            most_popular.append(current_time)
-
-            channel_info = get_channels_info(process, most_popular)
-
-            raw_data = send_raw_data(most_popular, channel_info)
-            return raw_data
-        elif parse["task"] == "categories":
-            raw_data = get_categories(process, parse["country"])
-            return raw_data
+        channel_info = get_channels_info(process, most_popular)
+        raw_data = send_raw_data(most_popular, channel_info)
+        return raw_data
+    elif task == "categories":
+        country = kwargs.get("country") 
+        raw_data = get_categories(process, country)
+        return raw_data
+    elif task == "single_channel":
+        raw_data = get_single_channel_info(process, None)  # it needs implementation
+        return raw_data
+    elif task == "channels_from_category":
+        raw_data = get_channels_from_category(process, None) # it needs implementation
+        return raw_data
+    else:
+        print("Invalid input")
+        return
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-
+@func_time_logger
 def get_most_popular(process, country_code, category):
     filters = "nextPageToken, " \
               "items(etag, id, " \
@@ -128,6 +108,7 @@ def get_most_popular(process, country_code, category):
     return most_popular
 
 
+@func_time_logger
 def get_channels_info(process, most_popular):
 
     filters = "items(etag, id," \

@@ -1,63 +1,30 @@
+from wdata_config.loggers import create_info_log as create_info_log
+
 import time
 import json
-import os
-import logging
 
 
-
-# setting up logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-formatting = logging.Formatter(
-    "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
-
-# creating specific file handler on g_logs
-directory = os.getcwd()
-file_handler = logging.FileHandler(f"{directory}/g_logs/youtube_api.log")
-file_handler.setFormatter(formatting)
-logger.addHandler(file_handler)
-
-# creating stream handler, simple format
-cmd_handler = logging.StreamHandler()
-logger.addHandler(cmd_handler) 
+logger = create_info_log(__name__)
 
 # ---------------------------------------------------------------------------------------------------------------------
 
 
-def write_file(data, parser):
+def write_file(data, **kwargs):
     data = json_format(data)
     logger.info("Writing data in file...")
 
     # for direct/routine call
-    try:
-        file_name = f"cat{parser.category}_{time.strftime('%y.%m.%d')}_{parser.country}_{parser.task}.json"
-        try:
-            with open(f"{parser.output_dir}/{file_name}",
-                      "w", encoding="utf-8") as file:
-                file.write(str(data))
-        except FileNotFoundError:
-            logger.info(f"Creating output folder at {parser.output}")
-        finally:
-            os.mkdir(f"{parser.output_dir}")
-            with open(f"{parser.output_dir}/{file_name}",
-                      "w", encoding="utf-8") as file:
-                file.write(str(data))
-            
-    # for WData call
-    except AttributeError:
-        file_name = f"cat{parser['category']}_{time.strftime('%y.%m.%d')}_{parser['country']}_{parser['task']}.json"
-        
-        try:
-            with open(f"{parser['output']}/{file_name}",
-                      "w", encoding="utf-8") as file:
-                file.write(str(data))
-        except FileNotFoundError:
-            logger.info(f"Creating output folder at {parser['output']}")
-        finally:
-            os.mkdir(f"{parser['output']}")
-            with open(f"{parser['output']}/{file_name}",
-                      "w", encoding="utf-8") as file:
-                file.write(str(data))
+    
+    if kwargs.get("name") != "standard":
+        file_name = kwargs.get("name")
+    else:
+        category = kwargs.get("category")
+        country = kwargs.get("country")
+        task = kwargs.get("task")
+        file_name = f"categ{category}_{time.strftime('%y.%m.%d')}_{country}_{task}.json"
+    
+    with open(f"{kwargs.get('output')}/{file_name}", "w", encoding="utf-8") as file:
+        file.write(str(data))
 
 
 def json_format(data):

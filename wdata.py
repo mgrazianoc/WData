@@ -1,6 +1,6 @@
-from wdata_config.parsers import command_line_parse
+from wdata_config.parser import command_line_parse
 from wdata_config.manager import wdata_manager
-import wdata_config.parsers as parser
+import wdata_config.parser as parser
 
 
 

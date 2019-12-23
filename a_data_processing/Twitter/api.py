@@ -85,9 +85,13 @@ def get_woeid_trends(process):
                     # accessing twitter list of "Model"s object data type
                     for p in range(len(trends)):
                         print(f"Getting trending information - {index}")
+                        
+                        # basic info
                         data["Data"][i].update({index: {}})
                         data["Data"][i][index].update({"State Name": j})
                         data["Data"][i][index].update({"Position": p+1})
+                        
+                        # api info
                         data["Data"][i][index].update({"Trend Name": trends[p].name})
                         data["Data"][i][index].update({"Time Query": trends[p].timestamp})
                         data["Data"][i][index].update({"URL": trends[p].url})

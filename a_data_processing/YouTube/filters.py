@@ -1,63 +1,27 @@
-import logging
 import re
 import itertools
 import a_data_processing.YouTube.partial_web_scrapping
 from a_data_processing.YouTube.config.constants import DICTIONARY_BR
-import os
+from wdata_config.loggers import create_info_log as create_info_log
 
 
 
-# setting up logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-formatting = logging.Formatter(
-    "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
-
-# creating specific file handler on g_logs
-directory = os.getcwd()
-file_handler = logging.FileHandler(f"{directory}/g_logs/youtube_api.log")
-file_handler.setFormatter(formatting)
-logger.addHandler(file_handler)
-
-# creating stream handler, simple format
-cmd_handler = logging.StreamHandler()
-logger.addHandler(cmd_handler) 
+logger = create_info_log(__name__)
 
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-def filter_manager(data, parse):
-    try:
-        if parse.task == "trends":
-            filtered_data = videos_filter(data)
-            filtered_data = channel_filter(data, filtered_data)
-            extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
-            extra_data = time_construct(extra_data)
-            extra_data = id_construct(extra_data, parse)
-            final_data = create_dict(extra_data)
-            final_data = string_correction(final_data)
-            return final_data
-    except AttributeError:
-        if parse["task"] == "trends":
-            filtered_data = videos_filter(data)
-            filtered_data = channel_filter(data, filtered_data)
-            print(len(filtered_data["Data"]))
-            print("\n\n")
-            extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
-            print((len(filtered_data["Data"])))
-            print("\n\n")
-            extra_data = time_construct(extra_data)
-            print((len(extra_data["Data"])))
-            print("\n\n")
-            extra_data = id_construct(extra_data, parse)
-            print(len(extra_data["Data"]))
-            print("\n\n")
-            final_data = create_dict(extra_data)
-            print(len(final_data["Data"]))
-            print("\n\n")
-            final_data = string_correction(final_data)
-            print(len(final_data["Data"]))
-            return final_data
+def filter_manager(data, **kwargs):
+    logger.info("Initiating filter_manager")
+    if kwargs.get("task") == "trends":
+        filtered_data = videos_filter(data)
+        filtered_data = channel_filter(data, filtered_data)
+        extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
+        extra_data = time_construct(extra_data)
+        extra_data = id_construct(extra_data, **kwargs)
+        final_data = create_dict(extra_data)
+        final_data = string_correction(final_data)
+        return final_data
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -234,7 +198,7 @@ def time_construct(data):
 
 
 # This function will insert the ID Query and the ID Query Name
-def id_construct(data, parse):
+def id_construct(data, **kwargs):
     new_data = {"Data": []}
     for i in range(len(data["Data"])):
         new_data["Data"].append({})
@@ -243,14 +207,10 @@ def id_construct(data, parse):
             new_data["Data"][i].update({j: k})
         
         # Getting information about Query
-        try:
-            new_data["Data"][i].update({"Query ID": parse.category})
-            id_name = DICTIONARY_BR[parse.category]
-            new_data["Data"][i].update({"Query ID Name": id_name})
-        except AttributeError:
-            new_data["Data"][i].update({"Query ID": parse["category"]})
-            id_name = DICTIONARY_BR[parse["category"]]
-            new_data["Data"][i].update({"Query ID Name": id_name})
+        category = kwargs.get("category")
+        new_data["Data"][i].update({"Query ID": category})
+        id_name = DICTIONARY_BR[category]
+        new_data["Data"][i].update({"Query ID Name": id_name})
         
         # Getting name of the Video Category ID.
         try:
@@ -258,7 +218,7 @@ def id_construct(data, parse):
             category_id = int(data["Data"][i]["Video Category ID"])
             new_data["Data"][i].update({"Video Category ID": category_id})
 
-            # assign name of category
+            # assign name of category from dictionary
             category_name = DICTIONARY_BR[category_id]
             new_data["Data"][i].update({"Video Category Name": category_name})
         except KeyError:

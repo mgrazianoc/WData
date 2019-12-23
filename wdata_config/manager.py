@@ -1,11 +1,9 @@
 import subprocess
-from a_data_processing.YouTube.main import construct as youtube_construct
-from a_data_processing.Twitter.main import construct as twitter_construct
-from a_data_processing.Yahoo.Yahoo_Weather.main import construct as yahoo_weather_construct
+from a_data_processing.YouTube.main import wdata_call as wdata_call
 
 def wdata_manager(args):
     if args.youtube is True:
-        youtube_construct()
+        wdata_call()
     elif args.twitter is True:
         twitter_construct()
     elif args.yahoo is True:

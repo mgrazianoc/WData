@@ -1,31 +1,14 @@
+from wdata_config.decorators import func_time_logger as func_time_logger
+from wdata_config.loggers import create_info_log as create_info_log
+
 import urllib.request
 import re
 import bs4
-import logging
-import os
 
 
+logger = create_info_log(__name__)
 
-# setting up logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-formatting = logging.Formatter(
-    "%(name)s:%(asctime)s:%(levelname)s:%(message)s")
-
-# creating specific file handler on g_logs
-directory = os.getcwd()
-file_handler = logging.FileHandler(f"{directory}/g_logs/youtube_api.log")
-file_handler.setFormatter(formatting)
-logger.addHandler(file_handler)
-
-# creating stream handler, simple format
-cmd_handler = logging.StreamHandler()
-logger.addHandler(cmd_handler) 
-
-
-# ---------------------------------------------------------------------------------------------------------------------
-
-
+@func_time_logger
 def web_scrapping_manager(data):
     logger.info("Initializing manual web scrapping process...")
     new_data = {"Data": []}
@@ -46,10 +29,10 @@ def web_scrapping_manager(data):
 
 
 # This function will return the time duration os each video
-def get_video_duration(html):
+def get_video_duration(video_id):
     
     # getting video html source code
-    html = f"https://www.youtube.com/watch?v={html}"
+    html = f"https://www.youtube.com/watch?v={video_id}"
     source_code = urllib.request.urlopen(html)
     
     # arranging html code and returning specific id where video duration info can be found
@@ -64,9 +47,7 @@ def get_video_duration(html):
         return duration
     except AttributeError:
         logger.info("get_video_duration returned an AttributeError")
-    finally:
         return "ERROR"
-
 
 def convert_to_seconds(time):
     time = time[21:]

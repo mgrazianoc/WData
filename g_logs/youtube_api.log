@@ -1019,3 +1019,1323 @@ a_data_processing.YouTube.main:2019-12-21 14:51:20,568:INFO:Data munging complet
 a_data_processing.YouTube.writer:2019-12-21 14:51:20,568:INFO:Converting data into .JSON format...
 a_data_processing.YouTube.writer:2019-12-21 14:51:20,576:INFO:Writing data in file...
 a_data_processing.YouTube.writer:2019-12-21 14:51:20,576:INFO:Creating output folder at C:\Users\maruc\OneDrive\햞ea de Trabalho\WDataa_data_processing\output\YouTube
+a_data_processing.YouTube.main:2019-12-22 21:22:47,157:INFO:Starting YouTube API construct
+a_data_processing.YouTube.main:2019-12-22 21:22:52,948:INFO:Starting process on trends, category 0 for country BR
+a_data_processing.YouTube.api:2019-12-22 21:22:52,949:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-22 21:22:52,950:INFO:Gathering user developer Key...
+a_data_processing.YouTube.api:2019-12-22 21:22:55,300:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-22 21:22:55,300:INFO:Getting videos information from youtube...
+a_data_processing.YouTube.api:2019-12-22 21:22:56,534:INFO:........Page 1
+a_data_processing.YouTube.api:2019-12-22 21:22:57,358:INFO:........Page 2
+a_data_processing.YouTube.api:2019-12-22 21:22:58,483:INFO:........Page 3
+a_data_processing.YouTube.api:2019-12-22 21:22:59,266:INFO:........Page 4
+a_data_processing.YouTube.api:2019-12-22 21:22:59,266:INFO:Getting channels information...
+a_data_processing.YouTube.api:2019-12-22 21:22:59,267:INFO:........Channel 1
+a_data_processing.YouTube.api:2019-12-22 21:22:59,538:INFO:........Channel 2
+a_data_processing.YouTube.api:2019-12-22 21:22:59,799:INFO:........Channel 3
+a_data_processing.YouTube.api:2019-12-22 21:23:00,047:INFO:........Channel 4
+a_data_processing.YouTube.api:2019-12-22 21:23:00,305:INFO:........Channel 5
+a_data_processing.YouTube.api:2019-12-22 21:23:00,556:INFO:........Channel 6
+a_data_processing.YouTube.api:2019-12-22 21:23:00,787:INFO:........Channel 7
+a_data_processing.YouTube.api:2019-12-22 21:23:01,019:INFO:........Channel 8
+a_data_processing.YouTube.api:2019-12-22 21:23:01,313:INFO:........Channel 9
+a_data_processing.YouTube.api:2019-12-22 21:23:01,577:INFO:........Channel 10
+a_data_processing.YouTube.api:2019-12-22 21:23:01,831:INFO:........Channel 11
+a_data_processing.YouTube.api:2019-12-22 21:23:02,201:INFO:........Channel 12
+a_data_processing.YouTube.api:2019-12-22 21:23:02,468:INFO:........Channel 13
+a_data_processing.YouTube.api:2019-12-22 21:23:02,740:INFO:........Channel 14
+a_data_processing.YouTube.api:2019-12-22 21:23:03,026:INFO:........Channel 15
+a_data_processing.YouTube.api:2019-12-22 21:23:03,338:INFO:........Channel 16
+a_data_processing.YouTube.api:2019-12-22 21:23:03,603:INFO:........Channel 17
+a_data_processing.YouTube.api:2019-12-22 21:23:03,823:INFO:........Channel 18
+a_data_processing.YouTube.api:2019-12-22 21:23:04,106:INFO:........Channel 19
+a_data_processing.YouTube.api:2019-12-22 21:23:04,406:INFO:........Channel 20
+a_data_processing.YouTube.api:2019-12-22 21:23:05,008:INFO:........Channel 21
+a_data_processing.YouTube.api:2019-12-22 21:23:05,230:INFO:........Channel 22
+a_data_processing.YouTube.api:2019-12-22 21:23:05,505:INFO:........Channel 23
+a_data_processing.YouTube.api:2019-12-22 21:23:05,750:INFO:........Channel 24
+a_data_processing.YouTube.api:2019-12-22 21:23:06,018:INFO:........Channel 25
+a_data_processing.YouTube.api:2019-12-22 21:23:06,263:INFO:........Channel 26
+a_data_processing.YouTube.api:2019-12-22 21:23:06,530:INFO:........Channel 27
+a_data_processing.YouTube.api:2019-12-22 21:23:06,750:INFO:........Channel 28
+a_data_processing.YouTube.api:2019-12-22 21:23:07,002:INFO:........Channel 29
+a_data_processing.YouTube.api:2019-12-22 21:23:07,251:INFO:........Channel 30
+a_data_processing.YouTube.api:2019-12-22 21:23:07,570:INFO:........Channel 31
+a_data_processing.YouTube.api:2019-12-22 21:23:07,895:INFO:........Channel 32
+a_data_processing.YouTube.api:2019-12-22 21:23:08,149:INFO:........Channel 33
+a_data_processing.YouTube.api:2019-12-22 21:23:08,391:INFO:........Channel 34
+a_data_processing.YouTube.api:2019-12-22 21:23:08,752:INFO:........Channel 35
+a_data_processing.YouTube.api:2019-12-22 21:23:08,995:INFO:........Channel 36
+a_data_processing.YouTube.api:2019-12-22 21:23:09,322:INFO:........Channel 37
+a_data_processing.YouTube.api:2019-12-22 21:23:09,603:INFO:........Channel 38
+a_data_processing.YouTube.api:2019-12-22 21:23:09,857:INFO:........Channel 39
+a_data_processing.YouTube.api:2019-12-22 21:23:10,072:INFO:........Channel 40
+a_data_processing.YouTube.api:2019-12-22 21:23:10,337:INFO:........Channel 41
+a_data_processing.YouTube.api:2019-12-22 21:23:10,568:INFO:........Channel 42
+a_data_processing.YouTube.api:2019-12-22 21:23:10,890:INFO:........Channel 43
+a_data_processing.YouTube.api:2019-12-22 21:23:11,273:INFO:........Channel 44
+a_data_processing.YouTube.api:2019-12-22 21:23:11,517:INFO:........Channel 45
+a_data_processing.YouTube.api:2019-12-22 21:23:11,817:INFO:........Channel 46
+a_data_processing.YouTube.api:2019-12-22 21:23:12,051:INFO:........Channel 47
+a_data_processing.YouTube.api:2019-12-22 21:23:12,308:INFO:........Channel 48
+a_data_processing.YouTube.api:2019-12-22 21:23:12,545:INFO:........Channel 49
+a_data_processing.YouTube.api:2019-12-22 21:23:12,788:INFO:........Channel 50
+a_data_processing.YouTube.api:2019-12-22 21:23:13,015:INFO:........Channel 51
+a_data_processing.YouTube.api:2019-12-22 21:23:13,415:INFO:........Channel 52
+a_data_processing.YouTube.api:2019-12-22 21:23:13,663:INFO:........Channel 53
+a_data_processing.YouTube.api:2019-12-22 21:23:13,907:INFO:........Channel 54
+a_data_processing.YouTube.api:2019-12-22 21:23:14,176:INFO:........Channel 55
+a_data_processing.YouTube.api:2019-12-22 21:23:14,411:INFO:........Channel 56
+a_data_processing.YouTube.api:2019-12-22 21:23:14,665:INFO:........Channel 57
+a_data_processing.YouTube.api:2019-12-22 21:23:14,917:INFO:........Channel 58
+a_data_processing.YouTube.api:2019-12-22 21:23:15,190:INFO:........Channel 59
+a_data_processing.YouTube.api:2019-12-22 21:23:15,435:INFO:........Channel 60
+a_data_processing.YouTube.api:2019-12-22 21:23:15,730:INFO:........Channel 61
+a_data_processing.YouTube.api:2019-12-22 21:23:16,000:INFO:........Channel 62
+a_data_processing.YouTube.api:2019-12-22 21:23:16,228:INFO:........Channel 63
+a_data_processing.YouTube.api:2019-12-22 21:23:16,488:INFO:........Channel 64
+a_data_processing.YouTube.api:2019-12-22 21:23:16,752:INFO:........Channel 65
+a_data_processing.YouTube.api:2019-12-22 21:23:17,027:INFO:........Channel 66
+a_data_processing.YouTube.api:2019-12-22 21:23:17,277:INFO:........Channel 67
+a_data_processing.YouTube.api:2019-12-22 21:23:17,545:INFO:........Channel 68
+a_data_processing.YouTube.api:2019-12-22 21:23:17,795:INFO:........Channel 69
+a_data_processing.YouTube.api:2019-12-22 21:23:18,088:INFO:........Channel 70
+a_data_processing.YouTube.api:2019-12-22 21:23:18,401:INFO:........Channel 71
+a_data_processing.YouTube.api:2019-12-22 21:23:18,732:INFO:........Channel 72
+a_data_processing.YouTube.api:2019-12-22 21:23:18,996:INFO:........Channel 73
+a_data_processing.YouTube.api:2019-12-22 21:23:19,238:INFO:........Channel 74
+a_data_processing.YouTube.api:2019-12-22 21:23:19,470:INFO:........Channel 75
+a_data_processing.YouTube.api:2019-12-22 21:23:19,727:INFO:........Channel 76
+a_data_processing.YouTube.api:2019-12-22 21:23:19,985:INFO:........Channel 77
+a_data_processing.YouTube.api:2019-12-22 21:23:20,248:INFO:........Channel 78
+a_data_processing.YouTube.api:2019-12-22 21:23:20,466:INFO:........Channel 79
+a_data_processing.YouTube.api:2019-12-22 21:23:20,694:INFO:........Channel 80
+a_data_processing.YouTube.api:2019-12-22 21:23:20,933:INFO:........Channel 81
+a_data_processing.YouTube.api:2019-12-22 21:23:21,304:INFO:........Channel 82
+a_data_processing.YouTube.api:2019-12-22 21:23:21,548:INFO:........Channel 83
+a_data_processing.YouTube.api:2019-12-22 21:23:21,786:INFO:........Channel 84
+a_data_processing.YouTube.api:2019-12-22 21:23:22,032:INFO:........Channel 85
+a_data_processing.YouTube.api:2019-12-22 21:23:22,270:INFO:........Channel 86
+a_data_processing.YouTube.api:2019-12-22 21:23:22,518:INFO:........Channel 87
+a_data_processing.YouTube.api:2019-12-22 21:23:22,747:INFO:........Channel 88
+a_data_processing.YouTube.api:2019-12-22 21:23:23,160:INFO:........Channel 89
+a_data_processing.YouTube.api:2019-12-22 21:23:23,604:INFO:........Channel 90
+a_data_processing.YouTube.api:2019-12-22 21:23:23,875:INFO:........Channel 91
+a_data_processing.YouTube.api:2019-12-22 21:23:24,134:INFO:........Channel 92
+a_data_processing.YouTube.api:2019-12-22 21:23:24,385:INFO:........Channel 93
+a_data_processing.YouTube.api:2019-12-22 21:23:24,649:INFO:........Channel 94
+a_data_processing.YouTube.api:2019-12-22 21:23:24,912:INFO:........Channel 95
+a_data_processing.YouTube.api:2019-12-22 21:23:25,443:INFO:........Channel 96
+a_data_processing.YouTube.api:2019-12-22 21:23:25,680:INFO:........Channel 97
+a_data_processing.YouTube.api:2019-12-22 21:23:26,087:INFO:........Channel 98
+a_data_processing.YouTube.api:2019-12-22 21:23:26,348:INFO:........Channel 99
+a_data_processing.YouTube.api:2019-12-22 21:23:26,634:INFO:........Channel 100
+a_data_processing.YouTube.api:2019-12-22 21:23:26,883:INFO:........Channel 101
+a_data_processing.YouTube.api:2019-12-22 21:23:27,131:INFO:........Channel 102
+a_data_processing.YouTube.api:2019-12-22 21:23:27,401:INFO:........Channel 103
+a_data_processing.YouTube.api:2019-12-22 21:23:27,700:INFO:........Channel 104
+a_data_processing.YouTube.api:2019-12-22 21:23:27,949:INFO:........Channel 105
+a_data_processing.YouTube.api:2019-12-22 21:23:28,228:INFO:........Channel 106
+a_data_processing.YouTube.api:2019-12-22 21:23:28,492:INFO:........Channel 107
+a_data_processing.YouTube.api:2019-12-22 21:23:28,718:INFO:........Channel 108
+a_data_processing.YouTube.api:2019-12-22 21:23:28,969:INFO:........Channel 109
+a_data_processing.YouTube.api:2019-12-22 21:23:29,305:INFO:........Channel 110
+a_data_processing.YouTube.api:2019-12-22 21:23:29,529:INFO:........Channel 111
+a_data_processing.YouTube.api:2019-12-22 21:23:29,791:INFO:........Channel 112
+a_data_processing.YouTube.api:2019-12-22 21:23:30,043:INFO:........Channel 113
+a_data_processing.YouTube.api:2019-12-22 21:23:30,296:INFO:........Channel 114
+a_data_processing.YouTube.api:2019-12-22 21:23:30,645:INFO:........Channel 115
+a_data_processing.YouTube.api:2019-12-22 21:23:30,896:INFO:........Channel 116
+a_data_processing.YouTube.api:2019-12-22 21:23:31,139:INFO:........Channel 117
+a_data_processing.YouTube.api:2019-12-22 21:23:31,417:INFO:........Channel 118
+a_data_processing.YouTube.api:2019-12-22 21:23:31,677:INFO:........Channel 119
+a_data_processing.YouTube.api:2019-12-22 21:23:31,933:INFO:........Channel 120
+a_data_processing.YouTube.api:2019-12-22 21:23:32,171:INFO:........Channel 121
+a_data_processing.YouTube.api:2019-12-22 21:23:32,461:INFO:........Channel 122
+a_data_processing.YouTube.api:2019-12-22 21:23:32,718:INFO:........Channel 123
+a_data_processing.YouTube.api:2019-12-22 21:23:32,986:INFO:........Channel 124
+a_data_processing.YouTube.api:2019-12-22 21:23:33,218:INFO:........Channel 125
+a_data_processing.YouTube.api:2019-12-22 21:23:33,488:INFO:........Channel 126
+a_data_processing.YouTube.api:2019-12-22 21:23:33,756:INFO:........Channel 127
+a_data_processing.YouTube.api:2019-12-22 21:23:33,999:INFO:........Channel 128
+a_data_processing.YouTube.api:2019-12-22 21:23:34,280:INFO:........Channel 129
+a_data_processing.YouTube.api:2019-12-22 21:23:34,531:INFO:........Channel 130
+a_data_processing.YouTube.api:2019-12-22 21:23:34,794:INFO:........Channel 131
+a_data_processing.YouTube.api:2019-12-22 21:23:35,061:INFO:........Channel 132
+a_data_processing.YouTube.api:2019-12-22 21:23:35,320:INFO:........Channel 133
+a_data_processing.YouTube.api:2019-12-22 21:23:35,618:INFO:........Channel 134
+a_data_processing.YouTube.api:2019-12-22 21:23:35,922:INFO:........Channel 135
+a_data_processing.YouTube.api:2019-12-22 21:23:36,184:INFO:........Channel 136
+a_data_processing.YouTube.api:2019-12-22 21:23:36,409:INFO:........Channel 137
+a_data_processing.YouTube.api:2019-12-22 21:23:36,647:INFO:........Channel 138
+a_data_processing.YouTube.api:2019-12-22 21:23:36,934:INFO:........Channel 139
+a_data_processing.YouTube.api:2019-12-22 21:23:37,199:INFO:........Channel 140
+a_data_processing.YouTube.api:2019-12-22 21:23:37,466:INFO:........Channel 141
+a_data_processing.YouTube.api:2019-12-22 21:23:37,719:INFO:........Channel 142
+a_data_processing.YouTube.api:2019-12-22 21:23:37,958:INFO:........Channel 143
+a_data_processing.YouTube.api:2019-12-22 21:23:38,241:INFO:........Channel 144
+a_data_processing.YouTube.api:2019-12-22 21:23:38,586:INFO:........Channel 145
+a_data_processing.YouTube.api:2019-12-22 21:23:38,845:INFO:........Channel 146
+a_data_processing.YouTube.api:2019-12-22 21:23:39,108:INFO:........Channel 147
+a_data_processing.YouTube.api:2019-12-22 21:23:39,403:INFO:........Channel 148
+a_data_processing.YouTube.api:2019-12-22 21:23:39,614:INFO:........Channel 149
+a_data_processing.YouTube.api:2019-12-22 21:23:39,893:INFO:........Channel 150
+a_data_processing.YouTube.api:2019-12-22 21:23:40,115:INFO:........Channel 151
+a_data_processing.YouTube.api:2019-12-22 21:23:40,368:INFO:........Channel 152
+a_data_processing.YouTube.api:2019-12-22 21:23:40,648:INFO:........Channel 153
+a_data_processing.YouTube.api:2019-12-22 21:23:41,018:INFO:........Channel 154
+a_data_processing.YouTube.api:2019-12-22 21:23:41,413:INFO:........Channel 155
+a_data_processing.YouTube.api:2019-12-22 21:23:41,652:INFO:........Channel 156
+a_data_processing.YouTube.api:2019-12-22 21:23:42,090:INFO:........Channel 157
+a_data_processing.YouTube.api:2019-12-22 21:23:42,396:INFO:........Channel 158
+a_data_processing.YouTube.api:2019-12-22 21:23:42,631:INFO:........Channel 159
+a_data_processing.YouTube.api:2019-12-22 21:23:42,892:INFO:........Channel 160
+a_data_processing.YouTube.api:2019-12-22 21:23:43,145:INFO:........Channel 161
+a_data_processing.YouTube.api:2019-12-22 21:23:43,368:INFO:........Channel 162
+a_data_processing.YouTube.api:2019-12-22 21:23:43,663:INFO:........Channel 163
+a_data_processing.YouTube.api:2019-12-22 21:23:43,980:INFO:........Channel 164
+a_data_processing.YouTube.api:2019-12-22 21:23:44,335:INFO:........Channel 165
+a_data_processing.YouTube.api:2019-12-22 21:23:44,620:INFO:........Channel 166
+a_data_processing.YouTube.api:2019-12-22 21:23:44,940:INFO:........Channel 167
+a_data_processing.YouTube.api:2019-12-22 21:23:45,274:INFO:........Channel 168
+a_data_processing.YouTube.api:2019-12-22 21:23:45,624:INFO:........Channel 169
+a_data_processing.YouTube.api:2019-12-22 21:23:45,890:INFO:........Channel 170
+a_data_processing.YouTube.api:2019-12-22 21:23:46,169:INFO:........Channel 171
+a_data_processing.YouTube.api:2019-12-22 21:23:46,483:INFO:........Channel 172
+a_data_processing.YouTube.api:2019-12-22 21:23:46,852:INFO:........Channel 173
+a_data_processing.YouTube.api:2019-12-22 21:23:47,122:INFO:........Channel 174
+a_data_processing.YouTube.api:2019-12-22 21:23:47,346:INFO:........Channel 175
+a_data_processing.YouTube.api:2019-12-22 21:23:47,637:INFO:........Channel 176
+a_data_processing.YouTube.api:2019-12-22 21:23:47,926:INFO:........Channel 177
+a_data_processing.YouTube.api:2019-12-22 21:23:48,164:INFO:........Channel 178
+a_data_processing.YouTube.api:2019-12-22 21:23:48,465:INFO:........Channel 179
+a_data_processing.YouTube.api:2019-12-22 21:23:48,739:INFO:........Channel 180
+a_data_processing.YouTube.api:2019-12-22 21:23:48,974:INFO:........Channel 181
+a_data_processing.YouTube.api:2019-12-22 21:23:49,209:INFO:........Channel 182
+a_data_processing.YouTube.api:2019-12-22 21:23:49,483:INFO:........Channel 183
+a_data_processing.YouTube.api:2019-12-22 21:23:49,737:INFO:........Channel 184
+a_data_processing.YouTube.api:2019-12-22 21:23:49,991:INFO:........Channel 185
+a_data_processing.YouTube.api:2019-12-22 21:23:50,321:INFO:........Channel 186
+a_data_processing.YouTube.api:2019-12-22 21:23:50,845:INFO:........Channel 187
+a_data_processing.YouTube.api:2019-12-22 21:23:51,152:INFO:........Channel 188
+a_data_processing.YouTube.api:2019-12-22 21:23:51,391:INFO:........Channel 189
+a_data_processing.YouTube.api:2019-12-22 21:23:51,815:INFO:........Channel 190
+a_data_processing.YouTube.api:2019-12-22 21:23:52,107:INFO:........Channel 191
+a_data_processing.YouTube.api:2019-12-22 21:23:52,479:INFO:........Channel 192
+a_data_processing.YouTube.api:2019-12-22 21:23:53,063:INFO:........Channel 193
+a_data_processing.YouTube.api:2019-12-22 21:23:53,422:INFO:........Channel 194
+a_data_processing.YouTube.api:2019-12-22 21:23:53,878:INFO:........Channel 195
+a_data_processing.YouTube.api:2019-12-22 21:23:54,181:INFO:........Channel 196
+a_data_processing.YouTube.api:2019-12-22 21:23:54,470:INFO:........Channel 197
+a_data_processing.YouTube.api:2019-12-22 21:23:54,749:INFO:........Channel 198
+a_data_processing.YouTube.api:2019-12-22 21:23:54,984:INFO:........Channel 199
+a_data_processing.YouTube.api:2019-12-22 21:23:55,344:INFO:........Channel 200
+a_data_processing.YouTube.api:2019-12-22 21:23:55,619:INFO:Download of Raw Data completed at Sun Dec 22 21:23:55 2019
+a_data_processing.YouTube.main:2019-12-22 21:23:55,620:INFO:Download of Raw Data completed
+a_data_processing.YouTube.filters:2019-12-22 21:23:55,621:INFO:Filtering videos data junk...
+a_data_processing.YouTube.filters:2019-12-22 21:23:55,628:INFO:Filtering channel data junk...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:23:55,632:INFO:Initializing manual web scrapping process...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:23:55,632:INFO:........Getting Video 1 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:23:58,325:INFO:........Getting Video 2 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:01,226:INFO:........Getting Video 3 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:04,016:INFO:........Getting Video 4 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:06,556:INFO:........Getting Video 5 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:09,258:INFO:........Getting Video 6 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:13,220:INFO:........Getting Video 7 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:16,777:INFO:........Getting Video 8 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:18,983:INFO:........Getting Video 9 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:21,797:INFO:........Getting Video 10 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:24,379:INFO:........Getting Video 11 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:26,813:INFO:........Getting Video 12 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:29,414:INFO:........Getting Video 13 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:32,034:INFO:........Getting Video 14 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:36,757:INFO:........Getting Video 15 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:39,095:INFO:........Getting Video 16 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:43,739:INFO:........Getting Video 17 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:46,555:INFO:........Getting Video 18 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:49,229:INFO:........Getting Video 19 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:51,983:INFO:........Getting Video 20 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:55,745:INFO:........Getting Video 21 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:24:58,895:INFO:........Getting Video 22 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:01,966:INFO:........Getting Video 23 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:04,521:INFO:........Getting Video 24 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:07,213:INFO:........Getting Video 25 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:10,536:INFO:........Getting Video 26 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:14,561:INFO:........Getting Video 27 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:17,307:INFO:........Getting Video 28 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:20,059:INFO:........Getting Video 29 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:22,788:INFO:........Getting Video 30 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:27,290:INFO:........Getting Video 31 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:29,840:INFO:........Getting Video 32 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:32,237:INFO:........Getting Video 33 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:34,418:INFO:........Getting Video 34 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:36,499:INFO:........Getting Video 35 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:25:38,945:INFO:........Getting Video 36 time duration
+a_data_processing.YouTube.main:2019-12-22 21:50:50,685:INFO:Starting YouTube API construct
+a_data_processing.YouTube.main:2019-12-22 21:50:55,702:INFO:Starting process on trends, category 0 for country BR
+a_data_processing.YouTube.api:2019-12-22 21:50:55,703:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-22 21:50:55,704:INFO:Gathering user developer Key...
+a_data_processing.YouTube.api:2019-12-22 21:50:57,300:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-22 21:50:57,300:INFO:Getting videos information from youtube...
+a_data_processing.YouTube.api:2019-12-22 21:50:58,140:INFO:........Page 1
+a_data_processing.YouTube.api:2019-12-22 21:50:58,938:INFO:........Page 2
+a_data_processing.YouTube.api:2019-12-22 21:50:59,917:INFO:........Page 3
+a_data_processing.YouTube.api:2019-12-22 21:51:00,641:INFO:........Page 4
+a_data_processing.YouTube.api:2019-12-22 21:51:00,641:INFO:Getting channels information...
+a_data_processing.YouTube.api:2019-12-22 21:51:00,642:INFO:........Channel 1
+a_data_processing.YouTube.api:2019-12-22 21:51:00,974:INFO:........Channel 2
+a_data_processing.YouTube.api:2019-12-22 21:51:01,218:INFO:........Channel 3
+a_data_processing.YouTube.api:2019-12-22 21:51:01,470:INFO:........Channel 4
+a_data_processing.YouTube.api:2019-12-22 21:51:01,728:INFO:........Channel 5
+a_data_processing.YouTube.api:2019-12-22 21:51:01,999:INFO:........Channel 6
+a_data_processing.YouTube.api:2019-12-22 21:51:02,237:INFO:........Channel 7
+a_data_processing.YouTube.api:2019-12-22 21:51:02,470:INFO:........Channel 8
+a_data_processing.YouTube.api:2019-12-22 21:51:02,693:INFO:........Channel 9
+a_data_processing.YouTube.api:2019-12-22 21:51:02,913:INFO:........Channel 10
+a_data_processing.YouTube.api:2019-12-22 21:51:03,145:INFO:........Channel 11
+a_data_processing.YouTube.api:2019-12-22 21:51:03,393:INFO:........Channel 12
+a_data_processing.YouTube.api:2019-12-22 21:51:03,610:INFO:........Channel 13
+a_data_processing.YouTube.api:2019-12-22 21:51:03,845:INFO:........Channel 14
+a_data_processing.YouTube.api:2019-12-22 21:51:04,059:INFO:........Channel 15
+a_data_processing.YouTube.api:2019-12-22 21:51:04,291:INFO:........Channel 16
+a_data_processing.YouTube.api:2019-12-22 21:51:04,501:INFO:........Channel 17
+a_data_processing.YouTube.api:2019-12-22 21:51:04,722:INFO:........Channel 18
+a_data_processing.YouTube.api:2019-12-22 21:51:04,989:INFO:........Channel 19
+a_data_processing.YouTube.api:2019-12-22 21:51:05,211:INFO:........Channel 20
+a_data_processing.YouTube.api:2019-12-22 21:51:05,429:INFO:........Channel 21
+a_data_processing.YouTube.api:2019-12-22 21:51:05,651:INFO:........Channel 22
+a_data_processing.YouTube.api:2019-12-22 21:51:05,889:INFO:........Channel 23
+a_data_processing.YouTube.api:2019-12-22 21:51:06,107:INFO:........Channel 24
+a_data_processing.YouTube.api:2019-12-22 21:51:06,339:INFO:........Channel 25
+a_data_processing.YouTube.api:2019-12-22 21:51:06,588:INFO:........Channel 26
+a_data_processing.YouTube.api:2019-12-22 21:51:06,799:INFO:........Channel 27
+a_data_processing.YouTube.api:2019-12-22 21:51:07,033:INFO:........Channel 28
+a_data_processing.YouTube.api:2019-12-22 21:51:07,261:INFO:........Channel 29
+a_data_processing.YouTube.api:2019-12-22 21:51:07,501:INFO:........Channel 30
+a_data_processing.YouTube.api:2019-12-22 21:51:07,735:INFO:........Channel 31
+a_data_processing.YouTube.api:2019-12-22 21:51:07,967:INFO:........Channel 32
+a_data_processing.YouTube.api:2019-12-22 21:51:08,682:INFO:........Channel 33
+a_data_processing.YouTube.api:2019-12-22 21:51:08,959:INFO:........Channel 34
+a_data_processing.YouTube.api:2019-12-22 21:51:09,175:INFO:........Channel 35
+a_data_processing.YouTube.api:2019-12-22 21:51:09,790:INFO:........Channel 36
+a_data_processing.YouTube.api:2019-12-22 21:51:10,025:INFO:........Channel 37
+a_data_processing.YouTube.api:2019-12-22 21:51:10,259:INFO:........Channel 38
+a_data_processing.YouTube.api:2019-12-22 21:51:10,478:INFO:........Channel 39
+a_data_processing.YouTube.api:2019-12-22 21:51:10,705:INFO:........Channel 40
+a_data_processing.YouTube.api:2019-12-22 21:51:10,925:INFO:........Channel 41
+a_data_processing.YouTube.api:2019-12-22 21:51:11,164:INFO:........Channel 42
+a_data_processing.YouTube.api:2019-12-22 21:51:11,392:INFO:........Channel 43
+a_data_processing.YouTube.api:2019-12-22 21:51:11,623:INFO:........Channel 44
+a_data_processing.YouTube.api:2019-12-22 21:51:11,858:INFO:........Channel 45
+a_data_processing.YouTube.api:2019-12-22 21:51:12,081:INFO:........Channel 46
+a_data_processing.YouTube.api:2019-12-22 21:51:12,308:INFO:........Channel 47
+a_data_processing.YouTube.api:2019-12-22 21:51:12,534:INFO:........Channel 48
+a_data_processing.YouTube.api:2019-12-22 21:51:12,771:INFO:........Channel 49
+a_data_processing.YouTube.api:2019-12-22 21:51:12,992:INFO:........Channel 50
+a_data_processing.YouTube.api:2019-12-22 21:51:13,222:INFO:........Channel 51
+a_data_processing.YouTube.api:2019-12-22 21:51:13,470:INFO:........Channel 52
+a_data_processing.YouTube.api:2019-12-22 21:51:13,680:INFO:........Channel 53
+a_data_processing.YouTube.api:2019-12-22 21:51:13,941:INFO:........Channel 54
+a_data_processing.YouTube.api:2019-12-22 21:51:14,181:INFO:........Channel 55
+a_data_processing.YouTube.api:2019-12-22 21:51:14,411:INFO:........Channel 56
+a_data_processing.YouTube.api:2019-12-22 21:51:14,668:INFO:........Channel 57
+a_data_processing.YouTube.api:2019-12-22 21:51:14,886:INFO:........Channel 58
+a_data_processing.YouTube.api:2019-12-22 21:51:15,108:INFO:........Channel 59
+a_data_processing.YouTube.api:2019-12-22 21:51:15,322:INFO:........Channel 60
+a_data_processing.YouTube.api:2019-12-22 21:51:15,563:INFO:........Channel 61
+a_data_processing.YouTube.api:2019-12-22 21:51:15,784:INFO:........Channel 62
+a_data_processing.YouTube.api:2019-12-22 21:51:16,039:INFO:........Channel 63
+a_data_processing.YouTube.api:2019-12-22 21:51:16,267:INFO:........Channel 64
+a_data_processing.YouTube.api:2019-12-22 21:51:16,534:INFO:........Channel 65
+a_data_processing.YouTube.api:2019-12-22 21:51:16,733:INFO:........Channel 66
+a_data_processing.YouTube.api:2019-12-22 21:51:16,999:INFO:........Channel 67
+a_data_processing.YouTube.api:2019-12-22 21:51:17,233:INFO:........Channel 68
+a_data_processing.YouTube.api:2019-12-22 21:51:17,456:INFO:........Channel 69
+a_data_processing.YouTube.api:2019-12-22 21:51:17,684:INFO:........Channel 70
+a_data_processing.YouTube.api:2019-12-22 21:51:17,905:INFO:........Channel 71
+a_data_processing.YouTube.api:2019-12-22 21:51:18,132:INFO:........Channel 72
+a_data_processing.YouTube.api:2019-12-22 21:51:18,349:INFO:........Channel 73
+a_data_processing.YouTube.api:2019-12-22 21:51:18,586:INFO:........Channel 74
+a_data_processing.YouTube.api:2019-12-22 21:51:18,815:INFO:........Channel 75
+a_data_processing.YouTube.api:2019-12-22 21:51:19,042:INFO:........Channel 76
+a_data_processing.YouTube.api:2019-12-22 21:51:19,273:INFO:........Channel 77
+a_data_processing.YouTube.api:2019-12-22 21:51:19,492:INFO:........Channel 78
+a_data_processing.YouTube.api:2019-12-22 21:51:19,700:INFO:........Channel 79
+a_data_processing.YouTube.api:2019-12-22 21:51:19,938:INFO:........Channel 80
+a_data_processing.YouTube.api:2019-12-22 21:51:20,143:INFO:........Channel 81
+a_data_processing.YouTube.api:2019-12-22 21:51:20,360:INFO:........Channel 82
+a_data_processing.YouTube.api:2019-12-22 21:51:20,649:INFO:........Channel 83
+a_data_processing.YouTube.api:2019-12-22 21:51:20,886:INFO:........Channel 84
+a_data_processing.YouTube.api:2019-12-22 21:51:21,113:INFO:........Channel 85
+a_data_processing.YouTube.api:2019-12-22 21:51:21,338:INFO:........Channel 86
+a_data_processing.YouTube.api:2019-12-22 21:51:21,590:INFO:........Channel 87
+a_data_processing.YouTube.api:2019-12-22 21:51:21,813:INFO:........Channel 88
+a_data_processing.YouTube.api:2019-12-22 21:51:22,060:INFO:........Channel 89
+a_data_processing.YouTube.api:2019-12-22 21:51:22,283:INFO:........Channel 90
+a_data_processing.YouTube.api:2019-12-22 21:51:22,515:INFO:........Channel 91
+a_data_processing.YouTube.api:2019-12-22 21:51:22,815:INFO:........Channel 92
+a_data_processing.YouTube.api:2019-12-22 21:51:23,155:INFO:........Channel 93
+a_data_processing.YouTube.api:2019-12-22 21:51:23,371:INFO:........Channel 94
+a_data_processing.YouTube.api:2019-12-22 21:51:23,592:INFO:........Channel 95
+a_data_processing.YouTube.api:2019-12-22 21:51:23,841:INFO:........Channel 96
+a_data_processing.YouTube.api:2019-12-22 21:51:24,096:INFO:........Channel 97
+a_data_processing.YouTube.api:2019-12-22 21:51:24,312:INFO:........Channel 98
+a_data_processing.YouTube.api:2019-12-22 21:51:24,552:INFO:........Channel 99
+a_data_processing.YouTube.api:2019-12-22 21:51:24,791:INFO:........Channel 100
+a_data_processing.YouTube.api:2019-12-22 21:51:25,032:INFO:........Channel 101
+a_data_processing.YouTube.api:2019-12-22 21:51:25,279:INFO:........Channel 102
+a_data_processing.YouTube.api:2019-12-22 21:51:25,538:INFO:........Channel 103
+a_data_processing.YouTube.api:2019-12-22 21:51:25,758:INFO:........Channel 104
+a_data_processing.YouTube.api:2019-12-22 21:51:25,974:INFO:........Channel 105
+a_data_processing.YouTube.api:2019-12-22 21:51:26,213:INFO:........Channel 106
+a_data_processing.YouTube.api:2019-12-22 21:51:26,456:INFO:........Channel 107
+a_data_processing.YouTube.api:2019-12-22 21:51:26,716:INFO:........Channel 108
+a_data_processing.YouTube.api:2019-12-22 21:51:26,955:INFO:........Channel 109
+a_data_processing.YouTube.api:2019-12-22 21:51:27,178:INFO:........Channel 110
+a_data_processing.YouTube.api:2019-12-22 21:51:27,394:INFO:........Channel 111
+a_data_processing.YouTube.api:2019-12-22 21:51:27,646:INFO:........Channel 112
+a_data_processing.YouTube.api:2019-12-22 21:51:27,889:INFO:........Channel 113
+a_data_processing.YouTube.api:2019-12-22 21:51:28,591:INFO:........Channel 114
+a_data_processing.YouTube.api:2019-12-22 21:51:28,814:INFO:........Channel 115
+a_data_processing.YouTube.api:2019-12-22 21:51:29,049:INFO:........Channel 116
+a_data_processing.YouTube.api:2019-12-22 21:51:29,266:INFO:........Channel 117
+a_data_processing.YouTube.api:2019-12-22 21:51:29,492:INFO:........Channel 118
+a_data_processing.YouTube.api:2019-12-22 21:51:29,739:INFO:........Channel 119
+a_data_processing.YouTube.api:2019-12-22 21:51:29,979:INFO:........Channel 120
+a_data_processing.YouTube.api:2019-12-22 21:51:30,204:INFO:........Channel 121
+a_data_processing.YouTube.api:2019-12-22 21:51:30,429:INFO:........Channel 122
+a_data_processing.YouTube.api:2019-12-22 21:51:30,665:INFO:........Channel 123
+a_data_processing.YouTube.api:2019-12-22 21:51:30,889:INFO:........Channel 124
+a_data_processing.YouTube.api:2019-12-22 21:51:31,114:INFO:........Channel 125
+a_data_processing.YouTube.api:2019-12-22 21:51:31,328:INFO:........Channel 126
+a_data_processing.YouTube.api:2019-12-22 21:51:31,548:INFO:........Channel 127
+a_data_processing.YouTube.api:2019-12-22 21:51:31,790:INFO:........Channel 128
+a_data_processing.YouTube.api:2019-12-22 21:51:32,017:INFO:........Channel 129
+a_data_processing.YouTube.api:2019-12-22 21:51:32,235:INFO:........Channel 130
+a_data_processing.YouTube.api:2019-12-22 21:51:32,457:INFO:........Channel 131
+a_data_processing.YouTube.api:2019-12-22 21:51:32,708:INFO:........Channel 132
+a_data_processing.YouTube.api:2019-12-22 21:51:32,933:INFO:........Channel 133
+a_data_processing.YouTube.api:2019-12-22 21:51:33,174:INFO:........Channel 134
+a_data_processing.YouTube.api:2019-12-22 21:51:33,414:INFO:........Channel 135
+a_data_processing.YouTube.api:2019-12-22 21:51:33,644:INFO:........Channel 136
+a_data_processing.YouTube.api:2019-12-22 21:51:33,848:INFO:........Channel 137
+a_data_processing.YouTube.api:2019-12-22 21:51:34,079:INFO:........Channel 138
+a_data_processing.YouTube.api:2019-12-22 21:51:34,292:INFO:........Channel 139
+a_data_processing.YouTube.api:2019-12-22 21:51:34,542:INFO:........Channel 140
+a_data_processing.YouTube.api:2019-12-22 21:51:34,759:INFO:........Channel 141
+a_data_processing.YouTube.api:2019-12-22 21:51:34,973:INFO:........Channel 142
+a_data_processing.YouTube.api:2019-12-22 21:51:35,218:INFO:........Channel 143
+a_data_processing.YouTube.api:2019-12-22 21:51:35,450:INFO:........Channel 144
+a_data_processing.YouTube.api:2019-12-22 21:51:35,683:INFO:........Channel 145
+a_data_processing.YouTube.api:2019-12-22 21:51:35,891:INFO:........Channel 146
+a_data_processing.YouTube.api:2019-12-22 21:51:36,141:INFO:........Channel 147
+a_data_processing.YouTube.api:2019-12-22 21:51:36,420:INFO:........Channel 148
+a_data_processing.YouTube.api:2019-12-22 21:51:36,665:INFO:........Channel 149
+a_data_processing.YouTube.api:2019-12-22 21:51:36,902:INFO:........Channel 150
+a_data_processing.YouTube.api:2019-12-22 21:51:37,132:INFO:........Channel 151
+a_data_processing.YouTube.api:2019-12-22 21:51:37,340:INFO:........Channel 152
+a_data_processing.YouTube.api:2019-12-22 21:51:37,573:INFO:........Channel 153
+a_data_processing.YouTube.api:2019-12-22 21:51:37,794:INFO:........Channel 154
+a_data_processing.YouTube.api:2019-12-22 21:51:38,002:INFO:........Channel 155
+a_data_processing.YouTube.api:2019-12-22 21:51:38,251:INFO:........Channel 156
+a_data_processing.YouTube.api:2019-12-22 21:51:38,474:INFO:........Channel 157
+a_data_processing.YouTube.api:2019-12-22 21:51:38,699:INFO:........Channel 158
+a_data_processing.YouTube.api:2019-12-22 21:51:38,964:INFO:........Channel 159
+a_data_processing.YouTube.api:2019-12-22 21:51:39,206:INFO:........Channel 160
+a_data_processing.YouTube.api:2019-12-22 21:51:39,406:INFO:........Channel 161
+a_data_processing.YouTube.api:2019-12-22 21:51:39,614:INFO:........Channel 162
+a_data_processing.YouTube.api:2019-12-22 21:51:39,872:INFO:........Channel 163
+a_data_processing.YouTube.api:2019-12-22 21:51:40,168:INFO:........Channel 164
+a_data_processing.YouTube.api:2019-12-22 21:51:40,376:INFO:........Channel 165
+a_data_processing.YouTube.api:2019-12-22 21:51:40,611:INFO:........Channel 166
+a_data_processing.YouTube.api:2019-12-22 21:51:40,896:INFO:........Channel 167
+a_data_processing.YouTube.api:2019-12-22 21:51:41,155:INFO:........Channel 168
+a_data_processing.YouTube.api:2019-12-22 21:51:41,376:INFO:........Channel 169
+a_data_processing.YouTube.api:2019-12-22 21:51:41,598:INFO:........Channel 170
+a_data_processing.YouTube.api:2019-12-22 21:51:41,820:INFO:........Channel 171
+a_data_processing.YouTube.api:2019-12-22 21:51:42,055:INFO:........Channel 172
+a_data_processing.YouTube.api:2019-12-22 21:51:42,278:INFO:........Channel 173
+a_data_processing.YouTube.api:2019-12-22 21:51:42,505:INFO:........Channel 174
+a_data_processing.YouTube.api:2019-12-22 21:51:42,733:INFO:........Channel 175
+a_data_processing.YouTube.api:2019-12-22 21:51:42,940:INFO:........Channel 176
+a_data_processing.YouTube.api:2019-12-22 21:51:43,285:INFO:........Channel 177
+a_data_processing.YouTube.api:2019-12-22 21:51:43,536:INFO:........Channel 178
+a_data_processing.YouTube.api:2019-12-22 21:51:43,754:INFO:........Channel 179
+a_data_processing.YouTube.api:2019-12-22 21:51:43,976:INFO:........Channel 180
+a_data_processing.YouTube.api:2019-12-22 21:51:44,253:INFO:........Channel 181
+a_data_processing.YouTube.api:2019-12-22 21:51:44,468:INFO:........Channel 182
+a_data_processing.YouTube.api:2019-12-22 21:51:44,682:INFO:........Channel 183
+a_data_processing.YouTube.api:2019-12-22 21:51:44,902:INFO:........Channel 184
+a_data_processing.YouTube.api:2019-12-22 21:51:45,152:INFO:........Channel 185
+a_data_processing.YouTube.api:2019-12-22 21:51:45,373:INFO:........Channel 186
+a_data_processing.YouTube.api:2019-12-22 21:51:45,607:INFO:........Channel 187
+a_data_processing.YouTube.api:2019-12-22 21:51:45,836:INFO:........Channel 188
+a_data_processing.YouTube.api:2019-12-22 21:51:46,134:INFO:........Channel 189
+a_data_processing.YouTube.api:2019-12-22 21:51:46,369:INFO:........Channel 190
+a_data_processing.YouTube.api:2019-12-22 21:51:46,599:INFO:........Channel 191
+a_data_processing.YouTube.api:2019-12-22 21:51:46,852:INFO:........Channel 192
+a_data_processing.YouTube.api:2019-12-22 21:51:47,089:INFO:........Channel 193
+a_data_processing.YouTube.api:2019-12-22 21:51:47,422:INFO:........Channel 194
+a_data_processing.YouTube.api:2019-12-22 21:51:47,671:INFO:........Channel 195
+a_data_processing.YouTube.api:2019-12-22 21:51:47,887:INFO:........Channel 196
+a_data_processing.YouTube.api:2019-12-22 21:51:48,121:INFO:........Channel 197
+a_data_processing.YouTube.api:2019-12-22 21:51:48,362:INFO:........Channel 198
+a_data_processing.YouTube.api:2019-12-22 21:51:48,612:INFO:........Channel 199
+a_data_processing.YouTube.api:2019-12-22 21:51:48,882:INFO:........Channel 200
+a_data_processing.YouTube.api:2019-12-22 21:51:49,091:INFO:Download of Raw Data completed at Sun Dec 22 21:51:49 2019
+a_data_processing.YouTube.main:2019-12-22 21:51:49,091:INFO:Download of Raw Data completed
+a_data_processing.YouTube.filters:2019-12-22 21:51:49,092:INFO:Filtering videos data junk...
+a_data_processing.YouTube.filters:2019-12-22 21:51:49,099:INFO:Filtering channel data junk...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:51:49,102:INFO:Initializing manual web scrapping process...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:51:49,103:INFO:........Getting Video 1 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:51:51,507:INFO:........Getting Video 2 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:51:54,038:INFO:........Getting Video 3 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:51:57,797:INFO:........Getting Video 4 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:51:59,958:INFO:........Getting Video 5 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:02,260:INFO:........Getting Video 6 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:07,314:INFO:........Getting Video 7 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:10,113:INFO:........Getting Video 8 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:12,810:INFO:........Getting Video 9 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:15,492:INFO:........Getting Video 10 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:17,832:INFO:........Getting Video 11 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:20,043:INFO:........Getting Video 12 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:25,071:INFO:........Getting Video 13 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:27,589:INFO:........Getting Video 14 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:31,889:INFO:........Getting Video 15 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:34,171:INFO:........Getting Video 16 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:38,913:INFO:........Getting Video 17 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:41,712:INFO:........Getting Video 18 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:44,172:INFO:........Getting Video 19 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:46,930:INFO:........Getting Video 20 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:50,052:INFO:........Getting Video 21 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:53,137:INFO:........Getting Video 22 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:52:56,861:INFO:........Getting Video 23 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:00,025:INFO:........Getting Video 24 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:02,233:INFO:........Getting Video 25 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:04,765:INFO:........Getting Video 26 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:08,138:INFO:........Getting Video 27 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:13,435:INFO:........Getting Video 28 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:16,365:INFO:........Getting Video 29 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:19,032:INFO:........Getting Video 30 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:21,578:INFO:........Getting Video 31 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:24,325:INFO:........Getting Video 32 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:26,761:INFO:........Getting Video 33 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:28,935:INFO:........Getting Video 34 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:31,372:INFO:........Getting Video 35 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:33,809:INFO:........Getting Video 36 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:36,043:INFO:........Getting Video 37 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:39,358:INFO:........Getting Video 38 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:41,641:INFO:........Getting Video 39 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:44,022:INFO:........Getting Video 40 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:47,889:INFO:........Getting Video 41 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:51,709:INFO:........Getting Video 42 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:56,378:INFO:........Getting Video 43 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:53:58,217:INFO:........Getting Video 44 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:54:04,199:INFO:........Getting Video 45 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:54:09,586:INFO:........Getting Video 46 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:54:11,994:INFO:........Getting Video 47 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:54:14,232:INFO:........Getting Video 48 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:54:17,037:INFO:........Getting Video 49 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:54:19,486:INFO:........Getting Video 50 time duration
+a_data_processing.YouTube.filters:2019-12-22 21:54:21,979:INFO:Creating dictionary from the data...
+a_data_processing.YouTube.filters:2019-12-22 21:54:21,984:INFO:Applying string corrections...
+a_data_processing.YouTube.main:2019-12-22 21:54:21,988:INFO:Data munging completed
+a_data_processing.YouTube.writer:2019-12-22 21:54:21,988:INFO:Converting data into .JSON format...
+a_data_processing.YouTube.writer:2019-12-22 21:54:21,996:INFO:Writing data in file...
+a_data_processing.YouTube.writer:2019-12-22 21:54:21,997:INFO:Creating output folder at C:\Users\maruc\OneDrive\햞ea de Trabalho\WDataa_data_processing\output\YouTube
+a_data_processing.YouTube.main:2019-12-22 21:57:23,049:INFO:Starting YouTube API construct
+a_data_processing.YouTube.main:2019-12-22 21:57:26,583:INFO:Starting process on trends, category 0 for country BR
+a_data_processing.YouTube.api:2019-12-22 21:57:26,583:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-22 21:57:26,584:INFO:Gathering user developer Key...
+a_data_processing.YouTube.api:2019-12-22 21:57:27,365:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-22 21:57:27,365:INFO:Getting videos information from youtube...
+a_data_processing.YouTube.api:2019-12-22 21:57:27,960:INFO:........Page 1
+a_data_processing.YouTube.api:2019-12-22 21:57:28,673:INFO:........Page 2
+a_data_processing.YouTube.api:2019-12-22 21:57:29,317:INFO:........Page 3
+a_data_processing.YouTube.api:2019-12-22 21:57:30,044:INFO:........Page 4
+a_data_processing.YouTube.api:2019-12-22 21:57:30,045:INFO:Getting channels information...
+a_data_processing.YouTube.api:2019-12-22 21:57:30,046:INFO:........Channel 1
+a_data_processing.YouTube.api:2019-12-22 21:57:30,302:INFO:........Channel 2
+a_data_processing.YouTube.api:2019-12-22 21:57:30,539:INFO:........Channel 3
+a_data_processing.YouTube.api:2019-12-22 21:57:30,774:INFO:........Channel 4
+a_data_processing.YouTube.api:2019-12-22 21:57:31,007:INFO:........Channel 5
+a_data_processing.YouTube.api:2019-12-22 21:57:31,222:INFO:........Channel 6
+a_data_processing.YouTube.api:2019-12-22 21:57:31,564:INFO:........Channel 7
+a_data_processing.YouTube.api:2019-12-22 21:57:31,790:INFO:........Channel 8
+a_data_processing.YouTube.api:2019-12-22 21:57:32,033:INFO:........Channel 9
+a_data_processing.YouTube.api:2019-12-22 21:57:32,243:INFO:........Channel 10
+a_data_processing.YouTube.api:2019-12-22 21:57:32,454:INFO:........Channel 11
+a_data_processing.YouTube.api:2019-12-22 21:57:32,674:INFO:........Channel 12
+a_data_processing.YouTube.api:2019-12-22 21:57:32,912:INFO:........Channel 13
+a_data_processing.YouTube.api:2019-12-22 21:57:33,196:INFO:........Channel 14
+a_data_processing.YouTube.api:2019-12-22 21:57:33,436:INFO:........Channel 15
+a_data_processing.YouTube.api:2019-12-22 21:57:33,676:INFO:........Channel 16
+a_data_processing.YouTube.api:2019-12-22 21:57:33,874:INFO:........Channel 17
+a_data_processing.YouTube.api:2019-12-22 21:57:34,122:INFO:........Channel 18
+a_data_processing.YouTube.api:2019-12-22 21:57:34,433:INFO:........Channel 19
+a_data_processing.YouTube.api:2019-12-22 21:57:34,795:INFO:........Channel 20
+a_data_processing.YouTube.api:2019-12-22 21:57:35,005:INFO:........Channel 21
+a_data_processing.YouTube.api:2019-12-22 21:57:35,248:INFO:........Channel 22
+a_data_processing.YouTube.api:2019-12-22 21:57:35,509:INFO:........Channel 23
+a_data_processing.YouTube.api:2019-12-22 21:57:35,746:INFO:........Channel 24
+a_data_processing.YouTube.api:2019-12-22 21:57:35,955:INFO:........Channel 25
+a_data_processing.YouTube.api:2019-12-22 21:57:36,195:INFO:........Channel 26
+a_data_processing.YouTube.api:2019-12-22 21:57:36,447:INFO:........Channel 27
+a_data_processing.YouTube.api:2019-12-22 21:57:36,681:INFO:........Channel 28
+a_data_processing.YouTube.api:2019-12-22 21:57:36,898:INFO:........Channel 29
+a_data_processing.YouTube.api:2019-12-22 21:57:37,121:INFO:........Channel 30
+a_data_processing.YouTube.api:2019-12-22 21:57:37,333:INFO:........Channel 31
+a_data_processing.YouTube.api:2019-12-22 21:57:37,547:INFO:........Channel 32
+a_data_processing.YouTube.api:2019-12-22 21:57:37,764:INFO:........Channel 33
+a_data_processing.YouTube.api:2019-12-22 21:57:37,979:INFO:........Channel 34
+a_data_processing.YouTube.api:2019-12-22 21:57:38,179:INFO:........Channel 35
+a_data_processing.YouTube.api:2019-12-22 21:57:38,394:INFO:........Channel 36
+a_data_processing.YouTube.api:2019-12-22 21:57:38,623:INFO:........Channel 37
+a_data_processing.YouTube.api:2019-12-22 21:57:38,840:INFO:........Channel 38
+a_data_processing.YouTube.api:2019-12-22 21:57:39,072:INFO:........Channel 39
+a_data_processing.YouTube.api:2019-12-22 21:57:39,417:INFO:........Channel 40
+a_data_processing.YouTube.api:2019-12-22 21:57:39,743:INFO:........Channel 41
+a_data_processing.YouTube.api:2019-12-22 21:57:39,984:INFO:........Channel 42
+a_data_processing.YouTube.api:2019-12-22 21:57:40,239:INFO:........Channel 43
+a_data_processing.YouTube.api:2019-12-22 21:57:40,490:INFO:........Channel 44
+a_data_processing.YouTube.api:2019-12-22 21:57:40,717:INFO:........Channel 45
+a_data_processing.YouTube.api:2019-12-22 21:57:40,962:INFO:........Channel 46
+a_data_processing.YouTube.api:2019-12-22 21:57:41,190:INFO:........Channel 47
+a_data_processing.YouTube.api:2019-12-22 21:57:41,408:INFO:........Channel 48
+a_data_processing.YouTube.api:2019-12-22 21:57:41,646:INFO:........Channel 49
+a_data_processing.YouTube.api:2019-12-22 21:57:41,871:INFO:........Channel 50
+a_data_processing.YouTube.api:2019-12-22 21:57:42,094:INFO:........Channel 51
+a_data_processing.YouTube.api:2019-12-22 21:57:42,305:INFO:........Channel 52
+a_data_processing.YouTube.api:2019-12-22 21:57:42,542:INFO:........Channel 53
+a_data_processing.YouTube.api:2019-12-22 21:57:42,847:INFO:........Channel 54
+a_data_processing.YouTube.api:2019-12-22 21:57:43,100:INFO:........Channel 55
+a_data_processing.YouTube.api:2019-12-22 21:57:43,340:INFO:........Channel 56
+a_data_processing.YouTube.api:2019-12-22 21:57:43,564:INFO:........Channel 57
+a_data_processing.YouTube.api:2019-12-22 21:57:43,805:INFO:........Channel 58
+a_data_processing.YouTube.api:2019-12-22 21:57:44,148:INFO:........Channel 59
+a_data_processing.YouTube.api:2019-12-22 21:57:44,400:INFO:........Channel 60
+a_data_processing.YouTube.api:2019-12-22 21:57:44,623:INFO:........Channel 61
+a_data_processing.YouTube.api:2019-12-22 21:57:44,843:INFO:........Channel 62
+a_data_processing.YouTube.api:2019-12-22 21:57:45,069:INFO:........Channel 63
+a_data_processing.YouTube.api:2019-12-22 21:57:45,292:INFO:........Channel 64
+a_data_processing.YouTube.api:2019-12-22 21:57:45,547:INFO:........Channel 65
+a_data_processing.YouTube.api:2019-12-22 21:57:45,750:INFO:........Channel 66
+a_data_processing.YouTube.api:2019-12-22 21:57:45,975:INFO:........Channel 67
+a_data_processing.YouTube.api:2019-12-22 21:57:46,214:INFO:........Channel 68
+a_data_processing.YouTube.api:2019-12-22 21:57:46,446:INFO:........Channel 69
+a_data_processing.YouTube.api:2019-12-22 21:57:46,685:INFO:........Channel 70
+a_data_processing.YouTube.api:2019-12-22 21:57:46,911:INFO:........Channel 71
+a_data_processing.YouTube.api:2019-12-22 21:57:47,136:INFO:........Channel 72
+a_data_processing.YouTube.api:2019-12-22 21:57:47,372:INFO:........Channel 73
+a_data_processing.YouTube.api:2019-12-22 21:57:47,575:INFO:........Channel 74
+a_data_processing.YouTube.api:2019-12-22 21:57:47,779:INFO:........Channel 75
+a_data_processing.YouTube.api:2019-12-22 21:57:48,006:INFO:........Channel 76
+a_data_processing.YouTube.api:2019-12-22 21:57:48,223:INFO:........Channel 77
+a_data_processing.YouTube.api:2019-12-22 21:57:48,452:INFO:........Channel 78
+a_data_processing.YouTube.api:2019-12-22 21:57:48,679:INFO:........Channel 79
+a_data_processing.YouTube.api:2019-12-22 21:57:48,893:INFO:........Channel 80
+a_data_processing.YouTube.api:2019-12-22 21:57:49,127:INFO:........Channel 81
+a_data_processing.YouTube.api:2019-12-22 21:57:49,350:INFO:........Channel 82
+a_data_processing.YouTube.api:2019-12-22 21:57:49,556:INFO:........Channel 83
+a_data_processing.YouTube.api:2019-12-22 21:57:49,794:INFO:........Channel 84
+a_data_processing.YouTube.api:2019-12-22 21:57:50,018:INFO:........Channel 85
+a_data_processing.YouTube.api:2019-12-22 21:57:50,301:INFO:........Channel 86
+a_data_processing.YouTube.api:2019-12-22 21:57:50,520:INFO:........Channel 87
+a_data_processing.YouTube.api:2019-12-22 21:57:50,755:INFO:........Channel 88
+a_data_processing.YouTube.api:2019-12-22 21:57:50,978:INFO:........Channel 89
+a_data_processing.YouTube.api:2019-12-22 21:57:51,203:INFO:........Channel 90
+a_data_processing.YouTube.api:2019-12-22 21:57:51,435:INFO:........Channel 91
+a_data_processing.YouTube.api:2019-12-22 21:57:51,652:INFO:........Channel 92
+a_data_processing.YouTube.api:2019-12-22 21:57:51,895:INFO:........Channel 93
+a_data_processing.YouTube.api:2019-12-22 21:57:52,132:INFO:........Channel 94
+a_data_processing.YouTube.api:2019-12-22 21:57:52,381:INFO:........Channel 95
+a_data_processing.YouTube.api:2019-12-22 21:57:52,618:INFO:........Channel 96
+a_data_processing.YouTube.api:2019-12-22 21:57:52,881:INFO:........Channel 97
+a_data_processing.YouTube.api:2019-12-22 21:57:53,103:INFO:........Channel 98
+a_data_processing.YouTube.api:2019-12-22 21:57:53,368:INFO:........Channel 99
+a_data_processing.YouTube.api:2019-12-22 21:57:53,574:INFO:........Channel 100
+a_data_processing.YouTube.api:2019-12-22 21:57:53,814:INFO:........Channel 101
+a_data_processing.YouTube.api:2019-12-22 21:57:54,052:INFO:........Channel 102
+a_data_processing.YouTube.api:2019-12-22 21:57:54,286:INFO:........Channel 103
+a_data_processing.YouTube.api:2019-12-22 21:57:54,517:INFO:........Channel 104
+a_data_processing.YouTube.api:2019-12-22 21:57:54,741:INFO:........Channel 105
+a_data_processing.YouTube.api:2019-12-22 21:57:54,984:INFO:........Channel 106
+a_data_processing.YouTube.api:2019-12-22 21:57:55,201:INFO:........Channel 107
+a_data_processing.YouTube.api:2019-12-22 21:57:55,433:INFO:........Channel 108
+a_data_processing.YouTube.api:2019-12-22 21:57:55,685:INFO:........Channel 109
+a_data_processing.YouTube.api:2019-12-22 21:57:55,889:INFO:........Channel 110
+a_data_processing.YouTube.api:2019-12-22 21:57:56,094:INFO:........Channel 111
+a_data_processing.YouTube.api:2019-12-22 21:57:56,294:INFO:........Channel 112
+a_data_processing.YouTube.api:2019-12-22 21:57:56,525:INFO:........Channel 113
+a_data_processing.YouTube.api:2019-12-22 21:57:56,750:INFO:........Channel 114
+a_data_processing.YouTube.api:2019-12-22 21:57:56,981:INFO:........Channel 115
+a_data_processing.YouTube.api:2019-12-22 21:57:57,211:INFO:........Channel 116
+a_data_processing.YouTube.api:2019-12-22 21:57:57,464:INFO:........Channel 117
+a_data_processing.YouTube.api:2019-12-22 21:57:57,678:INFO:........Channel 118
+a_data_processing.YouTube.api:2019-12-22 21:57:57,909:INFO:........Channel 119
+a_data_processing.YouTube.api:2019-12-22 21:57:58,134:INFO:........Channel 120
+a_data_processing.YouTube.api:2019-12-22 21:57:58,369:INFO:........Channel 121
+a_data_processing.YouTube.api:2019-12-22 21:57:58,576:INFO:........Channel 122
+a_data_processing.YouTube.api:2019-12-22 21:57:58,795:INFO:........Channel 123
+a_data_processing.YouTube.api:2019-12-22 21:57:59,011:INFO:........Channel 124
+a_data_processing.YouTube.api:2019-12-22 21:57:59,246:INFO:........Channel 125
+a_data_processing.YouTube.api:2019-12-22 21:57:59,489:INFO:........Channel 126
+a_data_processing.YouTube.api:2019-12-22 21:57:59,747:INFO:........Channel 127
+a_data_processing.YouTube.api:2019-12-22 21:57:59,989:INFO:........Channel 128
+a_data_processing.YouTube.api:2019-12-22 21:58:00,202:INFO:........Channel 129
+a_data_processing.YouTube.api:2019-12-22 21:58:00,415:INFO:........Channel 130
+a_data_processing.YouTube.api:2019-12-22 21:58:00,621:INFO:........Channel 131
+a_data_processing.YouTube.api:2019-12-22 21:58:00,858:INFO:........Channel 132
+a_data_processing.YouTube.api:2019-12-22 21:58:01,094:INFO:........Channel 133
+a_data_processing.YouTube.api:2019-12-22 21:58:01,340:INFO:........Channel 134
+a_data_processing.YouTube.api:2019-12-22 21:58:01,549:INFO:........Channel 135
+a_data_processing.YouTube.api:2019-12-22 21:58:01,749:INFO:........Channel 136
+a_data_processing.YouTube.api:2019-12-22 21:58:01,958:INFO:........Channel 137
+a_data_processing.YouTube.api:2019-12-22 21:58:02,181:INFO:........Channel 138
+a_data_processing.YouTube.api:2019-12-22 21:58:02,402:INFO:........Channel 139
+a_data_processing.YouTube.api:2019-12-22 21:58:02,612:INFO:........Channel 140
+a_data_processing.YouTube.api:2019-12-22 21:58:02,830:INFO:........Channel 141
+a_data_processing.YouTube.api:2019-12-22 21:58:03,065:INFO:........Channel 142
+a_data_processing.YouTube.api:2019-12-22 21:58:03,300:INFO:........Channel 143
+a_data_processing.YouTube.api:2019-12-22 21:58:03,535:INFO:........Channel 144
+a_data_processing.YouTube.api:2019-12-22 21:58:03,770:INFO:........Channel 145
+a_data_processing.YouTube.api:2019-12-22 21:58:04,004:INFO:........Channel 146
+a_data_processing.YouTube.api:2019-12-22 21:58:04,241:INFO:........Channel 147
+a_data_processing.YouTube.api:2019-12-22 21:58:04,506:INFO:........Channel 148
+a_data_processing.YouTube.api:2019-12-22 21:58:04,758:INFO:........Channel 149
+a_data_processing.YouTube.api:2019-12-22 21:58:04,983:INFO:........Channel 150
+a_data_processing.YouTube.api:2019-12-22 21:58:05,204:INFO:........Channel 151
+a_data_processing.YouTube.api:2019-12-22 21:58:05,418:INFO:........Channel 152
+a_data_processing.YouTube.api:2019-12-22 21:58:05,644:INFO:........Channel 153
+a_data_processing.YouTube.api:2019-12-22 21:58:05,879:INFO:........Channel 154
+a_data_processing.YouTube.api:2019-12-22 21:58:06,110:INFO:........Channel 155
+a_data_processing.YouTube.api:2019-12-22 21:58:06,317:INFO:........Channel 156
+a_data_processing.YouTube.api:2019-12-22 21:58:06,535:INFO:........Channel 157
+a_data_processing.YouTube.api:2019-12-22 21:58:06,737:INFO:........Channel 158
+a_data_processing.YouTube.api:2019-12-22 21:58:06,965:INFO:........Channel 159
+a_data_processing.YouTube.api:2019-12-22 21:58:07,192:INFO:........Channel 160
+a_data_processing.YouTube.api:2019-12-22 21:58:07,458:INFO:........Channel 161
+a_data_processing.YouTube.api:2019-12-22 21:58:07,681:INFO:........Channel 162
+a_data_processing.YouTube.api:2019-12-22 21:58:07,890:INFO:........Channel 163
+a_data_processing.YouTube.api:2019-12-22 21:58:08,110:INFO:........Channel 164
+a_data_processing.YouTube.api:2019-12-22 21:58:08,313:INFO:........Channel 165
+a_data_processing.YouTube.api:2019-12-22 21:58:08,547:INFO:........Channel 166
+a_data_processing.YouTube.api:2019-12-22 21:58:08,856:INFO:........Channel 167
+a_data_processing.YouTube.api:2019-12-22 21:58:09,165:INFO:........Channel 168
+a_data_processing.YouTube.api:2019-12-22 21:58:09,378:INFO:........Channel 169
+a_data_processing.YouTube.api:2019-12-22 21:58:09,603:INFO:........Channel 170
+a_data_processing.YouTube.api:2019-12-22 21:58:09,839:INFO:........Channel 171
+a_data_processing.YouTube.api:2019-12-22 21:58:10,063:INFO:........Channel 172
+a_data_processing.YouTube.api:2019-12-22 21:58:10,286:INFO:........Channel 173
+a_data_processing.YouTube.api:2019-12-22 21:58:10,491:INFO:........Channel 174
+a_data_processing.YouTube.api:2019-12-22 21:58:10,771:INFO:........Channel 175
+a_data_processing.YouTube.api:2019-12-22 21:58:11,013:INFO:........Channel 176
+a_data_processing.YouTube.api:2019-12-22 21:58:11,221:INFO:........Channel 177
+a_data_processing.YouTube.api:2019-12-22 21:58:11,447:INFO:........Channel 178
+a_data_processing.YouTube.api:2019-12-22 21:58:11,677:INFO:........Channel 179
+a_data_processing.YouTube.api:2019-12-22 21:58:11,893:INFO:........Channel 180
+a_data_processing.YouTube.api:2019-12-22 21:58:12,127:INFO:........Channel 181
+a_data_processing.YouTube.api:2019-12-22 21:58:12,353:INFO:........Channel 182
+a_data_processing.YouTube.api:2019-12-22 21:58:12,575:INFO:........Channel 183
+a_data_processing.YouTube.api:2019-12-22 21:58:12,810:INFO:........Channel 184
+a_data_processing.YouTube.api:2019-12-22 21:58:13,053:INFO:........Channel 185
+a_data_processing.YouTube.api:2019-12-22 21:58:13,316:INFO:........Channel 186
+a_data_processing.YouTube.api:2019-12-22 21:58:13,566:INFO:........Channel 187
+a_data_processing.YouTube.api:2019-12-22 21:58:13,789:INFO:........Channel 188
+a_data_processing.YouTube.api:2019-12-22 21:58:14,003:INFO:........Channel 189
+a_data_processing.YouTube.api:2019-12-22 21:58:14,209:INFO:........Channel 190
+a_data_processing.YouTube.api:2019-12-22 21:58:14,431:INFO:........Channel 191
+a_data_processing.YouTube.api:2019-12-22 21:58:14,657:INFO:........Channel 192
+a_data_processing.YouTube.api:2019-12-22 21:58:14,865:INFO:........Channel 193
+a_data_processing.YouTube.api:2019-12-22 21:58:15,077:INFO:........Channel 194
+a_data_processing.YouTube.api:2019-12-22 21:58:15,284:INFO:........Channel 195
+a_data_processing.YouTube.api:2019-12-22 21:58:15,528:INFO:........Channel 196
+a_data_processing.YouTube.api:2019-12-22 21:58:15,762:INFO:........Channel 197
+a_data_processing.YouTube.api:2019-12-22 21:58:15,985:INFO:........Channel 198
+a_data_processing.YouTube.api:2019-12-22 21:58:16,210:INFO:........Channel 199
+a_data_processing.YouTube.api:2019-12-22 21:58:16,446:INFO:........Channel 200
+a_data_processing.YouTube.api:2019-12-22 21:58:16,654:INFO:Download of Raw Data completed at Sun Dec 22 21:58:16 2019
+a_data_processing.YouTube.main:2019-12-22 21:58:16,654:INFO:Download of Raw Data completed
+a_data_processing.YouTube.filters:2019-12-22 21:58:16,655:INFO:Filtering videos data junk...
+a_data_processing.YouTube.filters:2019-12-22 21:58:16,662:INFO:Filtering channel data junk...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:16,667:INFO:Initializing manual web scrapping process...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:16,668:INFO:........Getting Video 1 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:19,022:INFO:........Getting Video 2 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:32,970:INFO:........Getting Video 3 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:36,771:INFO:........Getting Video 4 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:39,061:INFO:........Getting Video 5 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:41,795:INFO:........Getting Video 6 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:46,920:INFO:........Getting Video 7 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:49,472:INFO:........Getting Video 8 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:54,914:INFO:........Getting Video 9 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:58:57,520:INFO:........Getting Video 10 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:00,056:INFO:........Getting Video 11 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:02,716:INFO:........Getting Video 12 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:05,555:INFO:........Getting Video 13 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:09,656:INFO:........Getting Video 14 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:14,220:INFO:........Getting Video 15 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:16,696:INFO:........Getting Video 16 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:19,892:INFO:........Getting Video 17 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:22,327:INFO:........Getting Video 18 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:24,934:INFO:........Getting Video 19 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:28,016:INFO:........Getting Video 20 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:32,149:INFO:........Getting Video 21 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:34,873:INFO:........Getting Video 22 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:37,744:INFO:........Getting Video 23 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:40,327:INFO:........Getting Video 24 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:44,802:INFO:........Getting Video 25 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:47,625:INFO:........Getting Video 26 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:51,636:INFO:........Getting Video 27 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:54,008:INFO:........Getting Video 28 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:56,664:INFO:........Getting Video 29 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 21:59:59,296:INFO:........Getting Video 30 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:01,817:INFO:........Getting Video 31 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:04,775:INFO:........Getting Video 32 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:07,484:INFO:........Getting Video 33 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:09,705:INFO:........Getting Video 34 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:12,127:INFO:........Getting Video 35 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:14,672:INFO:........Getting Video 36 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:17,251:INFO:........Getting Video 37 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:20,981:INFO:........Getting Video 38 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:23,667:INFO:........Getting Video 39 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:26,377:INFO:........Getting Video 40 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:28,920:INFO:........Getting Video 41 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:32,925:INFO:........Getting Video 42 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:35,809:INFO:........Getting Video 43 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:37,840:INFO:........Getting Video 44 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:43,509:INFO:........Getting Video 45 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:48,832:INFO:........Getting Video 46 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:51,480:INFO:........Getting Video 47 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:53,926:INFO:........Getting Video 48 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:56,916:INFO:........Getting Video 49 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:00:59,919:INFO:........Getting Video 50 time duration
+a_data_processing.YouTube.filters:2019-12-22 22:01:02,909:INFO:Creating dictionary from the data...
+a_data_processing.YouTube.filters:2019-12-22 22:01:02,915:INFO:Applying string corrections...
+a_data_processing.YouTube.main:2019-12-22 22:01:02,920:INFO:Data munging completed
+a_data_processing.YouTube.writer:2019-12-22 22:01:02,920:INFO:Converting data into .JSON format...
+a_data_processing.YouTube.writer:2019-12-22 22:01:02,930:INFO:Writing data in file...
+a_data_processing.YouTube.writer:2019-12-22 22:01:02,930:INFO:Creating output folder at C:\Users\maruc\OneDrive\햞ea de Trabalho\WDataa_data_processing\output\YouTube
+a_data_processing.YouTube.main:2019-12-22 22:15:35,676:INFO:Starting YouTube API construct
+a_data_processing.YouTube.main:2019-12-22 22:15:40,355:INFO:Starting process on categories for country BR
+a_data_processing.YouTube.api:2019-12-22 22:15:40,355:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-22 22:15:40,355:INFO:Gathering user developer Key...
+a_data_processing.YouTube.api:2019-12-22 22:15:41,955:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-22 22:15:41,956:INFO:Getting categories information from youtube...
+a_data_processing.YouTube.api:2019-12-22 22:15:42,287:INFO:Download of Raw Data completed at Sun Dec 22 22:15:42 2019
+a_data_processing.YouTube.main:2019-12-22 22:15:42,287:INFO:Download of Raw Data completed
+a_data_processing.YouTube.main:2019-12-22 22:15:42,289:INFO:Data munging completed
+a_data_processing.YouTube.writer:2019-12-22 22:15:42,289:INFO:Converting data into .JSON format...
+a_data_processing.YouTube.writer:2019-12-22 22:15:42,289:INFO:Writing data in file...
+a_data_processing.YouTube.main:2019-12-22 22:15:49,766:INFO:Starting YouTube API construct
+a_data_processing.YouTube.main:2019-12-22 22:15:54,475:INFO:Starting process on trends, category 0 for country BR
+a_data_processing.YouTube.api:2019-12-22 22:15:54,476:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-22 22:15:54,477:INFO:Gathering user developer Key...
+a_data_processing.YouTube.api:2019-12-22 22:15:56,031:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-22 22:15:56,031:INFO:Getting videos information from youtube...
+a_data_processing.YouTube.api:2019-12-22 22:15:56,921:INFO:........Page 1
+a_data_processing.YouTube.api:2019-12-22 22:15:57,716:INFO:........Page 2
+a_data_processing.YouTube.api:2019-12-22 22:15:58,421:INFO:........Page 3
+a_data_processing.YouTube.api:2019-12-22 22:15:59,078:INFO:........Page 4
+a_data_processing.YouTube.api:2019-12-22 22:15:59,078:INFO:Getting channels information...
+a_data_processing.YouTube.api:2019-12-22 22:15:59,079:INFO:........Channel 1
+a_data_processing.YouTube.api:2019-12-22 22:15:59,357:INFO:........Channel 2
+a_data_processing.YouTube.api:2019-12-22 22:15:59,603:INFO:........Channel 3
+a_data_processing.YouTube.api:2019-12-22 22:15:59,844:INFO:........Channel 4
+a_data_processing.YouTube.api:2019-12-22 22:16:00,319:INFO:........Channel 5
+a_data_processing.YouTube.api:2019-12-22 22:16:00,578:INFO:........Channel 6
+a_data_processing.YouTube.api:2019-12-22 22:16:00,834:INFO:........Channel 7
+a_data_processing.YouTube.api:2019-12-22 22:16:01,045:INFO:........Channel 8
+a_data_processing.YouTube.api:2019-12-22 22:16:01,265:INFO:........Channel 9
+a_data_processing.YouTube.api:2019-12-22 22:16:01,479:INFO:........Channel 10
+a_data_processing.YouTube.api:2019-12-22 22:16:01,714:INFO:........Channel 11
+a_data_processing.YouTube.api:2019-12-22 22:16:01,938:INFO:........Channel 12
+a_data_processing.YouTube.api:2019-12-22 22:16:02,194:INFO:........Channel 13
+a_data_processing.YouTube.api:2019-12-22 22:16:02,434:INFO:........Channel 14
+a_data_processing.YouTube.api:2019-12-22 22:16:02,662:INFO:........Channel 15
+a_data_processing.YouTube.api:2019-12-22 22:16:02,895:INFO:........Channel 16
+a_data_processing.YouTube.api:2019-12-22 22:16:03,104:INFO:........Channel 17
+a_data_processing.YouTube.api:2019-12-22 22:16:03,370:INFO:........Channel 18
+a_data_processing.YouTube.api:2019-12-22 22:16:03,591:INFO:........Channel 19
+a_data_processing.YouTube.api:2019-12-22 22:16:03,816:INFO:........Channel 20
+a_data_processing.YouTube.api:2019-12-22 22:16:04,040:INFO:........Channel 21
+a_data_processing.YouTube.api:2019-12-22 22:16:04,263:INFO:........Channel 22
+a_data_processing.YouTube.api:2019-12-22 22:16:04,478:INFO:........Channel 23
+a_data_processing.YouTube.api:2019-12-22 22:16:04,741:INFO:........Channel 24
+a_data_processing.YouTube.api:2019-12-22 22:16:04,972:INFO:........Channel 25
+a_data_processing.YouTube.api:2019-12-22 22:16:05,216:INFO:........Channel 26
+a_data_processing.YouTube.api:2019-12-22 22:16:10,455:INFO:........Channel 27
+a_data_processing.YouTube.api:2019-12-22 22:16:10,693:INFO:........Channel 28
+a_data_processing.YouTube.api:2019-12-22 22:16:10,924:INFO:........Channel 29
+a_data_processing.YouTube.api:2019-12-22 22:16:11,129:INFO:........Channel 30
+a_data_processing.YouTube.api:2019-12-22 22:16:11,351:INFO:........Channel 31
+a_data_processing.YouTube.api:2019-12-22 22:16:11,589:INFO:........Channel 32
+a_data_processing.YouTube.api:2019-12-22 22:16:11,820:INFO:........Channel 33
+a_data_processing.YouTube.api:2019-12-22 22:16:12,044:INFO:........Channel 34
+a_data_processing.YouTube.api:2019-12-22 22:16:12,260:INFO:........Channel 35
+a_data_processing.YouTube.api:2019-12-22 22:16:12,474:INFO:........Channel 36
+a_data_processing.YouTube.api:2019-12-22 22:16:12,700:INFO:........Channel 37
+a_data_processing.YouTube.api:2019-12-22 22:16:12,928:INFO:........Channel 38
+a_data_processing.YouTube.api:2019-12-22 22:16:13,134:INFO:........Channel 39
+a_data_processing.YouTube.api:2019-12-22 22:16:13,348:INFO:........Channel 40
+a_data_processing.YouTube.api:2019-12-22 22:16:13,579:INFO:........Channel 41
+a_data_processing.YouTube.api:2019-12-22 22:16:13,796:INFO:........Channel 42
+a_data_processing.YouTube.api:2019-12-22 22:16:14,063:INFO:........Channel 43
+a_data_processing.YouTube.api:2019-12-22 22:16:14,316:INFO:........Channel 44
+a_data_processing.YouTube.api:2019-12-22 22:16:14,542:INFO:........Channel 45
+a_data_processing.YouTube.api:2019-12-22 22:16:14,760:INFO:........Channel 46
+a_data_processing.YouTube.api:2019-12-22 22:16:14,989:INFO:........Channel 47
+a_data_processing.YouTube.api:2019-12-22 22:16:15,240:INFO:........Channel 48
+a_data_processing.YouTube.api:2019-12-22 22:16:15,498:INFO:........Channel 49
+a_data_processing.YouTube.api:2019-12-22 22:16:15,741:INFO:........Channel 50
+a_data_processing.YouTube.api:2019-12-22 22:16:15,967:INFO:........Channel 51
+a_data_processing.YouTube.api:2019-12-22 22:16:16,189:INFO:........Channel 52
+a_data_processing.YouTube.api:2019-12-22 22:16:16,405:INFO:........Channel 53
+a_data_processing.YouTube.api:2019-12-22 22:16:16,625:INFO:........Channel 54
+a_data_processing.YouTube.api:2019-12-22 22:16:16,863:INFO:........Channel 55
+a_data_processing.YouTube.api:2019-12-22 22:16:17,097:INFO:........Channel 56
+a_data_processing.YouTube.api:2019-12-22 22:16:17,319:INFO:........Channel 57
+a_data_processing.YouTube.api:2019-12-22 22:16:17,569:INFO:........Channel 58
+a_data_processing.YouTube.api:2019-12-22 22:16:17,821:INFO:........Channel 59
+a_data_processing.YouTube.api:2019-12-22 22:16:18,073:INFO:........Channel 60
+a_data_processing.YouTube.api:2019-12-22 22:16:18,324:INFO:........Channel 61
+a_data_processing.YouTube.api:2019-12-22 22:16:18,532:INFO:........Channel 62
+a_data_processing.YouTube.api:2019-12-22 22:16:18,750:INFO:........Channel 63
+a_data_processing.YouTube.api:2019-12-22 22:16:18,979:INFO:........Channel 64
+a_data_processing.YouTube.api:2019-12-22 22:16:19,204:INFO:........Channel 65
+a_data_processing.YouTube.api:2019-12-22 22:16:19,427:INFO:........Channel 66
+a_data_processing.YouTube.api:2019-12-22 22:16:19,653:INFO:........Channel 67
+a_data_processing.YouTube.api:2019-12-22 22:16:19,884:INFO:........Channel 68
+a_data_processing.YouTube.api:2019-12-22 22:16:20,120:INFO:........Channel 69
+a_data_processing.YouTube.api:2019-12-22 22:16:20,364:INFO:........Channel 70
+a_data_processing.YouTube.api:2019-12-22 22:16:20,628:INFO:........Channel 71
+a_data_processing.YouTube.api:2019-12-22 22:16:20,865:INFO:........Channel 72
+a_data_processing.YouTube.api:2019-12-22 22:16:21,129:INFO:........Channel 73
+a_data_processing.YouTube.api:2019-12-22 22:16:21,381:INFO:........Channel 74
+a_data_processing.YouTube.api:2019-12-22 22:16:21,620:INFO:........Channel 75
+a_data_processing.YouTube.api:2019-12-22 22:16:21,848:INFO:........Channel 76
+a_data_processing.YouTube.api:2019-12-22 22:16:22,091:INFO:........Channel 77
+a_data_processing.YouTube.api:2019-12-22 22:16:22,351:INFO:........Channel 78
+a_data_processing.YouTube.api:2019-12-22 22:16:22,570:INFO:........Channel 79
+a_data_processing.YouTube.api:2019-12-22 22:16:22,790:INFO:........Channel 80
+a_data_processing.YouTube.api:2019-12-22 22:16:23,034:INFO:........Channel 81
+a_data_processing.YouTube.api:2019-12-22 22:16:23,266:INFO:........Channel 82
+a_data_processing.YouTube.api:2019-12-22 22:16:23,552:INFO:........Channel 83
+a_data_processing.YouTube.api:2019-12-22 22:16:23,793:INFO:........Channel 84
+a_data_processing.YouTube.api:2019-12-22 22:16:24,008:INFO:........Channel 85
+a_data_processing.YouTube.api:2019-12-22 22:16:24,216:INFO:........Channel 86
+a_data_processing.YouTube.api:2019-12-22 22:16:24,425:INFO:........Channel 87
+a_data_processing.YouTube.api:2019-12-22 22:16:24,651:INFO:........Channel 88
+a_data_processing.YouTube.api:2019-12-22 22:16:24,883:INFO:........Channel 89
+a_data_processing.YouTube.api:2019-12-22 22:16:25,142:INFO:........Channel 90
+a_data_processing.YouTube.api:2019-12-22 22:16:25,384:INFO:........Channel 91
+a_data_processing.YouTube.api:2019-12-22 22:16:25,596:INFO:........Channel 92
+a_data_processing.YouTube.api:2019-12-22 22:16:25,841:INFO:........Channel 93
+a_data_processing.YouTube.api:2019-12-22 22:16:26,084:INFO:........Channel 94
+a_data_processing.YouTube.api:2019-12-22 22:16:26,333:INFO:........Channel 95
+a_data_processing.YouTube.api:2019-12-22 22:16:26,550:INFO:........Channel 96
+a_data_processing.YouTube.api:2019-12-22 22:16:26,801:INFO:........Channel 97
+a_data_processing.YouTube.api:2019-12-22 22:16:27,029:INFO:........Channel 98
+a_data_processing.YouTube.api:2019-12-22 22:16:27,244:INFO:........Channel 99
+a_data_processing.YouTube.api:2019-12-22 22:16:27,478:INFO:........Channel 100
+a_data_processing.YouTube.api:2019-12-22 22:16:27,719:INFO:........Channel 101
+a_data_processing.YouTube.api:2019-12-22 22:16:27,954:INFO:........Channel 102
+a_data_processing.YouTube.api:2019-12-22 22:16:28,208:INFO:........Channel 103
+a_data_processing.YouTube.api:2019-12-22 22:16:28,430:INFO:........Channel 104
+a_data_processing.YouTube.api:2019-12-22 22:16:28,656:INFO:........Channel 105
+a_data_processing.YouTube.api:2019-12-22 22:16:28,858:INFO:........Channel 106
+a_data_processing.YouTube.api:2019-12-22 22:16:29,070:INFO:........Channel 107
+a_data_processing.YouTube.api:2019-12-22 22:16:29,275:INFO:........Channel 108
+a_data_processing.YouTube.api:2019-12-22 22:16:29,505:INFO:........Channel 109
+a_data_processing.YouTube.api:2019-12-22 22:16:29,733:INFO:........Channel 110
+a_data_processing.YouTube.api:2019-12-22 22:16:29,961:INFO:........Channel 111
+a_data_processing.YouTube.api:2019-12-22 22:16:30,199:INFO:........Channel 112
+a_data_processing.YouTube.api:2019-12-22 22:16:30,437:INFO:........Channel 113
+a_data_processing.YouTube.api:2019-12-22 22:16:30,641:INFO:........Channel 114
+a_data_processing.YouTube.api:2019-12-22 22:16:30,870:INFO:........Channel 115
+a_data_processing.YouTube.api:2019-12-22 22:16:31,114:INFO:........Channel 116
+a_data_processing.YouTube.api:2019-12-22 22:16:31,351:INFO:........Channel 117
+a_data_processing.YouTube.api:2019-12-22 22:16:31,598:INFO:........Channel 118
+a_data_processing.YouTube.api:2019-12-22 22:16:31,853:INFO:........Channel 119
+a_data_processing.YouTube.api:2019-12-22 22:16:32,078:INFO:........Channel 120
+a_data_processing.YouTube.api:2019-12-22 22:16:32,290:INFO:........Channel 121
+a_data_processing.YouTube.api:2019-12-22 22:16:32,496:INFO:........Channel 122
+a_data_processing.YouTube.api:2019-12-22 22:16:32,753:INFO:........Channel 123
+a_data_processing.YouTube.api:2019-12-22 22:16:32,974:INFO:........Channel 124
+a_data_processing.YouTube.api:2019-12-22 22:16:33,212:INFO:........Channel 125
+a_data_processing.YouTube.api:2019-12-22 22:16:33,455:INFO:........Channel 126
+a_data_processing.YouTube.api:2019-12-22 22:16:33,703:INFO:........Channel 127
+a_data_processing.YouTube.api:2019-12-22 22:16:33,941:INFO:........Channel 128
+a_data_processing.YouTube.api:2019-12-22 22:16:34,147:INFO:........Channel 129
+a_data_processing.YouTube.api:2019-12-22 22:16:34,353:INFO:........Channel 130
+a_data_processing.YouTube.api:2019-12-22 22:16:34,574:INFO:........Channel 131
+a_data_processing.YouTube.api:2019-12-22 22:16:34,807:INFO:........Channel 132
+a_data_processing.YouTube.api:2019-12-22 22:16:35,021:INFO:........Channel 133
+a_data_processing.YouTube.api:2019-12-22 22:16:35,261:INFO:........Channel 134
+a_data_processing.YouTube.api:2019-12-22 22:16:35,492:INFO:........Channel 135
+a_data_processing.YouTube.api:2019-12-22 22:16:35,741:INFO:........Channel 136
+a_data_processing.YouTube.api:2019-12-22 22:16:36,014:INFO:........Channel 137
+a_data_processing.YouTube.api:2019-12-22 22:16:36,243:INFO:........Channel 138
+a_data_processing.YouTube.api:2019-12-22 22:16:36,484:INFO:........Channel 139
+a_data_processing.YouTube.api:2019-12-22 22:16:36,700:INFO:........Channel 140
+a_data_processing.YouTube.api:2019-12-22 22:16:36,948:INFO:........Channel 141
+a_data_processing.YouTube.api:2019-12-22 22:16:37,185:INFO:........Channel 142
+a_data_processing.YouTube.api:2019-12-22 22:16:37,428:INFO:........Channel 143
+a_data_processing.YouTube.api:2019-12-22 22:16:37,644:INFO:........Channel 144
+a_data_processing.YouTube.api:2019-12-22 22:16:37,856:INFO:........Channel 145
+a_data_processing.YouTube.api:2019-12-22 22:16:38,084:INFO:........Channel 146
+a_data_processing.YouTube.api:2019-12-22 22:16:38,346:INFO:........Channel 147
+a_data_processing.YouTube.api:2019-12-22 22:16:38,597:INFO:........Channel 148
+a_data_processing.YouTube.api:2019-12-22 22:16:38,811:INFO:........Channel 149
+a_data_processing.YouTube.api:2019-12-22 22:16:39,035:INFO:........Channel 150
+a_data_processing.YouTube.api:2019-12-22 22:16:39,280:INFO:........Channel 151
+a_data_processing.YouTube.api:2019-12-22 22:16:39,506:INFO:........Channel 152
+a_data_processing.YouTube.api:2019-12-22 22:16:39,765:INFO:........Channel 153
+a_data_processing.YouTube.api:2019-12-22 22:16:39,988:INFO:........Channel 154
+a_data_processing.YouTube.api:2019-12-22 22:16:40,225:INFO:........Channel 155
+a_data_processing.YouTube.api:2019-12-22 22:16:40,435:INFO:........Channel 156
+a_data_processing.YouTube.api:2019-12-22 22:16:40,673:INFO:........Channel 157
+a_data_processing.YouTube.api:2019-12-22 22:16:40,903:INFO:........Channel 158
+a_data_processing.YouTube.api:2019-12-22 22:16:41,144:INFO:........Channel 159
+a_data_processing.YouTube.api:2019-12-22 22:16:41,360:INFO:........Channel 160
+a_data_processing.YouTube.api:2019-12-22 22:16:41,574:INFO:........Channel 161
+a_data_processing.YouTube.api:2019-12-22 22:16:41,800:INFO:........Channel 162
+a_data_processing.YouTube.api:2019-12-22 22:16:42,045:INFO:........Channel 163
+a_data_processing.YouTube.api:2019-12-22 22:16:42,278:INFO:........Channel 164
+a_data_processing.YouTube.api:2019-12-22 22:16:42,530:INFO:........Channel 165
+a_data_processing.YouTube.api:2019-12-22 22:16:42,778:INFO:........Channel 166
+a_data_processing.YouTube.api:2019-12-22 22:16:43,045:INFO:........Channel 167
+a_data_processing.YouTube.api:2019-12-22 22:16:43,309:INFO:........Channel 168
+a_data_processing.YouTube.api:2019-12-22 22:16:43,551:INFO:........Channel 169
+a_data_processing.YouTube.api:2019-12-22 22:16:43,839:INFO:........Channel 170
+a_data_processing.YouTube.api:2019-12-22 22:16:44,076:INFO:........Channel 171
+a_data_processing.YouTube.api:2019-12-22 22:16:44,295:INFO:........Channel 172
+a_data_processing.YouTube.api:2019-12-22 22:16:44,525:INFO:........Channel 173
+a_data_processing.YouTube.api:2019-12-22 22:16:44,761:INFO:........Channel 174
+a_data_processing.YouTube.api:2019-12-22 22:16:45,004:INFO:........Channel 175
+a_data_processing.YouTube.api:2019-12-22 22:16:45,230:INFO:........Channel 176
+a_data_processing.YouTube.api:2019-12-22 22:16:45,450:INFO:........Channel 177
+a_data_processing.YouTube.api:2019-12-22 22:16:45,676:INFO:........Channel 178
+a_data_processing.YouTube.api:2019-12-22 22:16:45,893:INFO:........Channel 179
+a_data_processing.YouTube.api:2019-12-22 22:16:46,124:INFO:........Channel 180
+a_data_processing.YouTube.api:2019-12-22 22:16:46,375:INFO:........Channel 181
+a_data_processing.YouTube.api:2019-12-22 22:16:46,601:INFO:........Channel 182
+a_data_processing.YouTube.api:2019-12-22 22:16:46,824:INFO:........Channel 183
+a_data_processing.YouTube.api:2019-12-22 22:16:47,057:INFO:........Channel 184
+a_data_processing.YouTube.api:2019-12-22 22:16:47,302:INFO:........Channel 185
+a_data_processing.YouTube.api:2019-12-22 22:16:47,527:INFO:........Channel 186
+a_data_processing.YouTube.api:2019-12-22 22:16:47,756:INFO:........Channel 187
+a_data_processing.YouTube.api:2019-12-22 22:16:47,978:INFO:........Channel 188
+a_data_processing.YouTube.api:2019-12-22 22:16:48,190:INFO:........Channel 189
+a_data_processing.YouTube.api:2019-12-22 22:16:48,415:INFO:........Channel 190
+a_data_processing.YouTube.api:2019-12-22 22:16:48,669:INFO:........Channel 191
+a_data_processing.YouTube.api:2019-12-22 22:16:48,896:INFO:........Channel 192
+a_data_processing.YouTube.api:2019-12-22 22:16:49,112:INFO:........Channel 193
+a_data_processing.YouTube.api:2019-12-22 22:16:49,331:INFO:........Channel 194
+a_data_processing.YouTube.api:2019-12-22 22:16:49,578:INFO:........Channel 195
+a_data_processing.YouTube.api:2019-12-22 22:16:49,803:INFO:........Channel 196
+a_data_processing.YouTube.api:2019-12-22 22:16:50,067:INFO:........Channel 197
+a_data_processing.YouTube.api:2019-12-22 22:16:50,285:INFO:........Channel 198
+a_data_processing.YouTube.api:2019-12-22 22:16:50,540:INFO:........Channel 199
+a_data_processing.YouTube.api:2019-12-22 22:16:50,781:INFO:........Channel 200
+a_data_processing.YouTube.api:2019-12-22 22:16:51,016:INFO:Download of Raw Data completed at Sun Dec 22 22:16:51 2019
+a_data_processing.YouTube.main:2019-12-22 22:16:51,016:INFO:Download of Raw Data completed
+a_data_processing.YouTube.filters:2019-12-22 22:16:51,017:INFO:Filtering videos data junk...
+a_data_processing.YouTube.filters:2019-12-22 22:16:51,026:INFO:Filtering channel data junk...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:16:51,030:INFO:Initializing manual web scrapping process...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:16:51,030:INFO:........Getting Video 1 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:16:53,686:INFO:........Getting Video 2 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:16:55,978:INFO:........Getting Video 3 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:16:58,225:INFO:........Getting Video 4 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:00,451:INFO:........Getting Video 5 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:02,806:INFO:........Getting Video 6 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:07,471:INFO:........Getting Video 7 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:11,556:INFO:........Getting Video 8 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:14,471:INFO:........Getting Video 9 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:17,178:INFO:........Getting Video 10 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:20,042:INFO:........Getting Video 11 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:23,044:INFO:........Getting Video 12 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:26,307:INFO:........Getting Video 13 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:30,259:INFO:........Getting Video 14 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:36,001:INFO:........Getting Video 15 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:38,627:INFO:........Getting Video 16 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:43,254:INFO:........Getting Video 17 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:45,709:INFO:........Getting Video 18 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:48,378:INFO:........Getting Video 19 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:51,292:INFO:........Getting Video 20 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:55,069:INFO:........Getting Video 21 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:17:57,920:INFO:........Getting Video 22 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:00,455:INFO:........Getting Video 23 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:02,927:INFO:........Getting Video 24 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:05,297:INFO:........Getting Video 25 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:08,064:INFO:........Getting Video 26 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:11,748:INFO:........Getting Video 27 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:14,209:INFO:........Getting Video 28 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:17,075:INFO:........Getting Video 29 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:19,825:INFO:........Getting Video 30 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:22,606:INFO:........Getting Video 31 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:25,064:INFO:........Getting Video 32 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:27,530:INFO:........Getting Video 33 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:30,622:INFO:........Getting Video 34 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:34,084:INFO:........Getting Video 35 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:37,218:INFO:........Getting Video 36 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:41,262:INFO:........Getting Video 37 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:44,449:INFO:........Getting Video 38 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:47,195:INFO:........Getting Video 39 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:51,369:INFO:........Getting Video 40 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:53,451:INFO:........Getting Video 41 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:18:56,807:INFO:........Getting Video 42 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:01,690:INFO:........Getting Video 43 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:04,249:INFO:........Getting Video 44 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:10,336:INFO:........Getting Video 45 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:17,285:INFO:........Getting Video 46 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:20,629:INFO:........Getting Video 47 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:23,612:INFO:........Getting Video 48 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:26,459:INFO:........Getting Video 49 time duration
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:19:29,363:INFO:........Getting Video 50 time duration
+a_data_processing.YouTube.filters:2019-12-22 22:19:32,019:INFO:Creating dictionary from the data...
+a_data_processing.YouTube.filters:2019-12-22 22:19:32,022:INFO:Applying string corrections...
+a_data_processing.YouTube.main:2019-12-22 22:19:32,028:INFO:Data munging completed
+a_data_processing.YouTube.writer:2019-12-22 22:19:32,028:INFO:Converting data into .JSON format...
+a_data_processing.YouTube.writer:2019-12-22 22:19:32,035:INFO:Writing data in file...
+a_data_processing.YouTube.writer:2019-12-22 22:19:32,036:INFO:Creating output folder at C:\Users\maruc\OneDrive\햞ea de Trabalho\WDataa_data_processing\output\YouTube
+a_data_processing.YouTube.main:2019-12-22 22:26:32,778:INFO:Starting YouTube API construct
+a_data_processing.YouTube.main:2019-12-22 22:26:35,997:INFO:Starting process on trends, category 0 for country BR
+a_data_processing.YouTube.api:2019-12-22 22:26:35,998:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-22 22:26:35,999:INFO:Gathering user developer Key...
+a_data_processing.YouTube.api:2019-12-22 22:26:37,537:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-22 22:26:37,538:INFO:Getting videos information from youtube...
+a_data_processing.YouTube.api:2019-12-22 22:26:38,286:INFO:........Page 1
+a_data_processing.YouTube.api:2019-12-22 22:26:38,973:INFO:........Page 2
+a_data_processing.YouTube.api:2019-12-22 22:26:40,524:INFO:........Page 3
+a_data_processing.YouTube.api:2019-12-22 22:26:41,760:INFO:........Page 4
+a_data_processing.YouTube.api:2019-12-22 22:26:41,760:INFO:Getting channels information...
+a_data_processing.YouTube.api:2019-12-22 22:26:41,761:INFO:........Channel 1
+a_data_processing.YouTube.api:2019-12-22 22:26:42,230:INFO:........Channel 2
+a_data_processing.YouTube.api:2019-12-22 22:26:42,538:INFO:........Channel 3
+a_data_processing.YouTube.api:2019-12-22 22:26:43,128:INFO:........Channel 4
+a_data_processing.YouTube.api:2019-12-22 22:26:43,726:INFO:........Channel 5
+a_data_processing.YouTube.api:2019-12-22 22:26:44,102:INFO:........Channel 6
+a_data_processing.YouTube.api:2019-12-22 22:26:44,686:INFO:........Channel 7
+a_data_processing.YouTube.api:2019-12-22 22:26:45,246:INFO:........Channel 8
+a_data_processing.YouTube.api:2019-12-22 22:26:45,684:INFO:........Channel 9
+a_data_processing.YouTube.api:2019-12-22 22:26:46,244:INFO:........Channel 10
+a_data_processing.YouTube.api:2019-12-22 22:26:46,866:INFO:........Channel 11
+a_data_processing.YouTube.api:2019-12-22 22:26:47,217:INFO:........Channel 12
+a_data_processing.YouTube.api:2019-12-22 22:26:47,780:INFO:........Channel 13
+a_data_processing.YouTube.api:2019-12-22 22:26:48,492:INFO:........Channel 14
+a_data_processing.YouTube.api:2019-12-22 22:26:48,775:INFO:........Channel 15
+a_data_processing.YouTube.api:2019-12-22 22:26:49,082:INFO:........Channel 16
+a_data_processing.YouTube.api:2019-12-22 22:26:49,332:INFO:........Channel 17
+a_data_processing.YouTube.api:2019-12-22 22:26:49,568:INFO:........Channel 18
+a_data_processing.YouTube.api:2019-12-22 22:26:49,825:INFO:........Channel 19
+a_data_processing.YouTube.api:2019-12-22 22:26:50,071:INFO:........Channel 20
+a_data_processing.YouTube.api:2019-12-22 22:26:50,299:INFO:........Channel 21
+a_data_processing.YouTube.api:2019-12-22 22:26:50,533:INFO:........Channel 22
+a_data_processing.YouTube.api:2019-12-22 22:26:50,790:INFO:........Channel 23
+a_data_processing.YouTube.api:2019-12-22 22:26:51,148:INFO:........Channel 24
+a_data_processing.YouTube.api:2019-12-22 22:26:51,416:INFO:........Channel 25
+a_data_processing.YouTube.api:2019-12-22 22:26:51,744:INFO:........Channel 26
+a_data_processing.YouTube.api:2019-12-22 22:26:51,984:INFO:........Channel 27
+a_data_processing.YouTube.api:2019-12-22 22:26:52,258:INFO:........Channel 28
+a_data_processing.YouTube.api:2019-12-22 22:26:52,633:INFO:........Channel 29
+a_data_processing.YouTube.api:2019-12-22 22:26:52,972:INFO:........Channel 30
+a_data_processing.YouTube.api:2019-12-22 22:26:53,264:INFO:........Channel 31
+a_data_processing.YouTube.api:2019-12-22 22:26:53,524:INFO:........Channel 32
+a_data_processing.YouTube.api:2019-12-22 22:26:53,743:INFO:........Channel 33
+a_data_processing.YouTube.api:2019-12-22 22:26:53,984:INFO:........Channel 34
+a_data_processing.YouTube.api:2019-12-22 22:26:54,208:INFO:........Channel 35
+a_data_processing.YouTube.api:2019-12-22 22:26:54,416:INFO:........Channel 36
+a_data_processing.YouTube.api:2019-12-22 22:26:54,640:INFO:........Channel 37
+a_data_processing.YouTube.api:2019-12-22 22:26:54,875:INFO:........Channel 38
+a_data_processing.YouTube.api:2019-12-22 22:26:55,123:INFO:........Channel 39
+a_data_processing.YouTube.api:2019-12-22 22:26:55,331:INFO:........Channel 40
+a_data_processing.YouTube.api:2019-12-22 22:26:55,546:INFO:........Channel 41
+a_data_processing.YouTube.api:2019-12-22 22:26:55,762:INFO:........Channel 42
+a_data_processing.YouTube.api:2019-12-22 22:26:56,008:INFO:........Channel 43
+a_data_processing.YouTube.api:2019-12-22 22:26:56,242:INFO:........Channel 44
+a_data_processing.YouTube.api:2019-12-22 22:26:56,464:INFO:........Channel 45
+a_data_processing.YouTube.api:2019-12-22 22:26:56,702:INFO:........Channel 46
+a_data_processing.YouTube.api:2019-12-22 22:26:56,933:INFO:........Channel 47
+a_data_processing.YouTube.api:2019-12-22 22:26:57,139:INFO:........Channel 48
+a_data_processing.YouTube.api:2019-12-22 22:26:57,375:INFO:........Channel 49
+a_data_processing.YouTube.api:2019-12-22 22:26:57,665:INFO:........Channel 50
+a_data_processing.YouTube.api:2019-12-22 22:26:57,875:INFO:........Channel 51
+a_data_processing.YouTube.api:2019-12-22 22:26:58,114:INFO:........Channel 52
+a_data_processing.YouTube.api:2019-12-22 22:26:58,339:INFO:........Channel 53
+a_data_processing.YouTube.api:2019-12-22 22:26:58,613:INFO:........Channel 54
+a_data_processing.YouTube.api:2019-12-22 22:26:58,836:INFO:........Channel 55
+a_data_processing.YouTube.api:2019-12-22 22:26:59,055:INFO:........Channel 56
+a_data_processing.YouTube.api:2019-12-22 22:26:59,294:INFO:........Channel 57
+a_data_processing.YouTube.api:2019-12-22 22:26:59,564:INFO:........Channel 58
+a_data_processing.YouTube.api:2019-12-22 22:26:59,799:INFO:........Channel 59
+a_data_processing.YouTube.api:2019-12-22 22:27:00,022:INFO:........Channel 60
+a_data_processing.YouTube.api:2019-12-22 22:27:00,553:INFO:........Channel 61
+a_data_processing.YouTube.api:2019-12-22 22:27:00,787:INFO:........Channel 62
+a_data_processing.YouTube.api:2019-12-22 22:27:00,995:INFO:........Channel 63
+a_data_processing.YouTube.api:2019-12-22 22:27:01,203:INFO:........Channel 64
+a_data_processing.YouTube.api:2019-12-22 22:27:01,458:INFO:........Channel 65
+a_data_processing.YouTube.api:2019-12-22 22:27:01,683:INFO:........Channel 66
+a_data_processing.YouTube.api:2019-12-22 22:27:01,929:INFO:........Channel 67
+a_data_processing.YouTube.api:2019-12-22 22:27:02,157:INFO:........Channel 68
+a_data_processing.YouTube.api:2019-12-22 22:27:02,383:INFO:........Channel 69
+a_data_processing.YouTube.api:2019-12-22 22:27:02,637:INFO:........Channel 70
+a_data_processing.YouTube.api:2019-12-22 22:27:02,859:INFO:........Channel 71
+a_data_processing.YouTube.api:2019-12-22 22:27:03,085:INFO:........Channel 72
+a_data_processing.YouTube.api:2019-12-22 22:27:03,311:INFO:........Channel 73
+a_data_processing.YouTube.api:2019-12-22 22:27:03,519:INFO:........Channel 74
+a_data_processing.YouTube.api:2019-12-22 22:27:03,790:INFO:........Channel 75
+a_data_processing.YouTube.api:2019-12-22 22:27:04,002:INFO:........Channel 76
+a_data_processing.YouTube.api:2019-12-22 22:27:04,266:INFO:........Channel 77
+a_data_processing.YouTube.api:2019-12-22 22:27:04,471:INFO:........Channel 78
+a_data_processing.YouTube.api:2019-12-22 22:27:04,692:INFO:........Channel 79
+a_data_processing.YouTube.api:2019-12-22 22:27:04,944:INFO:........Channel 80
+a_data_processing.YouTube.api:2019-12-22 22:27:05,157:INFO:........Channel 81
+a_data_processing.YouTube.api:2019-12-22 22:27:05,387:INFO:........Channel 82
+a_data_processing.YouTube.api:2019-12-22 22:27:05,642:INFO:........Channel 83
+a_data_processing.YouTube.api:2019-12-22 22:27:05,862:INFO:........Channel 84
+a_data_processing.YouTube.api:2019-12-22 22:27:06,122:INFO:........Channel 85
+a_data_processing.YouTube.api:2019-12-22 22:27:06,380:INFO:........Channel 86
+a_data_processing.YouTube.api:2019-12-22 22:27:06,607:INFO:........Channel 87
+a_data_processing.YouTube.api:2019-12-22 22:27:06,863:INFO:........Channel 88
+a_data_processing.YouTube.api:2019-12-22 22:27:07,064:INFO:........Channel 89
+a_data_processing.YouTube.api:2019-12-22 22:27:07,277:INFO:........Channel 90
+a_data_processing.YouTube.api:2019-12-22 22:27:07,514:INFO:........Channel 91
+a_data_processing.YouTube.api:2019-12-22 22:27:07,740:INFO:........Channel 92
+a_data_processing.YouTube.api:2019-12-22 22:27:07,989:INFO:........Channel 93
+a_data_processing.YouTube.api:2019-12-22 22:27:08,222:INFO:........Channel 94
+a_data_processing.YouTube.api:2019-12-22 22:27:08,459:INFO:........Channel 95
+a_data_processing.YouTube.api:2019-12-22 22:27:08,689:INFO:........Channel 96
+a_data_processing.YouTube.api:2019-12-22 22:27:08,906:INFO:........Channel 97
+a_data_processing.YouTube.api:2019-12-22 22:27:09,124:INFO:........Channel 98
+a_data_processing.YouTube.api:2019-12-22 22:27:09,362:INFO:........Channel 99
+a_data_processing.YouTube.api:2019-12-22 22:27:09,580:INFO:........Channel 100
+a_data_processing.YouTube.api:2019-12-22 22:27:09,801:INFO:........Channel 101
+a_data_processing.YouTube.api:2019-12-22 22:27:10,048:INFO:........Channel 102
+a_data_processing.YouTube.api:2019-12-22 22:27:10,305:INFO:........Channel 103
+a_data_processing.YouTube.api:2019-12-22 22:27:10,520:INFO:........Channel 104
+a_data_processing.YouTube.api:2019-12-22 22:27:10,737:INFO:........Channel 105
+a_data_processing.YouTube.api:2019-12-22 22:27:10,966:INFO:........Channel 106
+a_data_processing.YouTube.api:2019-12-22 22:27:11,191:INFO:........Channel 107
+a_data_processing.YouTube.api:2019-12-22 22:27:11,440:INFO:........Channel 108
+a_data_processing.YouTube.api:2019-12-22 22:27:11,663:INFO:........Channel 109
+a_data_processing.YouTube.api:2019-12-22 22:27:11,900:INFO:........Channel 110
+a_data_processing.YouTube.api:2019-12-22 22:27:12,122:INFO:........Channel 111
+a_data_processing.YouTube.api:2019-12-22 22:27:12,352:INFO:........Channel 112
+a_data_processing.YouTube.api:2019-12-22 22:27:12,578:INFO:........Channel 113
+a_data_processing.YouTube.api:2019-12-22 22:27:12,790:INFO:........Channel 114
+a_data_processing.YouTube.api:2019-12-22 22:27:13,040:INFO:........Channel 115
+a_data_processing.YouTube.api:2019-12-22 22:27:13,269:INFO:........Channel 116
+a_data_processing.YouTube.api:2019-12-22 22:27:13,484:INFO:........Channel 117
+a_data_processing.YouTube.api:2019-12-22 22:27:13,700:INFO:........Channel 118
+a_data_processing.YouTube.api:2019-12-22 22:27:13,941:INFO:........Channel 119
+a_data_processing.YouTube.api:2019-12-22 22:27:14,271:INFO:........Channel 120
+a_data_processing.YouTube.api:2019-12-22 22:27:14,506:INFO:........Channel 121
+a_data_processing.YouTube.api:2019-12-22 22:27:14,722:INFO:........Channel 122
+a_data_processing.YouTube.api:2019-12-22 22:27:14,950:INFO:........Channel 123
+a_data_processing.YouTube.api:2019-12-22 22:27:15,155:INFO:........Channel 124
+a_data_processing.YouTube.api:2019-12-22 22:27:15,359:INFO:........Channel 125
+a_data_processing.YouTube.api:2019-12-22 22:27:15,579:INFO:........Channel 126
+a_data_processing.YouTube.api:2019-12-22 22:27:15,810:INFO:........Channel 127
+a_data_processing.YouTube.api:2019-12-22 22:27:16,014:INFO:........Channel 128
+a_data_processing.YouTube.api:2019-12-22 22:27:16,231:INFO:........Channel 129
+a_data_processing.YouTube.api:2019-12-22 22:27:16,448:INFO:........Channel 130
+a_data_processing.YouTube.api:2019-12-22 22:27:16,692:INFO:........Channel 131
+a_data_processing.YouTube.api:2019-12-22 22:27:16,939:INFO:........Channel 132
+a_data_processing.YouTube.api:2019-12-22 22:27:17,191:INFO:........Channel 133
+a_data_processing.YouTube.api:2019-12-22 22:27:17,424:INFO:........Channel 134
+a_data_processing.YouTube.api:2019-12-22 22:27:17,648:INFO:........Channel 135
+a_data_processing.YouTube.api:2019-12-22 22:27:17,871:INFO:........Channel 136
+a_data_processing.YouTube.api:2019-12-22 22:27:18,101:INFO:........Channel 137
+a_data_processing.YouTube.api:2019-12-22 22:27:18,353:INFO:........Channel 138
+a_data_processing.YouTube.api:2019-12-22 22:27:18,572:INFO:........Channel 139
+a_data_processing.YouTube.api:2019-12-22 22:27:18,791:INFO:........Channel 140
+a_data_processing.YouTube.api:2019-12-22 22:27:19,028:INFO:........Channel 141
+a_data_processing.YouTube.api:2019-12-22 22:27:19,261:INFO:........Channel 142
+a_data_processing.YouTube.api:2019-12-22 22:27:19,466:INFO:........Channel 143
+a_data_processing.YouTube.api:2019-12-22 22:27:19,690:INFO:........Channel 144
+a_data_processing.YouTube.api:2019-12-22 22:27:19,932:INFO:........Channel 145
+a_data_processing.YouTube.api:2019-12-22 22:27:20,161:INFO:........Channel 146
+a_data_processing.YouTube.api:2019-12-22 22:27:20,403:INFO:........Channel 147
+a_data_processing.YouTube.api:2019-12-22 22:27:20,640:INFO:........Channel 148
+a_data_processing.YouTube.api:2019-12-22 22:27:20,856:INFO:........Channel 149
+a_data_processing.YouTube.api:2019-12-22 22:27:21,094:INFO:........Channel 150
+a_data_processing.YouTube.api:2019-12-22 22:27:21,327:INFO:........Channel 151
+a_data_processing.YouTube.api:2019-12-22 22:27:21,542:INFO:........Channel 152
+a_data_processing.YouTube.api:2019-12-22 22:27:22,032:INFO:........Channel 153
+a_data_processing.YouTube.api:2019-12-22 22:27:22,242:INFO:........Channel 154
+a_data_processing.YouTube.api:2019-12-22 22:27:22,477:INFO:........Channel 155
+a_data_processing.YouTube.api:2019-12-22 22:27:22,700:INFO:........Channel 156
+a_data_processing.YouTube.api:2019-12-22 22:27:22,922:INFO:........Channel 157
+a_data_processing.YouTube.api:2019-12-22 22:27:23,130:INFO:........Channel 158
+a_data_processing.YouTube.api:2019-12-22 22:27:23,360:INFO:........Channel 159
+a_data_processing.YouTube.api:2019-12-22 22:27:23,599:INFO:........Channel 160
+a_data_processing.YouTube.api:2019-12-22 22:27:23,837:INFO:........Channel 161
+a_data_processing.YouTube.api:2019-12-22 22:27:24,049:INFO:........Channel 162
+a_data_processing.YouTube.api:2019-12-22 22:27:24,263:INFO:........Channel 163
+a_data_processing.YouTube.api:2019-12-22 22:27:24,483:INFO:........Channel 164
+a_data_processing.YouTube.api:2019-12-22 22:27:24,700:INFO:........Channel 165
+a_data_processing.YouTube.api:2019-12-22 22:27:24,908:INFO:........Channel 166
+a_data_processing.YouTube.api:2019-12-22 22:27:25,142:INFO:........Channel 167
+a_data_processing.YouTube.api:2019-12-22 22:27:25,371:INFO:........Channel 168
+a_data_processing.YouTube.api:2019-12-22 22:27:25,591:INFO:........Channel 169
+a_data_processing.YouTube.api:2019-12-22 22:27:25,850:INFO:........Channel 170
+a_data_processing.YouTube.api:2019-12-22 22:27:26,113:INFO:........Channel 171
+a_data_processing.YouTube.api:2019-12-22 22:27:26,353:INFO:........Channel 172
+a_data_processing.YouTube.api:2019-12-22 22:27:26,579:INFO:........Channel 173
+a_data_processing.YouTube.api:2019-12-22 22:27:26,817:INFO:........Channel 174
+a_data_processing.YouTube.api:2019-12-22 22:27:27,050:INFO:........Channel 175
+a_data_processing.YouTube.api:2019-12-22 22:27:27,285:INFO:........Channel 176
+a_data_processing.YouTube.api:2019-12-22 22:27:27,512:INFO:........Channel 177
+a_data_processing.YouTube.api:2019-12-22 22:27:27,767:INFO:........Channel 178
+a_data_processing.YouTube.api:2019-12-22 22:27:28,025:INFO:........Channel 179
+a_data_processing.YouTube.api:2019-12-22 22:27:28,232:INFO:........Channel 180
+a_data_processing.YouTube.api:2019-12-22 22:27:28,456:INFO:........Channel 181
+a_data_processing.YouTube.api:2019-12-22 22:27:28,660:INFO:........Channel 182
+a_data_processing.YouTube.api:2019-12-22 22:27:28,869:INFO:........Channel 183
+a_data_processing.YouTube.api:2019-12-22 22:27:29,072:INFO:........Channel 184
+a_data_processing.YouTube.api:2019-12-22 22:27:29,290:INFO:........Channel 185
+a_data_processing.YouTube.api:2019-12-22 22:27:29,525:INFO:........Channel 186
+a_data_processing.YouTube.api:2019-12-22 22:27:29,788:INFO:........Channel 187
+a_data_processing.YouTube.api:2019-12-22 22:27:30,072:INFO:........Channel 188
+a_data_processing.YouTube.api:2019-12-22 22:27:30,286:INFO:........Channel 189
+a_data_processing.YouTube.api:2019-12-22 22:27:30,500:INFO:........Channel 190
+a_data_processing.YouTube.api:2019-12-22 22:27:30,710:INFO:........Channel 191
+a_data_processing.YouTube.api:2019-12-22 22:27:30,942:INFO:........Channel 192
+a_data_processing.YouTube.api:2019-12-22 22:27:31,151:INFO:........Channel 193
+a_data_processing.YouTube.api:2019-12-22 22:27:31,388:INFO:........Channel 194
+a_data_processing.YouTube.api:2019-12-22 22:27:31,599:INFO:........Channel 195
+a_data_processing.YouTube.api:2019-12-22 22:27:31,835:INFO:........Channel 196
+a_data_processing.YouTube.api:2019-12-22 22:27:32,073:INFO:........Channel 197
+a_data_processing.YouTube.api:2019-12-22 22:27:32,300:INFO:........Channel 198
+a_data_processing.YouTube.api:2019-12-22 22:27:32,529:INFO:........Channel 199
+a_data_processing.YouTube.api:2019-12-22 22:27:32,739:INFO:........Channel 200
+a_data_processing.YouTube.api:2019-12-22 22:27:32,949:INFO:Download of Raw Data completed at Sun Dec 22 22:27:32 2019
+a_data_processing.YouTube.main:2019-12-22 22:27:32,949:INFO:Download of Raw Data completed
+a_data_processing.YouTube.filters:2019-12-22 22:27:32,949:INFO:Filtering videos data junk...
+a_data_processing.YouTube.filters:2019-12-22 22:27:32,965:INFO:Filtering channel data junk...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:27:32,965:INFO:Initializing manual web scrapping process...
+a_data_processing.YouTube.partial_web_scrapping:2019-12-22 22:27:32,965:INFO:........Getting Video 1 time duration
+a_data_processing.YouTube.config.parser:2019-12-23 03:36:10,462:INFO:Starting YouTube API construct
+a_data_processing.YouTube.config.parser:2019-12-23 03:36:23,125:INFO:Starting YouTube API construct
+a_data_processing.YouTube.config.parser:2019-12-23 03:37:07,197:INFO:Starting YouTube API construct
+a_data_processing.YouTube.config.parser:2019-12-23 04:17:23,039:INFO:Starting YouTube API construct
+a_data_processing.YouTube.config.parser:2019-12-23 04:19:12,292:INFO:Starting YouTube API construct
+a_data_processing.YouTube.config.parser:2019-12-23 04:19:18,240:INFO:Starting process on trends, category 0 for country BR
+main:2019-12-23 04:19:18,240:INFO:Running with args ({'task': 'trends', 'category': 0, 'country': 'BR', 'output': 'C:\\Users\\maruc\\OneDrive\\햞ea de Trabalho\\WData\x07_data_processing\\output\\YouTube', 'routine': 'No'},) and kwargs {}
+main:2019-12-23 04:19:18,240:INFO:Running with args ({'task': 'trends', 'category': 0, 'country': 'BR', 'output': 'C:\\Users\\maruc\\OneDrive\\햞ea de Trabalho\\WData\x07_data_processing\\output\\YouTube', 'routine': 'No'},) and kwargs {}
+a_data_processing.YouTube.api:2019-12-23 04:19:18,240:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-23 04:19:18,240:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-23 04:19:18,240:INFO:Gathering user developer Key...
+a_data_processing.YouTube.main:2019-12-23 04:19:19,763:INFO:Download of Raw Data completed
+a_data_processing.YouTube.config.parser:2019-12-23 04:19:35,848:INFO:Starting YouTube API construct
+a_data_processing.YouTube.config.parser:2019-12-23 04:19:40,311:INFO:Starting process on trends, category 0 for country BR
+main:2019-12-23 04:19:40,314:INFO:Running with args ({'task': 'trends', 'category': 0, 'country': 'BR', 'output': 'C:\\Users\\maruc\\OneDrive\\햞ea de Trabalho\\WData\x07_data_processing\\output\\YouTube', 'routine': 'No'},) and kwargs {}
+main:2019-12-23 04:19:40,314:INFO:Running with args ({'task': 'trends', 'category': 0, 'country': 'BR', 'output': 'C:\\Users\\maruc\\OneDrive\\햞ea de Trabalho\\WData\x07_data_processing\\output\\YouTube', 'routine': 'No'},) and kwargs {}
+a_data_processing.YouTube.api:2019-12-23 04:19:40,314:INFO:Initializing api_manager
+a_data_processing.YouTube.api:2019-12-23 04:19:40,314:INFO:Initializing YouTube Api V3...
+a_data_processing.YouTube.api:2019-12-23 04:19:40,314:INFO:Gathering user developer Key...
+a_data_processing.YouTube.main:2019-12-23 04:19:41,765:INFO:Download of Raw Data completed
+a_data_processing.YouTube.filters:2019-12-23 04:19:41,765:INFO:Initiating filter_manager
+a_data_processing.YouTube.main:2019-12-23 04:19:41,765:INFO:Data munging completed
+a_data_processing.YouTube.writer:2019-12-23 04:19:41,765:INFO:Converting data into .JSON format...
+a_data_processing.YouTube.writer:2019-12-23 04:19:41,765:INFO:Writing data in file...
