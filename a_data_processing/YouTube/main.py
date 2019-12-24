@@ -10,7 +10,7 @@ import a_data_processing.YouTube.config.parser as parser
 
 @func_logger
 @func_time_logger
-def main(main_parser, wdata_parser=None, **kwargs):
+def main(*args, **kwargs):
     logger = create_info_log(__name__)
     
     raw_data = api_manager(**kwargs)
@@ -27,11 +27,11 @@ def main(main_parser, wdata_parser=None, **kwargs):
 # this is just to handle WData calls
 def wdata_call():
     kwargs = parser.construct()
-    main(kwargs)
+    main(**kwargs)
 
     
 if __name__ == "__main__":
     kwargs = parser.parsing_to_api()
-    main(kwargs)
+    main(**kwargs)
 
     

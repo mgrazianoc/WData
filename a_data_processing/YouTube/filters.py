@@ -1,10 +1,9 @@
 import re
-import itertools
 import a_data_processing.YouTube.partial_web_scrapping
 from a_data_processing.YouTube.config.constants import DICTIONARY_BR
 from wdata_config.loggers import create_info_log as create_info_log
 
-
+from a_data_processing.YouTube.writer import temp_write
 
 logger = create_info_log(__name__)
 
@@ -14,8 +13,20 @@ logger = create_info_log(__name__)
 def filter_manager(data, **kwargs):
     logger.info("Initiating filter_manager")
     if kwargs.get("task") == "trends":
+        
+        # TODO
+        temp_write(data, "testing_raw_data", **kwargs)
+        
+        
         filtered_data = videos_filter(data)
+        # TODO
+        temp_write(filtered_data, "testing_videos_filter", **kwargs)
+        
+        
         filtered_data = channel_filter(data, filtered_data)
+        # TODO
+        temp_write(filtered_data, "testing_channel_filter", **kwargs)
+        
         extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
         extra_data = time_construct(extra_data)
         extra_data = id_construct(extra_data, **kwargs)
@@ -32,84 +43,72 @@ def videos_filter(data):
     
     # constructing dictionary structure
     filtered_data = {"Data": []}
-    filtered_data["Data"].append({})
-    
-    # labelling first position process. Using this because it was easy to work with it
-    filtered_data["Data"][0].update({"Position": 1})
     
     # making the data more accessible
     data = data["most_popular"]
     
-    # there are 4 lists of items to separate. Each items has a list of dictionaries
+    # time of query request position
+    time = data.pop(4)
     
-    time = data[4]
-    
-    for t in range(4):
-        # we are gonna using try because the data from the API is irregular. I.E: don't have fixed values
-        try:
-            for i in itertools.count(0):
-                for j, k in data[t]["items"][i].items():
-                    # filtering process
-                    if j == "etag":
-                        filtered_data["Data"][i].update({"Video E-tag": k})  # insuring labeling "Video etag"
-                        continue
-                        
-                    if j == "id":
-                        filtered_data["Data"][i].update({"Video ID": k})  # insuring labeling "Video Id"
-                        continue
-                    
-                    if j == "snippet":
-                        for m, n in data[t]["items"][i][j].items():
-                            if m == "publishedAt":
-                                filtered_data["Data"][i].update({"Publication Date": n[:10]})
-                                filtered_data["Data"][i].update({"Publication Time": n[11:19]})
-                            if m == "thumbnails":
-                                url = data[t]["items"][i][j][m]["maxres"]["url"]
-                                filtered_data["Data"][i].update({"Thumbnail Url": url})
-                            elif m == "title":
-                                filtered_data["Data"][i].update({"Video Title": n})
-                            elif m == "description":
-                                filtered_data["Data"][i].update({"Video Description": n})
-                            elif m == "tags":
-                                # turning list of tags into a single string
-                                tags = ""
-                                for p in range(len(n)):
-                                    for q in n[p]:
-                                        tags += q
-                                    if p < len(n) - 1:
-                                        tags += ", "
-                                filtered_data["Data"][i].update({"Tags": tags})
-                                size = len(data[t]["items"][i][j][m])
-                                filtered_data["Data"][i].update({"Number of Tags": size})
-                            elif m == "categoryId":
-                                filtered_data["Data"][i].update({"Video Category ID": n})
-                        continue
-                    
-                    if j == "statistics":
-                        for m, n in data[t]["items"][i][j].items():
-                            if m == "viewCount":
-                                filtered_data["Data"][i].update({"Visualizations": int(n)})
-                            elif m == "likeCount":
-                                filtered_data["Data"][i].update({"Likes": int(n)})
-                            elif m == "dislikeCount":
-                                filtered_data["Data"][i].update({"Dislikes": int(n)})
-                            elif m == "favoriteCount":
-                                filtered_data["Data"][i].update({"Favorites": int(n)})
-                            elif m == "commentCount":
-                                filtered_data["Data"][i].update({"Comments": int(n)})
-                            
-                        # append time request
-                        filtered_data["Data"][i].update({"Time request": time})
-                        
-                        # creating a new dictionary for the next video
-                        if i < 200:
-                            filtered_data["Data"].append({})
-                            
-                            # labelling next position process
-                            filtered_data["Data"][i].update({"Position": i+1})
-        
-        except IndexError:
-            continue
+    for t in range(len(data)):
+
+        for i in range(len(data[t]["items"])):
+            
+            # since i range doesn't go higher then len(data[t]["items"]), track is used to count t repetitions as well
+            track = t*50 + i
+            
+            
+            filtered_data["Data"].append({})
+            filtered_data["Data"][track].update({"Position": track+1})
+            
+            for j, k in data[t]["items"][i].items():
+                # filtering process
+                if j == "etag":
+                    filtered_data["Data"][track].update({"Video E-tag": k})  # insuring labeling "Video etag"
+
+                elif j == "id":
+                    filtered_data["Data"][track].update({"Video ID": k})  # insuring labeling "Video Id"
+
+                elif j == "snippet":
+                    for m, n in k.items():
+                        if m == "publishedAt":
+                            filtered_data["Data"][track].update({"Publication Date": n[:10]})
+                            filtered_data["Data"][track].update({"Publication Time": n[11:19]})
+                        if m == "thumbnails":
+                            url = n["maxres"]["url"]
+                            filtered_data["Data"][track].update({"Thumbnail Url": url})
+                        elif m == "title":
+                            filtered_data["Data"][track].update({"Video Title": n})
+                        elif m == "description":
+                            filtered_data["Data"][track].update({"Video Description": n})
+                        elif m == "tags":
+                            # turning list of tags into a single string
+                            tags = ""
+                            for p in range(len(n)):
+                                for q in n[p]:
+                                    tags += q
+                                if p < len(n) - 1: # just avoiding a ", " at the final of the string
+                                    tags += ", "
+                            filtered_data["Data"][track].update({"Tags": tags})
+                            filtered_data["Data"][track].update({"Number of Tags": len(n)})
+                        elif m == "categoryId":
+                            filtered_data["Data"][track].update({"Video Category ID": n})
+
+                elif j == "statistics":
+                    for m, n in k.items():
+                        if m == "viewCount":
+                            filtered_data["Data"][track].update({"Visualizations": int(n)})
+                        elif m == "likeCount":
+                            filtered_data["Data"][track].update({"Likes": int(n)})
+                        elif m == "dislikeCount":
+                            filtered_data["Data"][track].update({"Dislikes": int(n)})
+                        elif m == "favoriteCount":
+                            filtered_data["Data"][track].update({"Favorites": int(n)})
+                        elif m == "commentCount":
+                            filtered_data["Data"][track].update({"Comments": int(n)})
+
+                    # append time request
+                    filtered_data["Data"][track].update({"Time request": time})
     
     return filtered_data
 
@@ -121,41 +120,37 @@ def channel_filter(data, video_data):
     # making the data more accessible
     data = data["channels_info"]
     
-    for i in itertools.count(0):
-        try:
-            for j, k in data[i]["items"][0].items():
-                if j == "etag":
-                    video_data["Data"][i].update({"Channel E-tag": k})  # insuring labeling "Video etag"
-                if j == "id":
-                    video_data["Data"][i].update({"Channel ID": k})  # insuring labeling "Video etag"
-                
-                if j == "snippet":
-                    for m, n in data[i]["items"][0][j].items():
-                        if m == "title":
-                            video_data["Data"][i].update({"Channel Title": n})
-                            continue
-                        if m == "description":
-                            video_data["Data"][i].update({"Channel Description": n})
-                            continue
-                        if m == "publishedAt":
-                            video_data["Data"][i].update({"Channel Creation Date": n[:10]})
-                            continue
-                        
-                        if "country" in data[i]["items"][0][j] and m == "country":
-                            video_data["Data"][i].update({"Channel Country": n})
-                        else:
-                            video_data["Data"][i].update({"Channel Country": "Unknown"})
-                
-                if j == "statistics":
-                    for m, n in data[i]["items"][0][j].items():
-                        if m == "viewCount":
-                            video_data["Data"][i].update({"Channel Views": int(n)})
-                        if m == "subscriberCount":
-                            video_data["Data"][i].update({"Channel Subscribers": int(n)})
-                        if m == "videoCount":
-                            video_data["Data"][i].update({"Channel Videos Published": int(n)})
-        except IndexError:
-            break
+    
+    for i in range(len(data)):
+        for j, k in data[i]["items"][0].items():
+            if j == "etag":
+                video_data["Data"][i].update({"Channel E-tag": k})  # insuring labeling "Video etag"
+            elif j == "id":
+                video_data["Data"][i].update({"Channel ID": k})  # insuring labeling "Video etag"
+
+            elif j == "snippet":
+                for m, n in k.items():
+                    if m == "title":
+                        video_data["Data"][i].update({"Channel Title": n})
+                    elif m == "description":
+                        video_data["Data"][i].update({"Channel Description": n})
+                    elif m == "publishedAt":
+                        video_data["Data"][i].update({"Channel Creation Date": n[:10]})
+
+                    # sometimes, API doesn't return the channels country
+                    if "country" not in k:
+                        video_data["Data"][i].update({"Channel Country": "Unknown"})
+                    elif m == "country":
+                        video_data["Data"][i].update({"Channel Country": n})
+
+            if j == "statistics":
+                for m, n in k.items():
+                    if m == "viewCount":
+                        video_data["Data"][i].update({"Channel Views": int(n)})
+                    elif m == "subscriberCount":
+                        video_data["Data"][i].update({"Channel Subscribers": int(n)})
+                    elif m == "videoCount":
+                        video_data["Data"][i].update({"Channel Videos Published": int(n)})
     
     return video_data
 

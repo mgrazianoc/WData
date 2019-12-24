@@ -17,5 +17,7 @@ def create_info_log(name_logging):
     logger.addHandler(file_handler)
 
     # creating stream handler, simple format
-    cmd_handler = logging.StreamHandler
+    cmd_handler = logging.StreamHandler()
+    logger.addHandler(cmd_handler)
+    
     return logger

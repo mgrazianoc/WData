@@ -24,11 +24,12 @@ def func_time_logger(original_func):
     def wrapper_func(*args, **kwargs):
         starting_time = time.time()
         
-        original_func(*args, **kwargs)
+        variable = original_func(*args, **kwargs)
         
         ending_time = time.time()
         result = ending_time - starting_time
         
         logger.info(f"{original_func.__name__} ran in: {result} sec")
+        return variable
         
     return wrapper_func

@@ -23,7 +23,8 @@ def write_file(data, **kwargs):
         task = kwargs.get("task")
         file_name = f"categ{category}_{time.strftime('%y.%m.%d')}_{country}_{task}.json"
     
-    with open(f"{kwargs.get('output')}/{file_name}", "w", encoding="utf-8") as file:
+    output = kwargs.get('output')
+    with open(f"{output}/{file_name}", "w", encoding="utf-8") as file:
         file.write(str(data))
 
 
@@ -36,8 +37,12 @@ def json_format(data):
 
 
 # This functions is just for debugging purpose, only direct call
-def temp_write(data, output):
+def temp_write(data, file_name, **kwargs):
     data = json_format(data)
+    
+    
+    output = kwargs.get('output')
+    
     print("Writing data in file...")
-    with open(f"{output}Testing.json", "w") as testing:
+    with open(f"{output}/{file_name}.json", "w") as testing:
         testing.write(str(data))

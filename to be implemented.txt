@@ -1,5 +1,11 @@
 Criar uma classe de objetos chamados de WData. Com eles você consegue definir algumas operações muito importantes, como:
-
 -somar (concatenar) banco de dados.
 -comparar dados no bancos de dados (funcionará com uma comparação de colunas, isto é, 3 de 5 colunas retorna 3/5)
 -transformar em uma matriz ?
+
+
+
+Coletar mais algumas informações, como:
+- frequency of videos (channel)
+- frequency of channel when a specific video was published
+- date of first channel's video

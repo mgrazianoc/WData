@@ -61,7 +61,7 @@ def parsing_to_api():
         "category": args.category,
         "country": args.country,
         "name": args.name,
-        "output":f'{directory}\a_data_processing\output\YouTube',
+        "output":f'{directory}/a_data_processing/output/YouTube',
         "routine":args.routine
         }
 
@@ -94,16 +94,17 @@ def construct():
             "task": task,
             "category": category,
             "country": country,
-            "output":f'{directory}\a_data_processing\output\YouTube',
+            "name": "standard",
+            "output":f'{directory}/a_data_processing/output/YouTube',
             "routine":'No'
         }
     else:
         task = "categories"
-        logger.info(f"Starting process on {task} for country {country}")
         
         return{
             "task": task,
             "country": country,
-            "output":f'{directory}\a_data_processing\output\YouTube',
+            "name": "standard",
+            "output":f'{directory}/a_data_processing/output/YouTube',
             "routine":'No'
         }
