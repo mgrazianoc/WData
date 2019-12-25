@@ -3,6 +3,10 @@ from itertools import count
 from wdata_config.decorators import func_time_logger as func_time_logger
 from wdata_config.loggers import create_info_log as create_info_log
 
+
+from a_data_processing.YouTube.writer import temp_write
+
+
 import time
 
 logger = create_info_log(__name__)
@@ -47,7 +51,7 @@ def api_manager(**kwargs):
         # appending currenctly time from which the query was made
         current_time = time.ctime(time.time())
         most_popular.append(current_time)
-
+        
         channel_info = get_channels_info(process, most_popular)
         raw_data = send_raw_data(most_popular, channel_info)
         return raw_data
@@ -123,8 +127,9 @@ def get_channels_info(process, most_popular):
     channel_info = []
     channel_number = 0
 
-    for i in range(4):
-        for j in range(50):
+    # the "-1" is because we appended the time Query in the last function
+    for i in range(len(most_popular) - 1):
+        for j in range(len(most_popular[i]['items'])):
             logger.info(f"........Channel {channel_number + 1}")
             channel = most_popular[i]['items'][j]['snippet']['channelId']
             request = process.channels().list(part="id, snippet, contentDetails, statistics, topicDetails",

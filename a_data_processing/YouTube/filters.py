@@ -14,18 +14,9 @@ def filter_manager(data, **kwargs):
     logger.info("Initiating filter_manager")
     if kwargs.get("task") == "trends":
         
-        # TODO
-        temp_write(data, "testing_raw_data", **kwargs)
-        
-        
         filtered_data = videos_filter(data)
-        # TODO
-        temp_write(filtered_data, "testing_videos_filter", **kwargs)
-        
         
         filtered_data = channel_filter(data, filtered_data)
-        # TODO
-        temp_write(filtered_data, "testing_channel_filter", **kwargs)
         
         extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
         extra_data = time_construct(extra_data)
@@ -49,7 +40,7 @@ def videos_filter(data):
     data = data["most_popular"]
     
     # time of query request position
-    time = data.pop(4)
+    time = data.pop(-1)
     
     for t in range(len(data)):
 
