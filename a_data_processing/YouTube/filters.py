@@ -30,8 +30,9 @@ def filter_manager(data, **kwargs):
         extra_data = a_data_processing.YouTube.partial_web_scrapping.web_scrapping_manager(filtered_data)
         extra_data = time_construct(extra_data)
         extra_data = id_construct(extra_data, **kwargs)
-        final_data = create_dict(extra_data)
+        final_data = create_index(extra_data)
         final_data = string_correction(final_data)
+        
         return final_data
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -236,7 +237,7 @@ def channels_from_categories_filter(data):
 # ---------------------------------------------------------------------------------------------------------------------
 
 # This function will include index for the final dictionary to be written
-def create_dict(data):
+def create_index(data):
     logger.info("Creating dictionary from the data...")
     
     new_data = {"Data": []}
@@ -255,7 +256,7 @@ def create_dict(data):
 # ---------------------------------------------------------------------------------------------------------------------
 
 
-# And last, this function will just remove some bad characters from strings
+# This function will just remove some bad characters from strings
 def string_correction(data):
     strings_to_correct = ["Video Description",
                           "Video Tittle",
@@ -270,3 +271,4 @@ def string_correction(data):
                 data["Data"][i].update({k: re.sub(bad_chars, "", l)})
                 
     return data
+
