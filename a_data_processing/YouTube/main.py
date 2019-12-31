@@ -1,9 +1,9 @@
-from a_data_processing.YouTube.api import api_manager as api_manager
-from a_data_processing.YouTube.writer import write_file as write_file
-from a_data_processing.YouTube.filters import filter_manager as filter_manager
-from wdata_config.decorators import func_logger as func_logger
-from wdata_config.decorators import func_time_logger as func_time_logger
-from wdata_config.loggers import create_info_log as create_info_log
+from a_data_processing.YouTube.api import api_manager 
+from a_data_processing.YouTube.writer import write_file 
+from a_data_processing.YouTube.filters import filter_manager 
+from wdata_config.decorators import func_logger 
+from wdata_config.decorators import func_time_logger 
+from wdata_config.loggers import create_info_log 
 
 import a_data_processing.YouTube.config.parser as parser
     
@@ -25,7 +25,7 @@ def main(*args, **kwargs):
 
     
 # this is just to handle WData calls
-def wdata_call():
+def wdata_call_p():
     kwargs = parser.construct()
     main(**kwargs)
 

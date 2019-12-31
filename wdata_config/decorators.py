@@ -2,6 +2,7 @@ from functools import wraps  # this will help to keep __name__ track from funcio
 import logging
 import time
 import wdata_config.loggers as loggers
+import concurrent.futures
 
 
 # This function will add a log report of args passed to a function decorated
@@ -33,3 +34,7 @@ def func_time_logger(original_func):
         return variable
         
     return wrapper_func
+
+
+# This function will create threads
+# use in the future some threads decorators
