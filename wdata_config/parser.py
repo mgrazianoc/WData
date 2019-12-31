@@ -18,19 +18,28 @@ def command_line_parse():
     parser.add_argument(
         "--icon", "-i",
         help="create a icon shortcut to WData in a specific directory",
-        action="store_false"
+        action="store_false",
+        default=False
     )
     parser.add_argument(
         "--open", "-o",
         help="open WData folder on system to work with its files",
-        action="store_true"
+        action="store_true",
+        default=False
     )
-
+    parser.add_argument(
+        "--shell",
+        help="initiate WData interactive shell",
+        action="store_true",
+        default=False
+    )
+    
     # creating a fork for WData different tasks
     sub_parser = parser.add_subparsers(
         title="WData tools",
         description="Try [task] -h for more help options!"
     )
+    
 
 # ---------------------------------------------------------------------------------------------------------------------
 
