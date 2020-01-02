@@ -4,7 +4,6 @@ import time
 import wdata_config.loggers as loggers
 import concurrent.futures
 
-
 # This function will add a log report of args passed to a function decorated
 def func_logger(original_func):
     logger = loggers.create_info_log(original_func.__name__)
@@ -34,6 +33,9 @@ def func_time_logger(original_func):
         return variable
         
     return wrapper_func
+
+
+
 
 
 # This function will create threads

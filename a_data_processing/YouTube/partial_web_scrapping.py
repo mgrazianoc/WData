@@ -20,10 +20,10 @@ def web_scrapping_manager(data):
             new_data["Data"][i].update({j: k})
             
             # getting video duration
-            if j == "Video ID":
+            if j == "Video_ID":
                 logger.info(f"........Getting Video {i+1} time duration")
                 duration = get_video_duration(k)
-                new_data["Data"][i].update({"Video Duration (s)": duration})
+                new_data["Data"][i].update({"Video_Duration_s": duration})
     
     return new_data
 

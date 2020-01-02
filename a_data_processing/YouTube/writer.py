@@ -21,7 +21,7 @@ def write_file(data, **kwargs):
         category = kwargs.get("category")
         country = kwargs.get("country")
         task = kwargs.get("task")
-        file_name = f"categ{category}_{time.strftime('%y.%m.%d')}_{country}_{task}.json"
+        file_name = f"{time.strftime('%y.%m.%d')}_categ[{category}]__{country}_{task}.json"
     
     output = kwargs.get('output')
     with open(f"{output}/{file_name}", "w", encoding="utf-8") as file:

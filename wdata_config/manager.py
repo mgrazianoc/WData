@@ -4,14 +4,11 @@ from b_post_processing.wdata_pp import wdata_call_pp
 from cmd import Cmd
 
 def wdata_manager(args):
-    try:
-        if args.shell is True:
-            cmd_manager()
-        elif args.youtube is True:
-            wdata_call_p()
-    except AttributeError:
-        print("No input found")
+    if args.shell is True:
         cmd_manager()
+    elif args.youtube is True:
+        wdata_call_p()
+
 
         
 def cmd_manager():
