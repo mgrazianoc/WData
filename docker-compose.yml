@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    wdata:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                - PYTHON_VERSION=3.7
+
+    splash:
+        image: scrapinghub/splash:latest
+        ports:
+            - 8050:8050
+
+
+
